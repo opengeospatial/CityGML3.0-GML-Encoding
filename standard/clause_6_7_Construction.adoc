@@ -1,0 +1,172 @@
+[[construction-section]]
+=== Construction
+
+The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g. beams and slabs), installations, and furniture.
+
+The concepts of the Construction module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Construction module is available under https://docs.ogc.org/is/20-010/20-010.html#construction-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc62[^].
+
+include::requirements/requirements_class_construction.adoc[]
+
+The Construction Conformance Class implements the following Requirements Class from the CityGML 3.0 Conceptual Model Standard:
+
+* Construction: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-construction
+
+The applicable GML schema is http://schemas.opengis.net/citygml/construction/3.0/construction.xsd[construction.xsd^].
+
+==== Dependencies
+
+The Construction Requirements Class is dependent on the following Requirements Class from this standard:
+
+* The <<core-section,Core>> Requirements Class which is the only mandatory Requirements Class. This class contains foundational elements upon which a CityGML dataset is built. The <<core-section,Core>> Requirements Class also defines XML elements and types reused by other Requirements Classes.
+
+==== Implementation Decisions
+
+The following decisions have been made regarding implementation of the CityGML 3.0 Construction conformance class in GML:
+
+. All associations allow by default that the referenced features can be provided inline or by reference.
+
+==== Requirements
+
+include::requirements/construction/REQ_Construction_Elements.adoc[]
+
+The CityGML Construction XML elements and their corresponding CityGML UML classes are listed in <<construction-xml-elements>>. In addition, the CityGML Construction XML elements are documented in the GML schema http://schemas.opengis.net/citygml/construction/3.0/construction.xsd[construction.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/[XML Schema documentation^].
+
+//[#construction-xml-elements,reftext='{table-caption} {counter:table-num}']
+[[construction-xml-elements]]
+.Construction XML Elements
+[width="100%",cols="10,10",options="header"]
+|===
+^|XML Schema Element +
+ (https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/[XML Schema documentation^])
+^|Conceptual Model +
+(https://docs.ogc.org/is/20-010/20-010.html#construction-uml[UML model^]; https://docs.ogc.org/is/20-010/20-010.html#toc62[Data Dictionary^])
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_AbstractConstruction[AbstractConstruction^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractConstruction-section[AbstractConstruction^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_AbstractConstructionSurface[AbstractConstructionSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractConstructionSurface-section[AbstractConstructionSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_AbstractConstructiveElement[AbstractConstructiveElement^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractConstructiveElement-section[AbstractConstructiveElement^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_AbstractFillingElement[AbstractFillingElement^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractFillingElement-section[AbstractFillingElement^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_AbstractFillingSurface[AbstractFillingSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractFillingSurface-section[AbstractFillingSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_AbstractFurniture[AbstractFurniture^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractFurniture-section[AbstractFurniture^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_AbstractInstallation[AbstractInstallation^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractInstallation-section[AbstractInstallation^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_CeilingSurface[CeilingSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#CeilingSurface-section[CeilingSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_Door[Door^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#Door-section[Door^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_DoorSurface[DoorSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#DoorSurface-section[DoorSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_FloorSurface[FloorSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#FloorSurface-section[FloorSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_GroundSurface[GroundSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#GroundSurface-section[GroundSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_InteriorWallSurface[InteriorWallSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#InteriorWallSurface-section[InteriorWallSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_OtherConstruction[OtherConstruction^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#OtherConstruction-section[OtherConstruction^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_OuterCeilingSurface[OuterCeilingSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#OuterCeilingSurface-section[OuterCeilingSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_OuterFloorSurface[OuterFloorSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#OuterFloorSurface-section[OuterFloorSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_RoofSurface[RoofSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#RoofSurface-section[RoofSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_WallSurface[WallSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#WallSurface-section[WallSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_Window[Window^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#Window-section[Window^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_WindowSurface[WindowSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#WindowSurface-section[WindowSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfAbstractConstruction[ADEOfAbstractConstruction^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractConstruction-section[ADEOfAbstractConstruction^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfAbstractConstructionSurface[ADEOfAbstractConstructionSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractConstructionSurface-section[ADEOfAbstractConstructionSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfAbstractConstructiveElement[ADEOfAbstractConstructiveElement^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractConstructiveElement-section[ADEOfAbstractConstructiveElement^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfAbstractFillingElement[ADEOfAbstractFillingElement^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractFillingElement-section[ADEOfAbstractFillingElement^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfAbstractFillingSurface[ADEOfAbstractFillingSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractFillingSurface-section[ADEOfAbstractFillingSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfAbstractFurniture[ADEOfAbstractFurniture^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractFurniture-section[ADEOfAbstractFurniture^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfAbstractInstallation[ADEOfAbstractInstallation^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractInstallation-section[ADEOfAbstractInstallation^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfCeilingSurface[ADEOfCeilingSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfCeilingSurface-section[ADEOfCeilingSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfDoor[ADEOfDoor^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfDoor-section[ADEOfDoor^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfDoorSurface[ADEOfDoorSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfDoorSurface-section[ADEOfDoorSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfFloorSurface[ADEOfFloorSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfFloorSurface-section[ADEOfFloorSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfGroundSurface[ADEOfGroundSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfGroundSurface-section[ADEOfGroundSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfInteriorWallSurface[ADEOfInteriorWallSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfInteriorWallSurface-section[ADEOfInteriorWallSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfOtherConstruction[ADEOfOtherConstruction^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfOtherConstruction-section[ADEOfOtherConstruction^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfOuterCeilingSurface[ADEOfOuterCeilingSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfOuterCeilingSurface-section[ADEOfOuterCeilingSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfOuterFloorSurface[ADEOfOuterFloorSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfOuterFloorSurface-section[ADEOfOuterFloorSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfRoofSurface[ADEOfRoofSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfRoofSurface-section[ADEOfRoofSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfWallSurface[ADEOfWallSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfWallSurface-section[ADEOfWallSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfWindow[ADEOfWindow^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfWindow-section[ADEOfWindow^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ADEOfWindowSurface[ADEOfWindowSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfWindowSurface-section[ADEOfWindowSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_ConstructionEvent[ConstructionEvent^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ConstructionEvent-section[ConstructionEvent^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_Elevation[Elevation^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#Elevation-section[Elevation^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/#element_Height[Height^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#Height-section[Height^]
+|===
+
+Surface boundaries are constrained by the following requirement:
+
+include::requirements/Construction/REQ_Construction_Boundaries.adoc[]
+
+<<construction-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the space elements defined in the Construction module:
+
+[[construction-boundaries-table]]
+.Construction space elements and their allowed thematic surface boundaries
+[cols="40,60",options="headers"]
+|===
+^|*Space element* ^|*Allowed space boundaries*
+|_con:AbstractConstruction_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_con:AbstractConstructiveElement_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_con:AbstractFillingElement_
+a|No boundaries allowed
+
+|_con:AbstractFurniture_
+a|No boundaries allowed
+
+|_con:AbstractInstallation_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_con:Door_
+a| * _con:DoorSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_con:OtherConstruction_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_con:Window_
+a| * _con:WindowSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+|===

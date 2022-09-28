@@ -1,0 +1,299 @@
+[appendix]
+:appendix-caption: Annex
+
+[[annex-codelist-usage]]
+== Codelists (Informative)
+
+Codelists are tables of values and corresponding descriptions or definitions. Values in a specific codelist may be used for designated properties with the codelist stereotype and a gml:CodeValue datatype in the UML Conceptual Model (CM). The CityGML 3.0 CM defines 140 such values.
+
+A gml:CodeValue datatype may have an optional codeSpace attribute. The purpose of the codeSpace attribute is to identify the codelist from which the value has been taken. Providing the codeSpace, especially with a dereferenceable identifier, allows easy access to further information detailing rules governing the use and meaning of the codelist's values and metadata. There may also be rules defining such things as the use and interpretation of values that do not appear in the codelist, the duplication of values, or any other characteristics of a codelist. All such properties and uses of a codelist or codelist value are outside the scope of this CityGML 3.0 Encoding Specification. This does not in any way restrict the ability of an authority sponsoring a codelist, as denoted by the use of a codeSpace attribute, to have application-specific codelist values, rules, interpretations, and uses in an independent specification.
+
+The values for each of these 140 codelists are interpreted in a specific application context. In particular, they may be required, recommended, or suggested by an authority within an organization or community. As a consequence, the lists and contained values are outside the scope of standardization of the CityGML CM or any of its encodings. Since only the values themselves, not the lists or tables, appear in CityGML GML-encoded documents, the structure of codelists also lies outside the scope of CityGML CM and Encoding standards. Nevertheless, it is helpful to have some example codelists available for inspection by developers working with a specific encoding. This Annex contains example structures for GML, comma-separated-value (CSV), and JSON codelists. Supplementing these structures, OGC maintains a CityGML 3.0 codelist repository with samples of each of the 140 CityGML 3.0 codelist attributes in GML, CSV, and JSON form at https://data.ogc.org/citygml-swg/3.0.0/_<Module_Name>_._<Codelist_Name>_._<Extension>_,  where _<Module_Name>_ is the name of the Module,  _<Codelist_Name>_ is the name of the attribute in the CityGML 3.0 CM UML diagram, and _Extension_ is "xml", "csv", or "json" to indicate the encoding. For example, to retrieve a sample codelist for the Vegetation Module PlantCoverClassValue, encoded as a GML 3.2 Dictionary, use the URL https://data.ogc.org/citygml-swg/CodeList_Examples_3.0.0/Vegetation.PlantCoverClassValue.xml . Note that the version number 3.0.0 is a codelist version number, not a standard version number. Once a sample codelist is published with a given version number, it will not change.
+
+=== Logical Model
+
+There is no standardized model for CityGML codelists. The following is a suggested structure based on the GML 3.2 Dictionary that meets requirements for documenting the source, currency, language, and other characteristics of the list of values. This *suggested* model is followed by the CityGML 3.0 codelist examples hosted by OGC. Note that many existing codelists, maintained by various organizations, are already in existence with different and permissible structures. These codelists remain valid.
+
+[[codelist_uml]]
+.Suggested Codelist UML Class Diagram
+image::images/Codelist_UML.PNG[codelist UML diagram,align="center"]
+
+
+=== Examples
+
+==== GML
+
+GML encoding of codelists as gml:Dictionary elements containing gml:dictionaryEntry gml:Definition elements is the expected form for defining and exchanging codelists in a GML environment. Examples of each of the 140 CityGML 3.0 codelists are provided using this encoding. Note, however, that there is no rule preventing the use of codelists encoded in some other manner. This is a common situation when fixed multipurpose codelists are recommended or required by government or other official agencies.
+
+
+The following is an XML example:
+
+----
+<?xml version="1.0" encoding="utf-8"?>
+<gml:Dictionary gml:id="id0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:cmd="http://www.opengis.net/citygml/codelist-metadata">
+	<gml:metaDataProperty>
+		<cmd:CodeListMetaData>
+			<cmd:dataType>RoofTypeValue</cmd:dataType>
+			<cmd:namespace>http://www.opengis.net/citygml/building/3.0</cmd:namespace>
+			<cmd:language>en</cmd:language>
+			<cmd:authority>Some Organization</cmd:authority>
+			<cmd:version>3.0</cmd:version>
+		</cmd:CodeListMetaData>
+	</gml:metaDataProperty>
+	<gml:description>Roof type values</gml:description>
+	<gml:identifier codeSpace="https://ogc.org/citygml/3.0/codelists/gml/rooftypes">RoofTypeValue</gml:identifier>
+	<gml:dictionaryEntry>
+		<gml:Definition gml:id="id1">
+			<gml:description>roof primarily a single plane, not necessarily level</gml:description>
+			<gml:identifier codeSpace="https://ogc.org/citygml/3.0/codelists/gml/rooftypes">1000</gml:identifier>
+			<gml:name>flat roof</gml:name>
+		</gml:Definition>
+	</gml:dictionaryEntry>
+	<gml:dictionaryEntry>
+		<gml:Definition gml:id="id2">
+			<gml:description>a roof that has a ridge and two gables</gml:description>
+			<gml:identifier codeSpace="https://ogc.org/citygml/3.0/codelists/gml/rooftypes">3100</gml:identifier>
+			<gml:name>saddle roof</gml:name>
+		</gml:Definition>
+	</gml:dictionaryEntry>
+</gml:Dictionary>
+
+----
+
+==== Comma Separated Values (CSV) Structure
+
+A suggested CSV encoding of the example logical model is illustrated with the following example with the delimiter '|':
+
+----
+CodeType|Identifier|Description
+Meta|CityGML_DataType|Building|RoofTypeValue
+Meta|CityGML_Namespace|http://www.opengis.net/citygml/building/3.0		
+Meta|Language|en-UK
+Meta|CityGML_Version|3.0		
+Code|1000|flat roof
+Code|3100|saddle roof
+----
+
+==== JSON
+
+
+A suggested JSON encoding of the example logical model for codelists has a JSON-Schema 2019-09 definition as follows:
+
+----
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Dictionary": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "metaDataProperty": {
+          "type": "object",
+          "properties": {
+            "CodeListMetaData": {
+              "type": "object",
+              "properties": {
+                "dataType": {
+                  "type": "string"
+                },
+                "namespace": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "authority": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "dataType",
+                "namespace",
+                "language",
+                "authority",
+                "version"
+              ]
+            }
+          },
+          "required": [
+            "CodeListMetaData"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "identifier": {
+          "type": "object",
+          "properties": {
+            "@codeSpace": {
+              "type": "string"
+            },
+            "#text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "@codeSpace",
+            "#text"
+          ]
+        },
+        "dictionaryEntry": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "Definition": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "object",
+                      "properties": {
+                        "@codeSpace": {
+                          "type": "string"
+                        },
+                        "#text": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@codeSpace",
+                        "#text"
+                      ]
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "description",
+                    "identifier",
+                    "name"
+                  ]
+                }
+              },
+              "required": [
+                "Definition"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "Definition": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "object",
+                      "properties": {
+                        "@codeSpace": {
+                          "type": "string"
+                        },
+                        "#text": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@codeSpace",
+                        "#text"
+                      ]
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "description",
+                    "identifier",
+                    "name"
+                  ]
+                }
+              },
+              "required": [
+                "Definition"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "@id",
+        "metaDataProperty",
+        "description",
+        "identifier",
+        "dictionaryEntry"
+      ]
+    }
+  },
+  "required": [
+    "Dictionary"
+  ]
+}
+----
+
+The following is the previous example in the suggested JSON encoding:
+
+----
+{
+   "Dictionary": {
+      "@id": "roofTypes",
+      "metaDataProperty": {
+         "CodeListMetaData": {
+            "dataType": "RoofTypeValue",
+            "namespace": "http://www.opengis.net/citygml/building/3.0",
+            "language": "en",
+            "authority": "Some Organization",
+            "version": "3.0"
+         }
+      },
+      "description": "Roof type values",
+      "identifier": {
+         "@codeSpace": "https://ogc.org/citygml/3.0/codelists/gml/rooftypes",
+         "#text": "RoofTypeValue"
+      },
+      "dictionaryEntry": [
+         {
+            "Definition": {
+               "@id": "id1",
+               "description": "roof primarily a single plane, not necessarily level",
+               "identifier": {
+                  "@codeSpace": "https://ogc.org/citygml/3.0/codelists/gml/rooftypes",
+                  "#text": "1000"
+               },
+               "name": "flat roof"
+            }
+         },
+         {
+            "Definition": {
+               "@id": "id2",
+               "description": "a roof that has a ridge and two gables",
+               "identifier": {
+                  "@codeSpace": "https://ogc.org/citygml/3.0/codelists/gml/rooftypes",
+                  "#text": "3100"
+               },
+               "name": "saddle roof"
+            }
+         }
+      ]
+   }
+}
+----

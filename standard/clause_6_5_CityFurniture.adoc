@@ -1,0 +1,61 @@
+[[city-furniture-section]]
+=== CityFurniture
+
+The CityFurniture module supports representation of city furniture objects. City furniture objects are immovable objects like lanterns, traffic signs, advertising columns, benches, or bus stops that can be found in traffic areas, residential areas, on squares, or in built-up areas.
+
+The concepts of the CityFurniture module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the City Furniture module is available under https://docs.ogc.org/is/20-010/20-010.html#cityfurniture-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc51[^].
+
+include::requirements/requirements_class_cityfurniture.adoc[]
+
+The CityFurniture Conformance Class implements the following Requirements Class from the CityGML 3.0 Conceptual Model Standard:
+
+* CityFurniture: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-cityfurniture
+
+The applicable GML schema is http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd[cityFurniture.xsd^].
+
+==== Dependencies
+
+The CityFurniture Requirements Class is dependent on the following Requirements Class from this standard:
+
+* The <<core-section,Core>> Requirements Class which is the only mandatory Requirements Class. This class contains foundational elements upon which a CityGML dataset is built. The <<core-section,Core>> Requirements Class also defines XML elements and types reused by other Requirements Classes.
+
+==== Implementation Decisions
+
+The following decisions have been made regarding implementation of the CityGML 3.0 CityFurniture conformance class in GML:
+
+. All associations allow by default that the referenced features can be provided inline or by reference.
+
+==== Requirements
+
+include::requirements/cityfurniture/REQ_CityFurniture_Elements.adoc[]
+
+The CityGML CityFurniture XML elements and their corresponding CityGML UML classes are listed in <<city-furniture-xml-elements>>. In addition, the CityGML CityFurniture XML elements are documented in the GML schema http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd[cityFurniture.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityFurniture/[XML Schema documentation^].
+
+//[#city-furniture-xml-elements,reftext='{table-caption} {counter:table-num}']
+[[city-furniture-xml-elements]]
+.CityFurniture XML Elements
+[width="100%",cols="10,10",options="header"]
+|===
+^|XML Schema Element +
+ (https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityFurniture/[XML Schema documentation^])
+^|Conceptual Model +
+(https://docs.ogc.org/is/20-010/20-010.html#cityfurniture-uml[UML model^]; https://docs.ogc.org/is/20-010/20-010.html#toc51[Data Dictionary^])
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityFurniture/#element_CityFurniture[CityFurniture^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#CityFurniture-section[CityFurniture^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityFurniture/#element_ADEOfCityFurniture[ADEOfCityFurniture^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfCityFurniture-section[ADEOfCityFurniture^]
+|===
+
+Surface boundaries are constrained by the following requirement:
+
+include::requirements/CityFurniture/REQ_CityFurniture_Boundaries.adoc[]
+
+<<cityfurniture-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the space elements defined in the CityFurniture module:
+
+[[cityfurniture-boundaries-table]]
+.CityFurniture space elements and their allowed thematic surface boundaries
+[cols="40,60",options="headers"]
+|===
+^|*Space element* ^|*Allowed space boundaries*
+|_frn:CityFurniture_  a|  * _core:ClosureSurface_
+                    * _gen:GenericThematicSurface_
+                    * possible surface elements from ADEs
+|===

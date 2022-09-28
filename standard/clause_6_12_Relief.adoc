@@ -1,0 +1,55 @@
+[[relief-section]]
+=== Relief
+
+The Relief module supports representation of the terrain. CityGML supports terrain representations at different levels of detail, reflecting different accuracies or resolutions. Terrain may be specified as a regular raster or grid, as a TIN, by break lines, and/or by mass points.
+
+The concepts of the Relief module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Relief module is available under https://docs.ogc.org/is/20-010/20-010.html#relief-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc57[^].
+
+include::requirements/requirements_class_relief.adoc[]
+
+The Relief Conformance Class implements the following Requirements Class from the CityGML 3.0 Conceptual Model Standard:
+
+* Relief: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-relief
+
+The applicable GML schema is http://schemas.opengis.net/citygml/relief/3.0/relief.xsd[relief.xsd^].
+
+==== Dependencies
+
+The Relief Requirements Class is dependent on the following Requirements Class from this standard:
+
+* The <<core-section,Core>> Requirements Class which is the only mandatory Requirements Class. This class contains foundational elements upon which a CityGML dataset is built. The <<core-section,Core>> Requirements Class also defines XML elements and types reused by other Requirements Classes.
+
+==== Implementation Decisions
+
+The following decisions have been made regarding implementation of the CityGML 3.0 Relief conformance class in GML.
+
+. All associations allow by default that the referenced features can be provided inline or by reference.
+
+==== Requirements
+
+include::requirements/relief/REQ_Relief_Elements.adoc[]
+
+The CityGML Relief XML elements and their corresponding CityGML UML classes are listed in <<relief-xml-elements>>. In addition, the CityGML Relief XML elements are documented in the GML schema http://schemas.opengis.net/citygml/relief/3.0/relief.xsd[relief.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/[XML Schema documentation^].
+
+//[#relief-xml-elements,reftext='{table-caption} {counter:table-num}']
+[[relief-xml-elements]]
+.Relief XML Elements
+[width="100%",cols="10,10",options="header"]
+|===
+^|XML Schema Element +
+ (https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/[XML Schema documentation^])
+^|Conceptual Model +
+(https://docs.ogc.org/is/20-010/20-010.html#relief-uml[UML model^]; https://docs.ogc.org/is/20-010/20-010.html#toc57[Data Dictionary^])
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_AbstractReliefComponent[AbstractReliefComponent^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractReliefComponent-section[AbstractReliefComponent^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_BreaklineRelief[BreaklineRelief^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#BreaklineRelief-section[BreaklineRelief^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_MassPointRelief[MassPointRelief^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#MassPointRelief-section[MassPointRelief^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_RasterRelief[RasterRelief^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#RasterRelief-section[RasterRelief^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_ReliefFeature[ReliefFeature^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#ReliefFeature-section[ReliefFeature^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_TINRelief[TINRelief^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#TINRelief-section[TINRelief^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_ADEOfAbstractReliefComponent[ADEOfAbstractReliefComponent^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractReliefComponent-section[ADEOfAbstractReliefComponent^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_ADEOfBreaklineRelief[ADEOfBreaklineRelief^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfBreaklineRelief-section[ADEOfBreaklineRelief^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_ADEOfMassPointRelief[ADEOfMassPointRelief^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfMassPointRelief-section[ADEOfMassPointRelief^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_ADEOfRasterRelief[ADEOfRasterRelief^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfRasterRelief-section[ADEOfRasterRelief^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_ADEOfReliefFeature[ADEOfReliefFeature^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfReliefFeature-section[ADEOfReliefFeature^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/#element_ADEOfTINRelief[ADEOfTINRelief^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfTINRelief-section[ADEOfTINRelief^]
+|===

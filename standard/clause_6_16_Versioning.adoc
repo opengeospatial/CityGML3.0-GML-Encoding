@@ -1,0 +1,55 @@
+[[versioning-section]]
+=== Versioning
+
+The Versioning module supports representation of multiple versions of CityGML features within a single CityGML model. In addition, the version transitions and transactions that lead to the different versions can be represented.
+
+The concepts of the Versioning module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Versioning module is available under https://docs.ogc.org/is/20-010/20-010.html#versioning-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc60[^].
+
+include::requirements/requirements_class_versioning.adoc[]
+
+The Versioning Conformance Class implements the following Requirements Class from the CityGML 3.0 Conceptual Model Standard:
+
+* Versioning: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-versioning
+
+The applicable GML schema is http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd[versioning.xsd^].
+
+==== Dependencies
+
+The Versioning Requirements Class is dependent on the following Requirements Class from this standard:
+
+* The <<core-section,Core>> Requirements Class which is the only mandatory Requirements Class. This class contains foundational elements upon which a CityGML dataset is built. The <<core-section,Core>> Requirements Class also defines XML elements and types reused by other Requirements Classes.
+
+==== Implementation Decisions
+
+The following decisions have been made regarding implementation of the CityGML 3.0 Versioning conformance class in GML.
+
+. All associations allow by default that the referenced features can be provided inline or by reference. However, restrictions are defined for the following associations, since they represent alternative aggregations (see Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>> on referencing features from alternative aggregations):
+* The association oldFeature which connects Transaction with AbstractFeatureWithLifespan; here, a transaction must reference the version of the city object prior to the transaction using XLink.
+* The association newFeature which connects Transaction with AbstractFeatureWithLifespan; here, a transaction must reference the version of the city object subsequent to the transaction using XLink.
+* The association from which connects VersionTransition with Version; here, a version transition must reference the predecessor version of the VersionTransition using XLink.
+* The association to which connects VersionTransition with Version; here, a version transition must reference the successor version of the VersionTransition using XLink.
+* The association versionMember which connects Version with AbstractFeatureWithLifespan; here, a version must reference the features that are part of this version using XLink.
+
+==== Requirements
+
+include::requirements/versioning/REQ_Versioning_Elements.adoc[]
+
+The CityGML Versioning XML elements and their corresponding CityGML UML classes are listed in <<versioning-xml-elements>>. In addition, the CityGML Versioning XML elements are documented in the GML schema http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd[versioning.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/versioning/[XML Schema documentation^].
+
+//[#versioning-xml-elements,reftext='{table-caption} {counter:table-num}']
+[[versioning-xml-elements]]
+.Versioning XML Elements
+[width="100%",cols="10,10",options="header"]
+|===
+^|XML Schema Element +
+ (https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/versioning/[XML Schema documentation^])
+^|Conceptual Model +
+(https://docs.ogc.org/is/20-010/20-010.html#versioning-uml[UML model^]; https://docs.ogc.org/is/20-010/20-010.html#toc60[Data Dictionary^])
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/versioning/#element_Version[Version^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#Version-section[Version^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/versioning/#element_VersionTransition[VersionTransition^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#VersionTransition-section[VersionTransition^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/versioning/#element_ADEOfVersion[ADEOfVersion^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfVersion-section[ADEOfVersion^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/versioning/#element_ADEOfVersionTransition[ADEOfVersionTransition^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfVersionTransition-section[ADEOfVersionTransition^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/versioning/#element_Transaction[Transaction^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#Transaction-section[Transaction^]
+|===
+
+include::requirements/versioning/REQ_Versioning_Reference.adoc[]

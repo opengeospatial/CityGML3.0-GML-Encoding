@@ -1,0 +1,162 @@
+[[transportation-section]]
+=== Transportation
+
+The Transportation module supports representation of the transportation infrastructure. Transportation features include roads, tracks, waterways, railways, and squares. Transportation features may be represented as a network and/or as a collection of spaces or surface elements embedded in a three-dimensional space.
+
+The concepts of the Transportation module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Transportation module is available under https://docs.ogc.org/is/20-010/20-010.html#transportation-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc58[^].
+
+include::requirements/requirements_class_transportation.adoc[]
+
+The Transportation Conformance Class implements the following Requirements Class from the CityGML 3.0 Conceptual Model Standard:
+
+* Transportation: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-transportation
+
+The applicable GML schema is http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd[transportation.xsd^].
+
+==== Dependencies
+
+The Transportation Requirements Class is dependent on the following Requirements Class from this standard:
+
+* The <<core-section,Core>> Requirements Class which is the only mandatory Requirements Class. This class contains foundational elements upon which a CityGML dataset is built. The <<core-section,Core>> Requirements Class also defines XML elements and types reused by other Requirements Classes.
+
+==== Implementation Decisions
+
+The following decisions have been made regarding implementation of the CityGML 3.0 Transportation conformance class in GML.
+
+. All associations allow by default that the referenced features can be provided inline or by reference. However, restrictions are defined for the following associations, since they represent alternative aggregations (see Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>> on referencing features from alternative aggregations):
+* The reflexive association successor of TrafficSpace; here, a traffic space must reference its succeeding traffic space using XLink.
+* The reflexive association predecessor of TrafficSpace; here, a traffic space must reference its preceding traffic space using XLink.
+
+==== Requirements
+
+include::requirements/transportation/REQ_Transportation_Elements.adoc[]
+
+The CityGML Transportation XML elements and their corresponding CityGML UML classes are listed in <<transportation-xml-elements>>. In addition, the CityGML Transportation XML elements are documented in the GML schema http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd[transportation.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/[XML Schema documentation^].
+
+//[#transportation-xml-elements,reftext='{table-caption} {counter:table-num}']
+[[transportation-xml-elements]]
+.Transportation XML Elements
+[width="100%",cols="10,10",options="header"]
+|===
+^|XML Schema Element +
+ (https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/[XML Schema documentation^])
+^|Conceptual Model +
+(https://docs.ogc.org/is/20-010/20-010.html#transportation-uml[UML model^]; https://docs.ogc.org/is/20-010/20-010.html#toc58[Data Dictionary^])
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_AbstractTransportationSpace[AbstractTransportationSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractTransportationSpace-section[AbstractTransportationSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_AuxiliaryTrafficArea[AuxiliaryTrafficArea^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AuxiliaryTrafficArea-section[AuxiliaryTrafficArea^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_AuxiliaryTrafficSpace[AuxiliaryTrafficSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AuxiliaryTrafficSpace-section[AuxiliaryTrafficSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ClearanceSpace[ClearanceSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#ClearanceSpace-section[ClearanceSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Hole[Hole^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#Hole-section[Hole^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_HoleSurface[HoleSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#HoleSurface-section[HoleSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Intersection[Intersection^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#Intersection-section[Intersection^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Marking[Marking^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#Marking-section[Marking^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Railway[Railway^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#Railway-section[Railway^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Road[Road^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#Road-section[Road^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Section[Section^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#Section-section[Section^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Square[Square^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#Square-section[Square^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Track[Track^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#Track-section[Track^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_TrafficArea[TrafficArea^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#TrafficArea-section[TrafficArea^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_TrafficSpace[TrafficSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#TrafficSpace-section[TrafficSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_Waterway[Waterway^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#Waterway-section[Waterway^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfAbstractTransportationSpace[ADEOfAbstractTransportationSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractTransportationSpace-section[ADEOfAbstractTransportationSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfAuxiliaryTrafficArea[ADEOfAuxiliaryTrafficArea^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAuxiliaryTrafficArea-section[ADEOfAuxiliaryTrafficArea^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfAuxiliaryTrafficSpace[ADEOfAuxiliaryTrafficSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAuxiliaryTrafficSpace-section[ADEOfAuxiliaryTrafficSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfClearanceSpace[ADEOfClearanceSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfClearanceSpace-section[ADEOfClearanceSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfHole[ADEOfHole^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfHole-section[ADEOfHole^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfHoleSurface[ADEOfHoleSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfHoleSurface-section[ADEOfHoleSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfIntersection[ADEOfIntersection^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfIntersection-section[ADEOfIntersection^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfMarking[ADEOfMarking^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfMarking-section[ADEOfMarking^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfRailway[ADEOfRailway^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfRailway-section[ADEOfRailway^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfRoad[ADEOfRoad^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfRoad-section[ADEOfRoad^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfSection[ADEOfSection^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfSection-section[ADEOfSection^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfSquare[ADEOfSquare^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfSquare-section[ADEOfSquare^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfTrack[ADEOfTrack^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfTrack-section[ADEOfTrack^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfTrafficArea[ADEOfTrafficArea^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfTrafficArea-section[ADEOfTrafficArea^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfTrafficSpace[ADEOfTrafficSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfTrafficSpace-section[ADEOfTrafficSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/#element_ADEOfWaterway[ADEOfWaterway^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfWaterway-section[ADEOfWaterway^]
+|===
+
+include::requirements/transportation/REQ_Transportation_Reference.adoc[]
+
+Surface boundaries are constrained by the following requirement:
+
+include::requirements/Transportation/REQ_Transportation_Boundaries.adoc[]
+
+<<transportation-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the space elements defined in the Transportation module:
+
+[[transportation-boundaries-table]]
+.Transportation space elements and their allowed thematic surface boundaries
+[cols="40,60",options="headers"]
+|===
+^|*Space element* ^|*Allowed space boundaries*
+|_tran:AbstractTransportationSpace_
+a| * _tran:Marking_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:AuxiliaryTrafficSpace_
+a| * _tran:AuxiliaryTrafficArea_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:ClearanceSpace_
+a| * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:Hole_
+a| * _tran:HoleSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:Intersection_
+a| * _tran:Marking_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:Railway_
+a| * _tran:Marking_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:Road_
+a| * _tran:Marking_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:Section_
+a| * _tran:Marking_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:Square_
+a| * _tran:Marking_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:Track_
+a| * _tran:Marking_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:TrafficSpace_
+a| * _tran:TrafficArea_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_tran:Waterway_
+a| * _tran:Marking_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+|===

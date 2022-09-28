@@ -1,0 +1,23 @@
+[[conventions-section]]
+== Conventions
+
+=== Identifiers
+The normative provisions in this document are denoted by the URI
+
+http://www.opengis.net/spec/CityGML-2/3.0
+
+All requirements and conformance tests that appear in this document are denoted by partial URIs relative to this base.
+
+[[uml_notation_section]]
+=== UML Notation
+
+This standard is an implementation of the CityGML Conceptual Model (CM) Standard. The CityGML conceptual model was constructed using the Unified Modeling Language (UML). The UML diagrams defined in the CityGML CM standard are not repeated here; instead, the reader is directed to https://docs.ogc.org/is/20-010/20-010.html#toc28[Chapter 7^] of the CityGML CM standard.
+
+This standard provides several UML class diagrams for illustration purposes. The UML notations used are described in the CityGML CM standard in https://docs.ogc.org/is/20-010/20-010.html#toc19[Chapter 5.2^].
+
+In addition, this standard provides several UML object diagrams as illustrations for CityGML instance documents. In order to enhance the readability of the UML object diagrams, objects are depicted in different colors. Objects painted in orange and yellow represent features as defined in the CityGML CM standard. The orange-colored objects represent the top-most features in the feature hierarchy of the CityGML instance document, the yellow-colored objects their subordinate features. Objects painted in green represent geometries as defined in <<iso19107>>.
+
+[[XML_notation_section]]
+=== XML Notation
+
+The CityGML XML schemas derived from the CityGML CM follow the rules in <<ogc07-036>>, GML, Annex E, UML-to-GML application schema encoding rules.

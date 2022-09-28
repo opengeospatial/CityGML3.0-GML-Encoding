@@ -1,0 +1,70 @@
+[[vegetation-section]]
+=== Vegetation
+
+The Vegetation module supports representation of vegetation objects with vegetation- specific thematic classes. CityGML’s vegetation model distinguishes between solitary vegetation objects like trees, and vegetation areas which represent biotopes like forests or other plant communities.
+
+The concepts of the Vegetation module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Vegetation module is available under https://docs.ogc.org/is/20-010/20-010.html#vegetation-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc59[^].
+
+include::requirements/requirements_class_vegetation.adoc[]
+
+The Vegetation Conformance Class implements the following Requirements Class from the CityGML 3.0 Conceptual Model Standard:
+
+* Vegetation: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-vegetation
+
+The applicable GML schema is http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd[vegetation.xsd^].
+
+==== Dependencies
+
+The Vegetation Requirements Class is dependent on the following Requirements Class from this standard:
+
+* The <<core-section,Core>> Requirements Class which is the only mandatory Requirements Class. This class contains foundational elements upon which a CityGML dataset is built. The <<core-section,Core>> Requirements Class also defines XML elements and types reused by other Requirements Classes.
+
+==== Implementation Decisions
+
+The following decisions have been made regarding implementation of the CityGML 3.0 Vegetation conformance class in GML.
+
+. All associations allow by default that the referenced features can be provided inline or by reference.
+
+==== Requirements
+
+include::requirements/vegetation/REQ_Vegetation_Elements.adoc[]
+
+The CityGML Vegetation XML elements and their corresponding CityGML UML classes are listed in <<vegetation-xml-elements>>. In addition, the CityGML Vegetation XML elements are documented in the GML schema http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd[vegetation.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/[XML Schema documentation^].
+
+//[#vegetation-xml-elements,reftext='{table-caption} {counter:table-num}']
+[[vegetation-xml-elements]]
+.Vegetation XML Elements
+[width="100%",cols="10,10",options="header"]
+|===
+^|XML Schema Element +
+ (https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/[XML Schema documentation^])
+^|Conceptual Model +
+(https://docs.ogc.org/is/20-010/20-010.html#vegetation-uml[UML model^]; https://docs.ogc.org/is/20-010/20-010.html#toc59[Data Dictionary^])
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/#element_AbstractVegetationObject[AbstractVegetationObject^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractVegetationObject-section[AbstractVegetationObject^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/#element_PlantCover[PlantCover^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#PlantCover-section[PlantCover^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/#element_SolitaryVegetationObject[SolitaryVegetationObject^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#SolitaryVegetationObject-section[SolitaryVegetationObject^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/#element_ADEOfAbstractVegetationObject[ADEOfAbstractVegetationObject^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractVegetationObject-section[ADEOfAbstractVegetationObject^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/#element_ADEOfPlantCover[ADEOfPlantCover^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfPlantCover-section[ADEOfPlantCover^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/#element_ADEOfSolitaryVegetationObject[ADEOfSolitaryVegetationObject^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfSolitaryVegetationObject-section[ADEOfSolitaryVegetationObject^]
+|===
+
+Surface boundaries are constrained by the following requirement:
+
+include::requirements/Vegetation/REQ_Vegetation_Boundaries.adoc[]
+
+<<vegetation-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the space elements defined in the Vegetation module.
+
+[[vegetation-boundaries-table]]
+.Vegetation space elements and their allowed thematic surface boundaries
+[cols="40,60",options="headers"]
+|===
+^|*Space element* ^|*Allowed space boundaries*
+|_veg:AbstractVegetationObject_
+a|No boundaries allowed
+
+|_veg:PlantCover_
+a|No boundaries allowed
+
+|_veg:SolitaryVegetationObject_
+a|No boundaries allowed
+|===

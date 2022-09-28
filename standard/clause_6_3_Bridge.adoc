@@ -1,0 +1,156 @@
+[[bridge-section]]
+=== Bridge
+
+The Bridge module supports representation of thematic and spatial aspects of bridges, bridge parts, bridge installations, and interior bridge structures.
+
+The concepts of the Bridge module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Bridge module is available under https://docs.ogc.org/is/20-010/20-010.html#bridge-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc63[^].
+
+include::requirements/requirements_class_bridge.adoc[]
+
+The Bridge Conformance Class implements the following Requirements Class from the CityGML 3.0 Conceptual Model Standard:
+
+* Bridge: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-bridge
+
+The applicable GML schema is http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd[bridge.xsd^].
+
+==== Dependencies
+
+The Bridge Requirements Class is dependent on the following Requirements Class from this standard:
+
+* The <<core-section,Core>> Requirements Class which is the only mandatory Requirements Class. This class contains foundational elements upon which a CityGML dataset is built. The <<core-section,Core>> Requirements Class also defines XML elements and types reused by other Requirements Classes.
+
+==== Implementation Decisions
+
+The following decisions have been made regarding implementation of the CityGML 3.0 Bridge conformance class in GML:
+
+. All associations allow by default that the referenced features can be provided inline or by reference.
+
+==== Requirements
+
+include::requirements/bridge/REQ_Bridge_Elements.adoc[]
+
+The CityGML Bridge XML elements and their corresponding CityGML UML classes are listed in <<bridge-xml-elements>>. In addition, the CityGML Bridge XML elements are documented in the GML schema http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd[bridge.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/[XML Schema documentation^].
+
+//[#bridge-xml-elements,reftext='{table-caption} {counter:table-num}']
+[[bridge-xml-elements]]
+.Bridge XML Elements
+[width="100%",cols="10,10",options="header"]
+|===
+^|XML Schema Element +
+ (https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/[XML Schema documentation^])
+^|Conceptual Model +
+(https://docs.ogc.org/is/20-010/20-010.html#bridge-uml[UML model^]; https://docs.ogc.org/is/20-010/20-010.html#toc63[Data Dictionary^])
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_AbstractBridge[AbstractBridge^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractBridge-section[AbstractBridge^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_Bridge[Bridge^] |«TopLevelFeatureType» https://docs.ogc.org/is/20-010/20-010.html#Bridge-section[Bridge^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_BridgeConstructiveElement[BridgeConstructiveElement^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#BridgeConstructiveElement-section[BridgeConstructiveElement^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_BridgeFurniture[BridgeFurniture^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#BridgeFurniture-section[BridgeFurniture^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_BridgeInstallation[BridgeInstallation^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#BridgeInstallation-section[BridgeInstallation^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_BridgePart[BridgePart^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#BridgePart-section[BridgePart^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_BridgeRoom[BridgeRoom^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#BridgeRoom-section[BridgeRoom^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_ADEOfAbstractBridge[ADEOfAbstractBridge^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractBridge-section[ADEOfAbstractBridge^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_ADEOfBridge[ADEOfBridge^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfBridge-section[ADEOfBridge^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_ADEOfBridgeConstructiveElement[ADEOfBridgeConstructiveElement^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfBridgeConstructiveElement-section[ADEOfBridgeConstructiveElement^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_ADEOfBridgeFurniture[ADEOfBridgeFurniture^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfBridgeFurniture-section[ADEOfBridgeFurniture^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_ADEOfBridgeInstallation[ADEOfBridgeInstallation^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfBridgeInstallation-section[ADEOfBridgeInstallation^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_ADEOfBridgePart[ADEOfBridgePart^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfBridgePart-section[ADEOfBridgePart^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/#element_ADEOfBridgeRoom[ADEOfBridgeRoom^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfBridgeRoom-section[ADEOfBridgeRoom^]
+|===
+
+Surface boundaries are constrained by the following requirement:
+
+include::requirements/Bridge/REQ_Bridge_Boundaries.adoc[]
+
+<<bridge-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the space elements defined in the Bridge module:
+
+[[bridge-boundaries-table]]
+.Bridge space elements and their allowed thematic surface boundaries
+[cols="40,60",options="headers"]
+|===
+^|*Space element* ^|*Allowed space boundaries*
+|_brid:AbstractBridge_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_brid:Bridge_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_brid:BridgeConstructiveElement_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_brid:BridgeFurniture_
+a|No boundaries allowed
+
+|_brid:BridgeInstallation_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_brid:BridgePart_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_brid:BridgeRoom_
+a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:RoofSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:CeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterCeilingSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:FloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:OuterFloorSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:WallSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _con:InteriorWallSurface_
+   * _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+|===

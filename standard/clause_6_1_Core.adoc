@@ -1,0 +1,150 @@
+[[core-section]]
+=== Core
+
+The Core module defines the basic components of the CityGML conceptual model. This includes abstract base classes that define the core properties of more specialized thematic classes defined in other modules as well as concrete classes that are common to other modules, for example basic data types.
+
+The concepts of the Core module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Core module is available under https://docs.ogc.org/is/20-010/20-010.html#core-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc49[^].
+
+include::requirements/requirements_class_core.adoc[]
+
+The Core Conformance Class implements the following Requirements Class from the CityGML 3.0 Conceptual Model Standard:
+
+* Core: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-core
+//* ADE: http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-ade
+
+The applicable GML schema is http://schemas.opengis.net/citygml/3.0/core.xsd[core.xsd^].
+
+==== Dependencies
+
+The Core Requirements Class is dependent on the following external OGC and ISO standard:
+
+* <<ogc07-036,GML 3.2>> provides most of the geometry types (e.g., Point, LineString, Polygon) used for spatial representations in this standard, defines Coordinate Reference Systems, and supports the General Feature Model upon which this standard is based.
+
+[[core-section-implementation-decisions]]
+==== Implementation Decisions
+
+The following decisions have been made regarding implementation of the CityGML 3.0 Core conformance class in GML.
+
+. The UML class AnyFeature is an instance of the metaclass FeatureType which is defined in ISO 19109. AnyFeature is the generalization of all feature types and acts as superclass of all classes in the CityGML UML model with the stereotype «FeatureType». A comparable concept is defined in ISO 19136 with the XML element gml:AbstractFeature as the most generic feature in GML and its basic feature model gml:AbstractFeatureType from which all feature defined in GML application schemas and, thus, also in the CityGML application schema, are derived. For this reason, the UML class AnyFeature is not encoded as CityGML-specific XML element, but is simply mapped to gml:AbstractFeature.
+. The UML class AbstractFeature is the abstract superclass of all feature types within the CityGML Conceptual Model. This class defines amongst others the attributes featureID, identifier, name, and description. These attributes represent properties that are predefined in ISO 19136 (i.e. gml:id, gml:identifier, gml:name, and gml:description) and are inherited by all features defined in GML application schemas. The attributes were added to the UML model to guarantee that they are available in all possible CityGML encodings. In the GML schema, these attributes are suppressed from being encoded, as they are already inherited by all CityGML features.
+. The UML class ImplicitGeometry is represented as an object type that defines the attribute objectID. This attribute was added to the UML model to guarantee that it is available in all possible CityGML encodings. This attribute represents the GML property gml:id which all object types automatically inherit in the GML encoding, thus, this attribute is suppressed from being encoded.
+. Several UML classes were defined in the CityGML Conceptual Model to represent concepts from the GML 3.2 standard in a language-independent way. These classes are Code, DoubleList, MeasureOrNilReasonList, DoubleOrNilReasonList, DoubleOrNilReason, NilReason, and NilReasonEnumeration. Since these concepts already exist in GML, they are simply mapped to the corresponding representations in GML. Furthermore, the class ID, representing the corresponding XML type ID, was defined as data type for the attributes featureID and objectID (see design decisions above). Since these attributes are suppressed from being encoded, also the class ID is not encoded.
+. As described in <<association-classes-section>>, the UML association class CityObjectRelation is modelled as an intermediate class in an Implementation Model before the GML encoding is applied. In this way, a relation between two features A and B can be represented in such a way that feature A provides the element CityObjectRelation inline, whereas the CityObjectRelation references feature B using XLink. This encoding also ensures that Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>> on referencing features from alternative aggregations is observed.
+. All associations allow by default that the referenced features can be provided inline or by reference. However, a restriction is defined for the following association, since it represents an alternative aggregation (see Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>> on referencing features from alternative aggregations):
+* The reflexive association generalizesTo of the element AbstractCityObject; here, a city object must reference its generalized city object using XLink.
+. An exception to the rule that XLinks shall not be used to reference geometries from another top-level feature is defined for the element ImplicitGeometry by Requirement <<req_global_referencinggeometries1,/req/global/referencinggeometries1>>. The concept of ImplicitGeometry requires that different top-level features can reference the same geometry and appearance; thus, XLinks from different top-level features to the same geometry and appearance are allowed in this case.
+. The UML class XALAddress is a placeholder for representing address details according to the OASIS xAL standard. The class is not encoded in the GML schema, but is simply mapped to xAL:Address, the root element for xAL-based address information.
+. The UML class CityModelMember was defined as a container for all the different types of objects that can occur as members of a city model. To allow that these objects can occur directly as members of a CityModel element and not as members of a CityModelMember element, this class is not mapped to a corresponding XML element, but to a global XML group.
+
+==== Requirements and Recommendations
+
+include::requirements/core/REQ_Core_Elements.adoc[]
+
+The CityGML Core XML elements and their corresponding CityGML UML classes are listed in <<core-xml-elements>>. In addition, the CityGML Core XML elements are documented in the GML schema http://schemas.opengis.net/citygml/3.0/core.xsd[core.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/[XML Schema documentation^].
+
+//[#core-xml-elements,reftext='{table-caption} {counter:table-num}']
+[[core-xml-elements]]
+.Core XML Elements
+[width="100%",cols="10,10",options="header"]
+|===
+^|XML Schema Element +
+ (https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/[XML Schema documentation^])
+^|Conceptual Model +
+(https://docs.ogc.org/is/20-010/20-010.html#core-uml[UML model^]; https://docs.ogc.org/is/20-010/20-010.html#toc49[Data Dictionary^])
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractAppearance[AbstractAppearance^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractAppearance-section[AbstractAppearance^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractCityObject[AbstractCityObject^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractCityObject-section[AbstractCityObject^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractDynamizer[AbstractDynamizer^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractDynamizer-section[AbstractDynamizer^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractFeature[AbstractFeature^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractFeature-section[AbstractFeature^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractFeatureWithLifespan[AbstractFeatureWithLifespan^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractFeatureWithLifespan-section[AbstractFeatureWithLifespan^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractLogicalSpace[AbstractLogicalSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractLogicalSpace-section[AbstractLogicalSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractOccupiedSpace[AbstractOccupiedSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractOccupiedSpace-section[AbstractOccupiedSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractPhysicalSpace[AbstractPhysicalSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractPhysicalSpace-section[AbstractPhysicalSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractPointCloud[AbstractPointCloud^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractPointCloud-section[AbstractPointCloud^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractSpace[AbstractSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractSpace-section[AbstractSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractSpaceBoundary[AbstractSpaceBoundary^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractSpaceBoundary-section[AbstractSpaceBoundary^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractThematicSurface[AbstractThematicSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractThematicSurface-section[AbstractThematicSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractUnoccupiedSpace[AbstractUnoccupiedSpace^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractUnoccupiedSpace-section[AbstractUnoccupiedSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractVersion[AbstractVersion^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractVersion-section[AbstractVersion^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractVersionTransition[AbstractVersionTransition^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#AbstractVersionTransition-section[AbstractVersionTransition^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_Address[Address^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#Address-section[Address^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_CityModel[CityModel^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#CityModel-section[CityModel^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_CityObjectRelation[CityObjectRelation^] |«ObjectType» https://docs.ogc.org/is/20-010/20-010.html#CityObjectRelation-section[CityObjectRelation^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ClosureSurface[ClosureSurface^] |«FeatureType» https://docs.ogc.org/is/20-010/20-010.html#ClosureSurface-section[ClosureSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ImplicitGeometry[ImplicitGeometry^] |«ObjectType» https://docs.ogc.org/is/20-010/20-010.html#ImplicitGeometry-section[ImplicitGeometry^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_AbstractGenericAttribute[AbstractGenericAttribute^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#AbstractGenericAttribute-section[AbstractGenericAttribute^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractAppearance[ADEOfAbstractAppearance^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractAppearance-section[ADEOfAbstractAppearance^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractCityObject[ADEOfAbstractCityObject^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractCityObject-section[ADEOfAbstractCityObject^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractDynamizer[ADEOfAbstractDynamizer^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractDynamizer-section[ADEOfAbstractDynamizer^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractFeature[ADEOfAbstractFeature^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractFeature-section[ADEOfAbstractFeature^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractFeatureWithLifespan[ADEOfAbstractFeatureWithLifespan^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractFeatureWithLifespan-section[ADEOfAbstractFeatureWithLifespan^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractLogicalSpace[ADEOfAbstractLogicalSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractLogicalSpace-section[ADEOfAbstractLogicalSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractOccupiedSpace[ADEOfAbstractOccupiedSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractOccupiedSpace-section[ADEOfAbstractOccupiedSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractPhysicalSpace[ADEOfAbstractPhysicalSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractPhysicalSpace-section[ADEOfAbstractPhysicalSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractPointCloud[ADEOfAbstractPointCloud^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractPointCloud-section[ADEOfAbstractPointCloud^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractSpace[ADEOfAbstractSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractSpace-section[ADEOfAbstractSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractSpaceBoundary[ADEOfAbstractSpaceBoundary^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractSpaceBoundary-section[ADEOfAbstractSpaceBoundary^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractThematicSurface[ADEOfAbstractThematicSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractThematicSurface-section[ADEOfAbstractThematicSurface^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractUnoccupiedSpace[ADEOfAbstractUnoccupiedSpace^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractUnoccupiedSpace-section[ADEOfAbstractUnoccupiedSpace^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractVersion[ADEOfAbstractVersion^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractVersion-section[ADEOfAbstractVersion^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAbstractVersionTransition[ADEOfAbstractVersionTransition^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAbstractVersionTransition-section[ADEOfAbstractVersionTransition^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfAddress[ADEOfAddress^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfAddress-section[ADEOfAddress^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfCityModel[ADEOfCityModel^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfCityModel-section[ADEOfCityModel^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ADEOfClosureSurface[ADEOfClosureSurface^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ADEOfClosureSurface-section[ADEOfClosureSurface^]
+|--- (not mapped to XML, see <<core-section-implementation-decisions>>) |«Union» https://docs.ogc.org/is/20-010/20-010.html#CityModelMember-section[CityModelMember^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_ExternalReference[ExternalReference^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#ExternalReference-section[ExternalReference^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_Occupancy[Occupancy^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#Occupancy-section[Occupancy^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_QualifiedArea[QualifiedArea^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#QualifiedArea-section[QualifiedArea^]
+|https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/core/#element_QualifiedVolume[QualifiedVolume^] |«DataType» https://docs.ogc.org/is/20-010/20-010.html#QualifiedVolume-section[QualifiedVolume^]
+|--- (not mapped to XML, see <<core-section-implementation-decisions>>) |«DataType» https://docs.ogc.org/is/20-010/20-010.html#XALAddress-section[XALAddress^]
+|===
+
+include::requirements/core/REQ_Core_Reference.adoc[]
+
+Surface boundaries are constrained by the following requirement:
+
+include::requirements/Core/REQ_Core_Boundaries.adoc[]
+
+<<core-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the space elements defined in the Core module:
+
+[[core-boundaries-table]]
+.Core space elements and their allowed thematic surface boundaries
+[cols="40,60",options="headers"]
+|===
+^|*Space element* ^|*Allowed space boundaries*
+|_core:AbstractLogicalSpace_
+a| * _core:AbstractSpaceBoundary_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:AbstractThematicSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_core:AbstractOccupiedSpace_
+a| * _core:AbstractSpaceBoundary_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:AbstractThematicSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_core:AbstractPhysicalSpace_
+a| * _core:AbstractSpaceBoundary_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:AbstractThematicSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_core:AbstractSpace_
+a| * _core:AbstractSpaceBoundary_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:AbstractThematicSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+
+|_core:AbstractUnoccupiedSpace_
+a| * _core:AbstractSpaceBoundary_ and the substitutable elements: +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:AbstractThematicSurface_, +
+{nbsp}{nbsp}{nbsp}{nbsp} _core:ClosureSurface_
+   * _gen:GenericThematicSurface_
+   * possible surface elements from ADEs
+|===
+
+include::requirements/core/REC_Core_CRS.adoc[]
