@@ -39,16 +39,8 @@ Encodings Details
 
 Definition
 
-Each encoding uses a specific representational methodology to implement the CityGML Conceptual Model. The number of independent encoding standards is unlimited.
-Several encodings (GML, relational database/SQL, JSON) are in commercial use with CityGML 2.0. It is likely that these will be updated to comply with the changes in the 3.0 Conceptual Model but, as of July 2018, results provided by the Work Package 2 team led by the Technische Universitaet Muenchen are only available for GML. These can be found at [https://github.com/opengeospatial/CityGML-3.0Encodings/tree/master/GML/Examples].
-
-Purpose
-
-The purpose of an encoding is to define the actual data structures used in an implementation of the CityGML Conceptual Model.
-
-Use
-
-Requirements on representations in individual encodings should be derived from the Conceptual Model. Most encodings will not have a direct mapping of every detail of every structure and property in the Conceptual Model. It is the responsibility of the specific encoding standard to define how the encoding meets the representational requirements of the Conceptual Model and to identify gaps, ambiguities, and mis-mappings.
+The GML 3.2 encoding uses a specific representational methodology to implement the entire CityGML 3.0 Conceptual Model. 
+The draft GML Encoding Standard defines the actual data structures in the representation using XML Schema Definition (XSD) files derived automatically from the 3.0 Conceptual Model UML representation. There are some additional required constraints and encoding rules to ensure unambiguous and efficient encoding.
 
 Characteristics and requirements
 
