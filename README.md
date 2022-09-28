@@ -1,4 +1,4 @@
-CityGML 3.0 Encodings
+CityGML 3.0 GML 3.2 Encoding
 ===========
 
 This is the public repository for draft CityGML 3.0 GML Encoding Standard. This document specifies an implementation of the Open Geospatial Consortium (OGC) CityGML Standards Working Group (SWG) CityGML version 3.0 Conceptual Model. 
