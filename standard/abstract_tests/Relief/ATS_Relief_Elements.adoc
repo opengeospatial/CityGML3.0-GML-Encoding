@@ -1,0 +1,9 @@
+[[ats_relief_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/relief/elements
+|Requirement: |<<req_relief_elements,/req/relief/elements>>
+|Test purpose: |Verify that the conforming instance document supports the Relief XML elements listed in <<relief-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/relief/3.0/relief.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
