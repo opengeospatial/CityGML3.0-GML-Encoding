@@ -1,4 +1,4 @@
-[[req_reliefe_elements]]
+[[req_relief_elements]]
 [width="100%",cols="2,6"]
 |===
 ^|*Requirement  {counter:req-id}* |*/req/relief/elements*
