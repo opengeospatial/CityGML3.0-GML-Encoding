@@ -1,4 +1,4 @@
-[[land-use-section]]
+[[landuse-section]]
 === LandUse
 
 The LandUse module supports representation of areas of the earth’s surface dedicated to a specific land use.
@@ -29,10 +29,10 @@ The following decisions have been made regarding implementation of the CityGML 3
 
 include::requirements/landuse/REQ_LandUse_Elements.adoc[]
 
-The CityGML LandUse XML elements and their corresponding CityGML UML classes are listed in <<land-use-xml-elements>>. In addition, the CityGML LandUse XML elements are documented in the GML schema http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd[landUse.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/landUse/[XML Schema documentation^].
+The CityGML LandUse XML elements and their corresponding CityGML UML classes are listed in <<landuse-xml-elements>>. In addition, the CityGML LandUse XML elements are documented in the GML schema http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd[landUse.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/landUse/[XML Schema documentation^].
 
 //[#land-use-xml-elements,reftext='{table-caption} {counter:table-num}']
-[[land-use-xml-elements]]
+[[landuse-xml-elements]]
 .LandUse XML Elements
 [width="100%",cols="10,10",options="header"]
 |===
