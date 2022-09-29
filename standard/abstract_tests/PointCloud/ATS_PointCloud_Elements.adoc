@@ -1,0 +1,9 @@
+[[ats_pointcloud_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/pointcloud/elements
+|Requirement: |<<req_pointcloud_elements,/req/pointcloud/elements>>
+|Test purpose: |Verify that the conforming instance document supports the PointCloud XML elements listed in <<pointcloud-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/pointcloud/3.0/pointCloud.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

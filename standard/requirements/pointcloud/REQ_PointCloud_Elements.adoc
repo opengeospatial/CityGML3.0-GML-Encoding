@@ -1,4 +1,4 @@
-[[req_point_cloud_elements]]
+[[req_pointcloud_elements]]
 [width="100%",cols="2,6"]
 |===
 ^|*Requirement  {counter:req-id}* |*/req/pointcloud/elements*
