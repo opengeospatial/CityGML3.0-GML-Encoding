@@ -1,0 +1,9 @@
+[[ats_dynamizer_reference]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/dynamizer/reference
+|Requirement: |<<req_dynamizer_reference,/req/dynamizer/reference>>
+|Test purpose: |Verify that if the _sensorLocation_ property (type: _gml:ReferenceType_) of the _SensorConnection_ element is not null, it contains an XLink reference to a _core:AbstractCityObject_ element.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
