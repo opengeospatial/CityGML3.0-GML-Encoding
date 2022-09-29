@@ -1,0 +1,12 @@
+[[ats_transportation_reference]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/transportation/reference
+|Requirement: |<<req_transportation_reference,/req/transportation/reference>>
+|Test purpose: a|For the following properties, verify that:
+
+* if the _predecessor_ property (type: _gml:ReferenceType_) of the _TrafficSpace_ element is not null, it contains an XLink reference to a _TrafficSpace_ element.
+* if the _successor_ property (type: _gml:ReferenceType_) of the _TrafficSpace_ element is not null, it contains an XLink reference to a _TrafficSpace_ element.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

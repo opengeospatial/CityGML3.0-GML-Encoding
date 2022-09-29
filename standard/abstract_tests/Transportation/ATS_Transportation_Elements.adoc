@@ -1,0 +1,9 @@
+[[ats_transportation_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/transportation/elements
+|Requirement: |<<req_transportation_elements,/req/transportation/elements>>
+|Test purpose: |Verify that the conforming instance document supports the Transportation XML elements listed in <<transportation-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
