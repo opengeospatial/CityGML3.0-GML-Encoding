@@ -1,0 +1,12 @@
+[[ats_cityobjectgroup_reference]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/cityobjectgroup/reference
+|Requirement: |<<req_cityobjectgroup_reference,/req/cityobjectgroup/reference>>
+|Test purpose: a|For the following properties, verify that:
+
+* If the _parent_ property (type: _gml:ReferenceType_) of the _CityObjectGroup_ element is not null, it contains an XLink reference to a _core:AbstractCityObject_ element.
+* If the _groupMember_ property (type: _gml:AbstractFeatureMemberType_) of the _Role_ element is not null, it contains an XLink reference to a _core:AbstractCityObject_ element.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

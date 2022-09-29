@@ -1,4 +1,4 @@
-[[city-object-group-section]]
+[[cityobjectgroup-section]]
 === CityObjectGroup
 
 The CityObjectGroup module supports grouping of city objects. Arbitrary city objects may be aggregated in groups according to user-defined criteria. A group may be further classified by application-specific attributes.
@@ -31,10 +31,10 @@ The following decisions have been made regarding implementation of the CityGML 3
 
 include::requirements/cityobjectgroup/REQ_CityObjectGroup_Elements.adoc[]
 
-The CityGML CityObjectGroup XML elements and their corresponding CityGML UML classes are listed in <<city-object-group-xml-elements>>. In addition, the CityGML CityObjectGroup XML elements are documented in the GML schema http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd[cityObjectGroup.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityObjectGroup/[XML Schema documentation^].
+The CityGML CityObjectGroup XML elements and their corresponding CityGML UML classes are listed in <<cityobjectgroup-xml-elements>>. In addition, the CityGML CityObjectGroup XML elements are documented in the GML schema http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd[cityObjectGroup.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityObjectGroup/[XML Schema documentation^].
 
 //[#city-object-group-xml-elements,reftext='{table-caption} {counter:table-num}']
-[[city-object-group-xml-elements]]
+[[cityobjectgroup-xml-elements]]
 .CityObjectGroup XML Elements
 [width="100%",cols="10,10",options="header"]
 |===

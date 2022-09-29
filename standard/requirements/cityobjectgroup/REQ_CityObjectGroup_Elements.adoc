@@ -1,4 +1,4 @@
-[[req_city_object_group_elements]]
+[[req_cityobjectgroup_elements]]
 [width="100%",cols="2,6"]
 |===
 ^|*Requirement  {counter:req-id}* |*/req/cityobjectgroup/elements*
