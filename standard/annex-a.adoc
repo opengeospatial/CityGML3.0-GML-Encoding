@@ -4,18 +4,54 @@
 [[annex-abstract-text-suite]]
 == Conformance Class Abstract Test Suite (Normative)
 
-[NOTE]
-Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
+//[NOTE]
+//Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
 
-=== Conformance Class A
+//=== Conformance Class A
 
-==== Requirement 1
-[cols=">20h,<80d",width="100%"]
-|===
-|Test id: |/conf/conf-class-a/req-name-1
-|Requirement: |/req/req-class-a/req-name-1
-|Test purpose: | Verify that...
-|Test method: | Inspect...
-|===
+//==== Requirement 1
+//[cols=">20h,<80d",width="100%"]
+//|===
+//|Test id: |/conf/conf-class-a/req-name-1
+//|Requirement: |/req/req-class-a/req-name-1
+//|Test purpose: | Verify that...
+//|Test method: | Inspect...
+//|===
 
-==== Requirement 2
+//==== Requirement 2
+
+include::abstract_tests/ATS_Global.adoc[]
+
+include::abstract_tests/ATS_Core.adoc[]
+
+include::abstract_tests/ATS_Appearance.adoc[]
+
+include::abstract_tests/ATS_Bridge.adoc[]
+
+include::abstract_tests/ATS_Building.adoc[]
+
+include::abstract_tests/ATS_CityFurniture.adoc[]
+
+include::abstract_tests/ATS_CityObjectGroup.adoc[]
+
+include::abstract_tests/ATS_Construction.adoc[]
+
+include::abstract_tests/ATS_Dynamizer.adoc[]
+
+include::abstract_tests/ATS_Generics.adoc[]
+
+include::abstract_tests/ATS_LandUse.adoc[]
+
+include::abstract_tests/ATS_PointCloud.adoc[]
+
+include::abstract_tests/ATS_Relief.adoc[]
+
+include::abstract_tests/ATS_Transportation.adoc[]
+
+include::abstract_tests/ATS_Tunnel.adoc[]
+
+include::abstract_tests/ATS_Vegetation.adoc[]
+
+include::abstract_tests/ATS_Versioning.adoc[]
+
+include::abstract_tests/ATS_WaterBody.adoc[]
