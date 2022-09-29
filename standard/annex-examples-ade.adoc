@@ -304,31 +304,35 @@ image::images/TestADE_UML.png[align="center"]
       <bldg:storeysBelowGround>0</bldg:storeysBelowGround>
       <bldg:storeyHeightsAboveGround uom="#m">2.0</bldg:storeyHeightsAboveGround>
       <bldg:storeyHeightsBelowGround uom="#m">0.0</bldg:storeyHeightsBelowGround>
-      <test:ownerName>Smith</test:ownerName>
-      <test:energyPerformanceCertification>
-        <test:EnergyPerformanceCertification>
-          <test:certificationName>certName</test:certificationName>
-          <test:certificationId>certId</test:certificationId>
-        </test:EnergyPerformanceCertification>
-      </test:energyPerformanceCertification>
-      <test:buildingUnderground>
-        <test:BuildingUnderground>
-          <test:lod0GenericGeometry>
-            <gml:Polygon>
-              <gml:exterior>
-                <gml:LinearRing>
-                  <gml:posList srsDimension="3">6.0 0.0 0.0 0.0 0.0 0.0 0.0 8.0 0.0 6.0 8.0 0.0 6.0 0.0 0.0</gml:posList>
-                </gml:LinearRing>
-              </gml:exterior>
-            </gml:Polygon>
-          </test:lod0GenericGeometry>
-          <test:equippedWith>
-            <test:LightingFacility>
-              <test:electricalPower uom="W">4000.0</test:electricalPower>
-            </test:LightingFacility>
-          </test:equippedWith>
-        </test:BuildingUnderground>
-      </test:buildingUnderground>
+      <bldg:adeOfAbstractBuilding>
+        <test:BuildingProperties>
+          <test:ownerName>Smith</test:ownerName>
+          <test:energyPerformanceCertification>
+            <test:EnergyPerformanceCertification>
+              <test:certificationName>certName</test:certificationName>
+              <test:certificationId>certId</test:certificationId>
+            </test:EnergyPerformanceCertification>
+          </test:energyPerformanceCertification>
+          <test:buildingUnderground>
+            <test:BuildingUnderground>
+              <test:lod0GenericGeometry>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">6.0 0.0 0.0 0.0 0.0 0.0 0.0 8.0 0.0 6.0 8.0 0.0 6.0 0.0 0.0</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </test:lod0GenericGeometry>
+              <test:equippedWith>
+                <test:LightingFacility>
+                  <test:electricalPower uom="W">4000.0</test:electricalPower>
+                </test:LightingFacility>
+              </test:equippedWith>
+            </test:BuildingUnderground>
+          </test:buildingUnderground>
+        </test:BuildingProperties>
+      </bldg:adeOfAbstractBuilding>
       <test:remark>remark</test:remark>
     </test:IndustrialBuilding>
   </cityObjectMember>
@@ -448,7 +452,7 @@ link:Examples/ADE-examples/Urban-Planning-ADE/ShapeChangeConfigurationFile_CityG
 .XML schema document of the ADE derived from UML model.
 [source,XML]
 ----
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:bldg="http://www.opengis.net/citygml/building/3.0" ...  xmlns:uro="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" elementFormDefault="qualified" targetNamespace="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/uro/1.4" version="1.4.1">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:bldg="http://www.opengis.net/citygml/building/3.0" ...  xmlns:uro="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" elementFormDefault="qualified" targetNamespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" version="1.5">
   <import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="../schema/building.xsd"/>
   ...
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
@@ -650,8 +654,8 @@ image::images/Example_ADE_Realworld.png[align="center"]
 [source,XML]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<core:CityModel xmlns:uro="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/uro/1.4" ...
-xsi:schemaLocation="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/uro/1.4 ./urbanObject_CityGML3.xsd ...">
+<core:CityModel xmlns:uro="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" ...
+xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5 ./urbanObject_CityGML3.xsd ...">
   <gml:boundedBy> ... </gml:boundedBy>
   <core:cityObjectMember>
     <bldg:Building gml:id="BLD_77ca1a15-3b35-4386-8f86-152ed71c4c64">
