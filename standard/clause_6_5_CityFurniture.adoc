@@ -1,4 +1,4 @@
-[[city-furniture-section]]
+[[cityfurniture-section]]
 === CityFurniture
 
 The CityFurniture module supports representation of city furniture objects. City furniture objects are immovable objects like lanterns, traffic signs, advertising columns, benches, or bus stops that can be found in traffic areas, residential areas, on squares, or in built-up areas.
@@ -29,10 +29,10 @@ The following decisions have been made regarding implementation of the CityGML 3
 
 include::requirements/cityfurniture/REQ_CityFurniture_Elements.adoc[]
 
-The CityGML CityFurniture XML elements and their corresponding CityGML UML classes are listed in <<city-furniture-xml-elements>>. In addition, the CityGML CityFurniture XML elements are documented in the GML schema http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd[cityFurniture.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityFurniture/[XML Schema documentation^].
+The CityGML CityFurniture XML elements and their corresponding CityGML UML classes are listed in <<cityfurniture-xml-elements>>. In addition, the CityGML CityFurniture XML elements are documented in the GML schema http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd[cityFurniture.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityFurniture/[XML Schema documentation^].
 
 //[#city-furniture-xml-elements,reftext='{table-caption} {counter:table-num}']
-[[city-furniture-xml-elements]]
+[[cityfurniture-xml-elements]]
 .CityFurniture XML Elements
 [width="100%",cols="10,10",options="header"]
 |===

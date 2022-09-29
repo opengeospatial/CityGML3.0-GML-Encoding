@@ -1,4 +1,4 @@
-[[req_city_furniture_elements]]
+[[req_cityfurniture_elements]]
 [width="100%",cols="2,6"]
 |===
 ^|*Requirement  {counter:req-id}* |*/req/cityfurniture/elements*

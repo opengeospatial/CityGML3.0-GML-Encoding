@@ -1,0 +1,9 @@
+[[ats_cityfurniture_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/cityfurniture/elements
+|Requirement: |<<req_cityfurniture_elements,/req/cityfurniture/elements>>
+|Test purpose: |Verify that the conforming instance document supports the CityFurniture XML elements listed in <<cityfurniture-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
