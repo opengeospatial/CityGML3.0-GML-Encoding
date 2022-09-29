@@ -1,0 +1,9 @@
+[[ats_bridge_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/bridge/elements
+|Requirement: |<<req_bridge_elements,/req/bridge/elements>>
+|Test purpose: |Verify that the conforming instance document supports the Bridge XML elements listed in <<bridge-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
