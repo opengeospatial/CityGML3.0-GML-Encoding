@@ -4,7 +4,14 @@
 2+<|*Abstract Test {counter:ats-id}*
 |Test ID: |/conf/appearance/parameterizedtexture
 |Requirement: |<<req_appearance_parameterizedtexture,/req/appearance/parameterizedtexture>>
-|Test purpose: |
+|Test purpose: a|When assigning texture coordinates to a surface geometry using _ParameterizedTexture_ elements, verify that:
+
+* Texture coordinates given by the _textureCoordinates_ property of the _TexCoordList_ element define an explicit mapping of a surface’s boundary points to points in texture space. A point in texture space is given as a coordinate pair consisting of two doubles.
+* The _textureCoordinates_ and _ring_ properties of a _TexCoordList_ element form pairs and their order is decisive. The first _textureCoordinates_ property in the sequence forms a pair with the first _ring_ property in the sequence, the second _textureCoordinates_ property forms a pair with the second _ring_ property, and so on. As a consequence, the number of _textureCoordinates_ and _ring_ properties is identical.
+* A _TexCoordList_ element provides _textureCoordinates_ for all _gml:LinearRing_ elements contained in the surface geometry that is referenced by the _target_ property of the embracing _TextureAssociation_. This explicitly includes both exterior and interior rings.
+* The _ring_ property (type: _anyURI_) references the _gml:id_ of the target _gml:LinearRing_ using an appropriate XPointer.
+* Each point in a ring of a surface geometry receives a point in texture space. The number of 2D points in the _textureCoordinates_ element therefore is identical with the number of 3D points in the ring referenced by the corresponding _ring_ property. This explicitly includes texture coordinates for the last point in a _gml:LinearRing_ element which, by GML definition, must be coincident with the first point.
+* The order of points in the _textureCoordinates_ follows the order of the points in the referenced _ring_ element as given in the CityGML document regardless of a possibly flipped surface orientation.
 |Test method: |Inspect the instance document to verify the above requirement.
 |===
 
