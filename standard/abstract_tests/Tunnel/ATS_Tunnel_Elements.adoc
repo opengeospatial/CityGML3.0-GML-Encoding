@@ -1,0 +1,9 @@
+[[ats_tunnel_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/tunnel/elements
+|Requirement: |<<req_tunnel_elements,/req/tunnel/elements>>
+|Test purpose: |Verify that the conforming instance document supports the Tunnel XML elements listed in <<tunnel-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/tunnel/3.0/tunnel.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
