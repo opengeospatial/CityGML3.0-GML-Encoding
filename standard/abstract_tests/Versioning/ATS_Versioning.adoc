@@ -1,0 +1,5 @@
+=== Conformance Class Versioning
+
+include::Versioning/ATS_Versioning_Elements.adoc[]
+
+include::Versioning/ATS_Versioning_Reference.adoc[]

@@ -1,0 +1,15 @@
+[[ats_versioning_reference]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/versioning/reference
+|Requirement: |<<req_versioning_reference,/req/versioning/reference>>
+|Test purpose: a|For the following properties, verify that:
+
+* If the _from_ property (type: _gml:ReferenceType_) of the _VersionTransition_ element is not null, it only contains an XLink reference to a _Version_ element.
+* If the _to_ property (type: _gml:ReferenceType_) of the _VersionTransition_ element is not null, it only contains an XLink reference to a _Version_ element.
+* If the _oldFeature_ property (type: _gml:ReferenceType_) of the _Transaction_ element is not null, it only contains an XLink reference to a _core:AbstractFeatureWithLifespan_ element.
+* If the _newFeature_ property (type: _gml:ReferenceType_) of the _Transaction_ element is not null, it only contains an XLink reference to a _core:AbstractFeatureWithLifespan_ element.
+* If the _versionMember_ property (type: _gml:AbstractFeatureMemberType_) of the _Version_ element is not null, it only  contains an XLink reference to a _core:AbstractFeatureWithLifespan_ element.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
