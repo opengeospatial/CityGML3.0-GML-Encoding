@@ -1,0 +1,5 @@
+=== Conformance Class Construction
+
+include::Construction/ATS_Construction_Elements.adoc[]
+
+include::Construction/ATS_Construction_Boundaries.adoc[]

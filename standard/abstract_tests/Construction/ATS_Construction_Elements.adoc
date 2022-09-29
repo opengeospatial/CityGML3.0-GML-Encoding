@@ -1,0 +1,9 @@
+[[ats_construction_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/construction/elements
+|Requirement: |<<req_construction_elements,/req/construction/elements>>
+|Test purpose: |Verify that the conforming instance document supports the Construction XML elements listed in <<construction-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/construction/3.0/construction.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

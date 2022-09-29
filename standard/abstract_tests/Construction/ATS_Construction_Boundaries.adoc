@@ -1,0 +1,9 @@
+[[ats_construction_boundaries]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/construction/boundaries
+|Requirement: |<<req_construction_boundaries,/req/construction/boundaries>>
+|Test purpose: |For each Construction space element verify that if the space element is bounded by thematic surface boundaries using the property _core:boundary_ (type: _core:AbstractSpaceBoundaryPropertyType_), each property contains exactly one surface element from <<construction-boundaries-table>> that is supported for the specific space element. If no surface element is supported, the space element is not bounded by thematic surface boundaries.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
