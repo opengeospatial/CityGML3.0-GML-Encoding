@@ -1,0 +1,9 @@
+[[ats_vegetation_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/vegetation/elements
+|Requirement: |<<req_vegetation_elements,/req/vegetation/elements>>
+|Test purpose: |Verify that the conforming instance document supports the Vegetation XML elements listed in <<vegetation-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
