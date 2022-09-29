@@ -1,0 +1,9 @@
+[[ats_core_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/core/elements
+|Requirement: |<<req_core_elements,/req/core/elements>>
+|Test purpose: |Verify that the conforming instance document supports the Core XML elements listed in <<core-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/3.0/core.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

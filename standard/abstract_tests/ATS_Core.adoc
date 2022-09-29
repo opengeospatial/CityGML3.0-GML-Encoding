@@ -1,0 +1,7 @@
+=== Conformance Class Core
+
+include::Core/ATS_Core_Elements.adoc[]
+
+include::Core/ATS_Core_Reference.adoc[]
+
+include::Core/ATS_Core_Boundaries.adoc[]
