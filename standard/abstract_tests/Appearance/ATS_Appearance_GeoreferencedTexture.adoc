@@ -1,0 +1,12 @@
+[[ats_appearance_georeferencedtexture]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/appearance/georeferencedtexture
+|Requirement: |<<req_appearance_georeferencedtexture,/req/appearance/georeferencedtexture>>
+|Test purpose: a|When using _GeoreferencedTexture_ elements, verify that:
+
+* A _GeoreferencedTexture_ element defines the geo-reference either inline using the _referencePoint_ and _orientation_ properties or externally inside the texture image (e.g., by using the GeoTIFF image format) or through an accompanying world file.
+* The _referencePoint_ property (type: _gml:PointPropertyType_) only contains or references a 2D point geometry.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

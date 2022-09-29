@@ -1,0 +1,9 @@
+[[ats_appearance_target]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/appearance/target
+|Requirement: |<<req_appearance_target,/req/appearance/target>>
+|Test purpose: |Verify that surface data is only applied to surface geometries. The _target_ property of a surface data element therefore only references a subtype of _gml:AbstractSurfaceType_ or a _gml:MultiSurface_.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

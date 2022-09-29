@@ -1,0 +1,11 @@
+[[ats_appearance_parameterizedtexture]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/appearance/parameterizedtexture
+|Requirement: |<<req_appearance_parameterizedtexture,/req/appearance/parameterizedtexture>>
+|Test purpose: |
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
+
+NOTE: TODO: How to deal with the Note in the Requirement? Should it also appear in the Test purpose?

@@ -1,0 +1,9 @@
+[[ats_appearance_elements]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/appearance/elements
+|Requirement: |<<req_appearance_elements,/req/appearance/elements>>
+|Test purpose: |Verify that the conforming instance document supports the Appearance XML elements listed in <<appearance-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
