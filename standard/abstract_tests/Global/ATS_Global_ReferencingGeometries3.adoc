@@ -1,0 +1,9 @@
+[[ats_global_referencinggeometries3]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/global/referencinggeometries3
+|Requirement: |<<req_global_referencinggeometries3,/req/global/referencinggeometries3>>
+|Test purpose: |Verify that LoDs are self-contained: Geometries are not shared between different LoDs using XLinks.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

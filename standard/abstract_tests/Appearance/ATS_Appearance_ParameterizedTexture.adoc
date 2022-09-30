@@ -14,5 +14,3 @@
 * The order of points in the _textureCoordinates_ follows the order of the points in the referenced _ring_ element as given in the CityGML document regardless of a possibly flipped surface orientation.
 |Test method: |Inspect the instance document to verify the above requirement.
 |===
-
-NOTE: TODO: How to deal with the Note in the Requirement? Should it also appear in the Test purpose?

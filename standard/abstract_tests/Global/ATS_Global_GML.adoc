@@ -1,0 +1,9 @@
+[[ats_global_gml]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/global/gml
+|Requirement: |<<req_global_gml,/req/global/gml>>
+|Test purpose: |Verify that XML instance documents claiming conformance to this specification validate with respect to the XML schema files.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

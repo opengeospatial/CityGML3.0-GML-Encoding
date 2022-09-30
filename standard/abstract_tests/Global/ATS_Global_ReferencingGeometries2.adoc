@@ -1,0 +1,14 @@
+[[ats_global_referencinggeometries2]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/global/referencinggeometries2
+|Requirement: |<<req_global_referencinggeometries2,/req/global/referencinggeometries2>>
+|Test purpose: a|When referencing geometries of spaces and space boundaries, verify that:
+
+* Geometries stored inline a space boundary are not redundantly stored as geometry of a space. If the geometry is stored with the space in addition, it references the geometry from the space boundary using XLinks.
+* Space boundaries do not reference geometries of a space using XLinks.
+* This applies for all spaces and space boundaries that are children of the same top-level feature.
+
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

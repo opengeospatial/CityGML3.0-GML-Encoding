@@ -1,0 +1,12 @@
+[[ats_global_alternativeaggregations]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/global/alternativeaggregations
+|Requirement: |<<req_global_alternativeaggregations,/req/global/alternativeaggregations>>
+|Test purpose: a|When referencing features from alternative aggregations, verify that:
+
+* Each feature belongs to a natural aggregation hierarchy and is stored inline this hierarchy.
+* Alternative aggregations do not contain the feature inline but use an XLink to reference the feature.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

@@ -1,0 +1,12 @@
+[[ats_global_referencinggeometries4]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/global/referencinggeometries4
+|Requirement: |<<req_global_referencinggeometries4,/req/global/referencinggeometries4>>
+|Test purpose: a|When referencing shared geometries between top-level features using _CityObjectRelation_ elements, verify that:
+
+* If two top-level features share a common geometry, the shared geometry is stored for each top-level feature separately.
+* If _CityObjectRelation_ elements are used to denote that a geometry is shared between two top-level features, then a _CityObjectRelation_ element is stored for each feature (might be the top-level feature itself or one of its nested features), and each _CityObjectRelation_ element is assigned the relation type “shared” and references the other feature using an XLink. Thus, the reference is bi-directional.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===

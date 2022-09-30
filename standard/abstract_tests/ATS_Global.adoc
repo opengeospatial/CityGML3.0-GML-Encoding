@@ -1,0 +1,13 @@
+=== Conformance Class Global
+
+include::Global/ATS_Global_GML.adoc[]
+
+include::Global/ATS_Global_ReferencingGeometries1.adoc[]
+
+include::Global/ATS_Global_ReferencingGeometries2.adoc[]
+
+include::Global/ATS_Global_ReferencingGeometries3.adoc[]
+
+include::Global/ATS_Global_ReferencingGeometries4.adoc[]
+
+include::Global/ATS_Global_AlternativeAggregations.adoc[]

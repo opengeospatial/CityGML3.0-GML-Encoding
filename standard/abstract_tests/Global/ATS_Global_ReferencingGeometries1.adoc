@@ -1,0 +1,9 @@
+[[ats_global_referencinggeometries1]]
+[cols=">20h,<80d",width="100%"]
+|===
+2+<|*Abstract Test {counter:ats-id}*
+|Test ID: |/conf/global/referencinggeometries1
+|Requirement: |<<req_global_referencinggeometries1,/req/global/referencinggeometries1>>
+|Test purpose: |Verify that XLinks are not used to reference geometries, except for geometries of _ImplicitGeometry_ elements, from another top-level feature.
+|Test method: |Inspect the instance document to verify the above requirement.
+|===
