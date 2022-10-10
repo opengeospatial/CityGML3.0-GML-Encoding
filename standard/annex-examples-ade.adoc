@@ -27,11 +27,11 @@ The UML Conceptual Model of the Test ADE is shown in <<figure-test-ade-uml>>. Al
 A corresponding XML schema derived from the UML Conceptual Model is shown in <<listing-test-ade-xml-schema>>. An example ADE dataset is represented in <<listing-test-ade-example-dataset>>.
 
 [[figure-test-ade-uml]]
-.UML model of the Test ADE.
+.UML model of the Test ADE
 image::images/TestADE_UML.png[align="center"]
 
 [[listing-test-ade-xml-schema]]
-.XML schema of the Test ADE model in <<figure-test-ade-uml>>.
+.XML schema of the Test ADE model in <<figure-test-ade-uml>>
 [source,XML]
 ----
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:bldg="http://www.opengis.net/citygml/building/3.0" xmlns:con="http://www.opengis.net/citygml/construction/3.0" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:test="http://www.citygml.org/ade/TestADE/2.0" elementFormDefault="qualified" targetNamespace="http://www.citygml.org/ade/TestADE/2.0" version="2.0">
@@ -289,7 +289,7 @@ image::images/TestADE_UML.png[align="center"]
 ----
 
 [[listing-test-ade-example-dataset]]
-.Example dataset implementing the illustrated Test ADE schema.
+.Example dataset implementing the illustrated Test ADE schema
 [source,XML]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -355,7 +355,7 @@ The UML conceptual model is illustrated in <<figure-ADE-realworld-uml1>>.
 The DataType _BuildingProperties_ is modelled as subclass of the "hook" data type _ADEOfAbstractBuilding_ and defines the additional properties that are added to the CityGML _AbstractBuilding_ class. Additionally, a DataType _KeyValuePair_ and a Union _ValueType_ are defined. By using the _BuildingProperties_ that includes two sets of properties, _BuildingDetails_ and _LargeCustomerFacilities_, 3D city models can systematically be extended with the detailed properties for urban planning.
 
 [[figure-ADE-realworld-uml1]]
-.UML model of the Urban Object module from the Urban Planning ADE.
+.UML model of the Urban Object module from the Urban Planning ADE
 image::images/UML_ADE_RealworldExample.png[align="center"]
 
 *Step 2: Deriving the XML schema from the UML model*
@@ -370,7 +370,7 @@ java -jar ShapeChange-2.11.0.jar -Dfile.encoding=UTF-8 -c ShapeChangeConfigurati
 https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/ADE-examples/Urban-Planning-ADE/ShapeChangeConfigurationFile_CityGML_3.0_UrbanPlanningADE.xml[The ShapeChange configuration file] is illustrated in <<listing-ADE-realworld-shapechange1>> and https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/ADE-examples/Urban-Planning-ADE/urbanObject_CityGML3.xsd[the derived XML schema] from https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/ADE-examples/Urban-Planning-ADE/CityGML_3.0_UrbanPlanningADE.eap[the Enterprise Architect UML model] is illustrated in <<listing-ADE-realworld-ADE1>>.
 
 [[listing-ADE-realworld-shapechange1]]
-.ShapeChange configuration file used for converting the ADE UML model to an XML schema.
+.ShapeChange configuration file used for converting the ADE UML model to an XML schema
 [source,XML]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
@@ -449,7 +449,7 @@ https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/ex
 ----
 
 [[listing-ADE-realworld-ADE1]]
-.XML schema document of the ADE derived from UML model.
+.XML schema document of the ADE derived from UML model
 [source,XML]
 ----
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:bldg="http://www.opengis.net/citygml/building/3.0" ...  xmlns:uro="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" elementFormDefault="qualified" targetNamespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" version="1.5">
@@ -643,14 +643,14 @@ https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/ex
 
 https://www.mlit.go.jp/plateau/[The Project PLATEAU] was launched by MLIT (Ministry of Land, Infrastructure, Transport and Tourism) Japan in 2020, and developed 3D city models for more than 10 million buildings of 56 cities, over 10,000km^2^ in Japan. The 3D city models were implemented using the Urban Planning ADE and were published as Open Data (CC BY 4.0/ODbL).
 
-<<figure-ADE-realworld-step2>> illustrates sample building data, and the <<listing-ADE-realworld-gml1>> shows an example of https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/ADE-examples/Urban-Planning-ADE/53394517_bldg_6697_op2_CityGML3.gml[the GML instance document] that was converted from CityGML 2.0 building model to CityGML 3.0. Note that this conversion was operated manually by checking the ADE XML schema carefully and validating the instance document against the XML schema afterwards. Though there are converters for converting CityGML 2.0 data to CityGML 3.0 such as https://github.com/citygml4j[citygml4j], data conversion for ADEs is not yet supported by these converters.
+<<figure-ADE-realworld-step2>> illustrates sample building data, and the <<listing-ADE-realworld-gml1>> shows an example of https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/ADE-examples/Urban-Planning-ADE/53394517_bldg_6697_2_op_CityGML3.gml[the GML instance document] that was converted from CityGML 2.0 building model to CityGML 3.0. Note that this conversion was operated manually by checking the ADE XML schema carefully and validating the instance document against the XML schema afterwards. Though there are converters for converting CityGML 2.0 data to CityGML 3.0 such as https://github.com/citygml4j[citygml4j], data conversion for ADEs is not yet supported by these converters.
 
 [[figure-ADE-realworld-step2]]
-.Meiji Memorial Picture Gallery (Mesh ID: 53394517, Building ID: 13104-bldg-53) from https://www.geospatial.jp/ckan/dataset/plateau-tokyo23ku[the Project PLATEAU].
+.Meiji Memorial Picture Gallery (Mesh ID: 53394517, Building ID: 13104-bldg-53) from https://www.geospatial.jp/ckan/dataset/plateau-tokyo23ku[the Project PLATEAU]
 image::images/Example_ADE_Realworld.png[align="center"]
 
 [[listing-ADE-realworld-gml1]]
-.Example of a CityGML 3.0 GML instance document based on the converted ADE XML schema.
+.Example of a CityGML 3.0 GML instance document based on the converted ADE XML schema
 [source,XML]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
