@@ -3,7 +3,7 @@
 
 The PointCloud module allows for representing the geometries of city objects by 3D point clouds in three different options, which are illustrated in the following.
 
-The CityGML and LAZ data sets presented here are available under https://github.com/opengeospatial/CityGML-3.0Encodings/tree/master/CityGML/Examples/PointCloud/Real-world%20examples/CityGML_3.0_buildings_with_point_cloud_representation.
+The CityGML and LAZ data sets presented here are available under https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/PointCloud/Real-world%20examples/CityGML_3.0_buildings.
 
 *Option 1: Inline representation*
 
