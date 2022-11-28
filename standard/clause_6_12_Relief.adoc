@@ -3,7 +3,7 @@
 
 The Relief module supports representation of the terrain. CityGML supports terrain representations at different levels of detail, reflecting different accuracies or resolutions. Terrain may be specified as a regular raster or grid, as a TIN, by break lines, and/or by mass points.
 
-The concepts of the Relief module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Relief module is available under https://docs.ogc.org/is/20-010/20-010.html#relief-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc57[^].
+The concepts of the Relief module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Relief module is available under https://docs.ogc.org/is/20-010/20-010.html#relief-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc57[^]. A detailed discussion of the Relief module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-relief-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_relief.adoc[]
 

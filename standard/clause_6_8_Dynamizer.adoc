@@ -3,7 +3,7 @@
 
 The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g. OGC TimeseriesML or OGC Observations & Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time- value pairs.
 
-The concepts of the Dynamizer module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Dynamizer module is available under https://docs.ogc.org/is/20-010/20-010.html#dynamizer-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc53[^].
+The concepts of the Dynamizer module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Dynamizer module is available under https://docs.ogc.org/is/20-010/20-010.html#dynamizer-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc53[^]. A detailed discussion of the Dynamizer module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-dynamizer-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_dynamizer.adoc[]
 

@@ -3,7 +3,7 @@
 
 The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g. beams and slabs), installations, and furniture.
 
-The concepts of the Construction module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Construction module is available under https://docs.ogc.org/is/20-010/20-010.html#construction-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc62[^].
+The concepts of the Construction module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Construction module is available under https://docs.ogc.org/is/20-010/20-010.html#construction-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc62[^]. A detailed discussion of the Construction module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-construction-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_construction.adoc[]
 
