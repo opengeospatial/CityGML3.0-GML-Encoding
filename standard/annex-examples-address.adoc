@@ -5,10 +5,10 @@ The CityGML 3.0 CM provides the ability to represent address information of real
 
 An _Address_ is modeled with two properties:
 
-- An optional _multiPoint_ property containing a _gml:MultiPoint_ for specifying the 2D or 3D position of the address. 
+- An optional _multiPoint_ property containing a _gml:MultiPoint_ for specifying the 2D or 3D position of the address.
 - A _xalAddress_ property containing a _xAL:Address_ type from the OASIS CIQ TC extensible Address Language standard (xAL).
 
-The CityGML datasets presented here are available under https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Building, additional examples are also available on the OASIS documentation repository http://docs.oasis-open.org/ciq/v3.0/cs02/xsd/default/examples/xAL/.
+The CityGML datasets presented here are available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Building[CityGML 3.0 Encodings Github], additional examples are also available on the http://docs.oasis-open.org/ciq/v3.0/cs02/xsd/default/examples/xAL/[OASIS documentation repository].
 
 *Example 1: Structured address and multipoint*
 
@@ -24,7 +24,7 @@ xAL provides a rich vocabulary for structuring addresses in GML. <<listing-addre
     <bldg:Building gml:id="DEBY_LOD2_5744682">
       <bldg:address>
         <core:Address>
-          <!-- 
+          <!--
           Am Hang 15      street number and name
           85665 Moosach   postcode and locality
           Germany         country
@@ -77,7 +77,7 @@ More freeform addresses can also be declared using FreeTextAddresses as shown in
     <bldg:Building gml:id="OPERA_LYON_45">
       <bldg:address>
         <core:Address>
-          <!-- 
+          <!--
           Opéra National de Lyon      additional geographical information
           1 Place de la Comédie       street number and name
           69001 Lyon                  postcode and locality

@@ -7,6 +7,8 @@
 
 * [[Agugiaro2018,Agugiaro et al. 2018]]Agugiaro, G., Benner, J., Cipriano, P., Nouvel, R., 2018: *The Energy Application Domain Extension for CityGML: enhancing interoperability for urban energy simulations*. Open Geospatial Data, Software and Standards, Vol. 3. https://doi.org/10.1186/s40965-018-0042-y
 
+* [[Akahoshi2020,Akahoshi et al. 2020]]Akahoshi, K., Ishimaru, N., Kurokawa, C., Tanaka, Y., Oishi, T., Kutzner, T., Kolbe, T. H.,2020: *I-Urban Revitalization: Conceptual modeling, implementation, and visualization towards sustainable urban planning using CityGML*. In: Proceedings of the 24th ISPRS Congress, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. V-4-2020, ISPRS. https://doi.org/10.5194/isprs-annals-V-4-2020-179-2020
+
 * [[Becker2011,Becker et al. 2011]]Becker, T., Nagel, C., Kolbe, T. H., 2011: *Integrated 3D Modeling of Multi-utility Networks and their Interdependencies for Critical Infrastructure Analysis*. In: T. H. Kolbe, G. König, C. Nagel (Eds.): Advances in 3D Geoinformation Sciences. LNG&C, Springer, Berlin. https://doi.org/10.1007/978-3-642-12670-3_1
 
 * [[Beil2017,Beil et al. 2017]]Beil, C., Kolbe, T. H., 2017: *CityGML and the streets of New York - A proposal for detailed street space modelling*. In: Proceedings of the 12th International 3D GeoInfo Conference 2017, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W5, ISPRS. http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017
@@ -34,6 +36,8 @@
 * [[Gröger2012a,Gröger & Plümer 2012]]Gröger, G., Plümer, L., 2012: *CityGML – Interoperable semantic 3D city models*. ISPRS Journal of Photogrammetry and Remote Sensing, Vol. 71, July 2012. https://dx.doi.org/10.1016/j.isprsjprs.2012.04.004
 
 * [[Gröger2012b,Gröger et al. 2012]]Gröger, G., Kolbe, T. H., Nagel, C., Häfele, K.-H., 2012: *OGC City Geography Markup Language (CityGML) Encoding Standard, Version 2.0.0*, Open Geospatial Consortium. https://portal.opengeospatial.org/files/?artifact_id=47842[OGC Doc. 12-019]
+
+* [[Ishimaru2020,Ishimaru et al. 2020]]Ishimaru, N., Kurokawa, C., Tanaka, Y., Oishi, T., Akahoshi, K., Kutzner, T., Kolbe, T. H., 2020: *CityGML Urban Planning ADE for i-Urban Revitalization*, Open Geospatial Consortium. https://portal.ogc.org/files/?artifact_id=92113[OGC Doc. 20-000r1]
 
 * [[iso19107,ISO 19107:2003]] ISO: ISO 19107:2003, Geographic Information – Spatial Schema
 
