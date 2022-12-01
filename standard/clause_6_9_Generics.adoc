@@ -68,7 +68,7 @@ include::requirements/Generics/REQ_Generics_Boundaries.adoc[]
 .Generics space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_gen:GenericLogicalSpace_
 a| * _core:ClosureSurface_
    * _gen:GenericThematicSurface_

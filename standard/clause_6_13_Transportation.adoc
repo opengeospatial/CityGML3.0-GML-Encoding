@@ -88,7 +88,7 @@ include::requirements/Transportation/REQ_Transportation_Boundaries.adoc[]
 .Transportation space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_tran:AbstractTransportationSpace_
 a| * _tran:Marking_
    * _core:ClosureSurface_

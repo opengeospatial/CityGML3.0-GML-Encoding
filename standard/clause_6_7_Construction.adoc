@@ -95,7 +95,7 @@ include::requirements/Construction/REQ_Construction_Boundaries.adoc[]
 .Construction space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_con:AbstractConstruction_
 a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
 {nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +

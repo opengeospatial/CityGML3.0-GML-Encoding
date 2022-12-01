@@ -60,7 +60,7 @@ include::requirements/Waterbody/REQ_WaterBody_Boundaries.adoc[]
 .WaterBody space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_wtr:WaterBody_
 a| * _wtr:AbstractWaterBoundarySurface_ and the substitutable elements: +
 {nbsp}{nbsp}{nbsp}{nbsp} _wtr:WaterGroundSurface_, +

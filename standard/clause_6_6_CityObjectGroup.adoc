@@ -59,7 +59,7 @@ include::requirements/CityObjectGroup/REQ_CityObjectGroup_Boundaries.adoc[]
 .CityObjectGroup space elements and their allowed thematic surface boundaries
 [cols="2,6",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
   |_grp:CityObjectGroup_  a|  * _core:ClosureSurface_
                         * _gen:GenericThematicSurface_
                         * possible surface elements from ADEs
