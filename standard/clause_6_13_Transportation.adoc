@@ -3,7 +3,7 @@
 
 The Transportation module supports representation of the transportation infrastructure. Transportation features include roads, tracks, waterways, railways, and squares. Transportation features may be represented as a network and/or as a collection of spaces or surface elements embedded in a three-dimensional space.
 
-The concepts of the Transportation module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Transportation module is available under https://docs.ogc.org/is/20-010/20-010.html#transportation-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc58[^].
+The concepts of the Transportation module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Transportation module is available under https://docs.ogc.org/is/20-010/20-010.html#transportation-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc58[^]. A detailed discussion of the Transportation module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-transportation-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_transportation.adoc[]
 
@@ -88,7 +88,7 @@ include::requirements/Transportation/REQ_Transportation_Boundaries.adoc[]
 .Transportation space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_tran:AbstractTransportationSpace_
 a| * _tran:Marking_
    * _core:ClosureSurface_

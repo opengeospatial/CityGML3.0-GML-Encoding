@@ -3,7 +3,7 @@
 
 The Tunnel module supports representation of thematic and spatial aspects of tunnels, tunnel parts, tunnel installations, and interior tunnel structures.
 
-The concepts of the Tunnel module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Tunnel module is available under https://docs.ogc.org/is/20-010/20-010.html#tunnel-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc65[^].
+The concepts of the Tunnel module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Tunnel module is available under https://docs.ogc.org/is/20-010/20-010.html#tunnel-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc65[^]. A detailed discussion of the Tunnel module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-tunnel-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_tunnel.adoc[]
 
@@ -66,7 +66,7 @@ include::requirements/Tunnel/REQ_Tunnel_Boundaries.adoc[]
 .Tunnel space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_tun:AbstractTunnel_
 a| * _con:AbstractConstructionSurface_ and the substitutable elements: +
 {nbsp}{nbsp}{nbsp}{nbsp} _con:GroundSurface_, +

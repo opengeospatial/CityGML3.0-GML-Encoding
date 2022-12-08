@@ -3,7 +3,7 @@
 
 The WaterBody module supports representation of the thematic aspects and 3D geometry of rivers, canals, lakes, and basins. It does, however, not inherit any hydrological or other dynamic aspects of fluid flow.
 
-The concepts of the WaterBody module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the WaterBody module is available under https://docs.ogc.org/is/20-010/20-010.html#waterbody-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc61[^].
+The concepts of the WaterBody module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the WaterBody module is available under https://docs.ogc.org/is/20-010/20-010.html#waterbody-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc61[^]. A detailed discussion of the WaterBody module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-waterbody-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_waterbody.adoc[]
 
@@ -60,7 +60,7 @@ include::requirements/Waterbody/REQ_WaterBody_Boundaries.adoc[]
 .WaterBody space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_wtr:WaterBody_
 a| * _wtr:AbstractWaterBoundarySurface_ and the substitutable elements: +
 {nbsp}{nbsp}{nbsp}{nbsp} _wtr:WaterGroundSurface_, +

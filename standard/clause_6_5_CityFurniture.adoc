@@ -3,7 +3,7 @@
 
 The CityFurniture module supports representation of city furniture objects. City furniture objects are immovable objects like lanterns, traffic signs, advertising columns, benches, or bus stops that can be found in traffic areas, residential areas, on squares, or in built-up areas.
 
-The concepts of the CityFurniture module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the City Furniture module is available under https://docs.ogc.org/is/20-010/20-010.html#cityfurniture-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc51[^].
+The concepts of the CityFurniture module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the City Furniture module is available under https://docs.ogc.org/is/20-010/20-010.html#cityfurniture-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc51[^]. A detailed discussion of the CityFurniture module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-city-furniture-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_cityfurniture.adoc[]
 
@@ -54,7 +54,7 @@ include::requirements/CityFurniture/REQ_CityFurniture_Boundaries.adoc[]
 .CityFurniture space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_frn:CityFurniture_  a|  * _core:ClosureSurface_
                     * _gen:GenericThematicSurface_
                     * possible surface elements from ADEs

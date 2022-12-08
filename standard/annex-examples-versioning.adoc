@@ -10,10 +10,10 @@ The rules clearly define when to create new versions of features and when to ref
 
 *Rule 1: Only the top-level feature changes*
 
-. When only the top-level feature changes, a new version of the top-level feature shall be created which receives a new gml:id.
-. All subordinate features, i.e. the features that are part of the top-level feature, must remain unchanged and must be referenced in their unchanged version by the new version of the top-level feature via their gml:id using XLink.
+. When only the top-level feature changes, a new version of the top-level feature is created which receives a new gml:id.
+. All subordinate features, i.e. the features that are part of the top-level feature, remain unchanged and are referenced in their unchanged version by the new version of the top-level feature via their gml:id using XLink.
 
-With this rule, the subordinate features can remain in their current state and do not need to be copied as new versions for every change within in a top-level feature.
+With this rule, the subordinate features can remain in their current state and do not need to be copied as new versions for every change within a top-level feature.
 
 The use of Rule 1 is illustrated in <<figure-version-management-rule1>>.
 The _function_ attribute of the top-level feature Building changes from _Living_ to _Office_; thus, a new version of the Building feature is created with a new gml:id. Since the subordinate feature BuildingPart remains unchanged, the new Building version references the unchanged BuildingPart feature.
@@ -24,10 +24,10 @@ image::images/VersionManagement_Rule1.png[align="center"]
 
 *Rule 2: Only a subordinate feature changes*
 
-. When only a subordinate feature changes, a new version of this subordinate feature shall be created which receives a new gml:id.
-. This subordinate feature is referenced by a superordinate feature. By creating a new version of the subordinate feature with a new gml:id, the XLink reference of the superordinate to the subordinate feature must be adapted to this new gml:id as well, which means that also a new version of the superordinate feature must be created.
-. Changes to these XLink references and creation of new superordinate features must be applied transitively to all superordinate features up to the top-level feature.
-. All other subordinate features that do not change must be referenced in their unchanged versions by the new versions of the superordinate features according to Rule 1.
+. When only a subordinate feature changes, a new version of this subordinate feature is created which receives a new gml:id.
+. This subordinate feature is referenced by a superordinate feature. By creating a new version of the subordinate feature with a new gml:id, the XLink reference of the superordinate to the subordinate feature is adapted to this new gml:id as well, which means that also a new version of the superordinate feature is created.
+. Changes to these XLink references and creation of new superordinate features are applied transitively to all superordinate features up to the top-level feature.
+. All other subordinate features that do not change are referenced in their unchanged versions by the new versions of the superordinate features according to Rule 1.
 
 For aggregation hierarchies this means that whenever a subordinate feature changes, also new versions of all corresponding superordinate features up to the top-level feature need to be created.
 
@@ -45,7 +45,7 @@ image::images/VersionManagement_Rule2_Aggregation.png[align="center"]
 
 *Rule 3: Top-level and subordinate features change*
 
-. This rule is a combination of Rules 1 and 2; i.e., when a top-level feature and its corresponding subordinate features change, both rules must be applied jointly.
+. This rule is a combination of Rules 1 and 2; i.e., when a top-level feature and its corresponding subordinate features change, both rules are applied jointly.
 
 [[figure-version-management-rule3]]
 .Use of Rule3 in case a top-level feature and a corresponding subordinate feature changes.

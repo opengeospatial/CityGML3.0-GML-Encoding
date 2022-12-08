@@ -3,7 +3,7 @@
 
 The Generics module supports application-specific extensions to the CityGML conceptual model. These extensions may be used to model and exchange additional attributes and features not covered by the predefined thematic classes of CityGML. Generic extensions shall only be used if appropriate thematic classes or attributes are not provided by any other City GML module.
 
-The concepts of the Generics module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Generics module is available under https://docs.ogc.org/is/20-010/20-010.html#generics-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc54[^].
+The concepts of the Generics module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Generics module is available under https://docs.ogc.org/is/20-010/20-010.html#generics-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc54[^]. A detailed discussion of the Generics module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-generics-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_generics.adoc[]
 
@@ -68,7 +68,7 @@ include::requirements/Generics/REQ_Generics_Boundaries.adoc[]
 .Generics space elements and their allowed thematic surface boundaries
 [cols="40,60",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
 |_gen:GenericLogicalSpace_
 a| * _core:ClosureSurface_
    * _gen:GenericThematicSurface_

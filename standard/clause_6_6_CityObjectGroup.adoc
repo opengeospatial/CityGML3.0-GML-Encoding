@@ -3,7 +3,7 @@
 
 The CityObjectGroup module supports grouping of city objects. Arbitrary city objects may be aggregated in groups according to user-defined criteria. A group may be further classified by application-specific attributes.
 
-The concepts of the CityObjectGroup module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the CityObjectGroup module is available under https://docs.ogc.org/is/20-010/20-010.html#cityobject-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc52[^].
+The concepts of the CityObjectGroup module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the CityObjectGroup module is available under https://docs.ogc.org/is/20-010/20-010.html#cityobject-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc52[^]. A detailed discussion of the CityObjectGroup module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-city-object-group-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_cityobjectgroup.adoc[]
 
@@ -59,7 +59,7 @@ include::requirements/CityObjectGroup/REQ_CityObjectGroup_Boundaries.adoc[]
 .CityObjectGroup space elements and their allowed thematic surface boundaries
 [cols="2,6",options="headers"]
 |===
-^|*Space element* ^|*Allowed space boundaries*
+^|*Space element* ^|*Allowed thematic surface boundaries*
   |_grp:CityObjectGroup_  a|  * _core:ClosureSurface_
                         * _gen:GenericThematicSurface_
                         * possible surface elements from ADEs

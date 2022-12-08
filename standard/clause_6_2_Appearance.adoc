@@ -3,7 +3,7 @@
 
 The Appearance module supports the modelling of the observable surface properties of CityGML features in the form of textures and material.
 
-The concepts of the Appearance module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Appearance module is available under https://docs.ogc.org/is/20-010/20-010.html#appearance-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc50[^].
+The concepts of the Appearance module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Appearance module is available under https://docs.ogc.org/is/20-010/20-010.html#appearance-uml[^], the Data Dictionary is available under https://docs.ogc.org/is/20-010/20-010.html#toc50[^]. A detailed discussion of the Appearance module can also be found in the https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-appearance-section[CityGML 3.0 Users Guide].
 
 include::requirements/requirements_class_appearance.adoc[]
 

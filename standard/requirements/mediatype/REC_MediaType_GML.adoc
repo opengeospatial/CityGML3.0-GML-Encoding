@@ -1,0 +1,7 @@
+[[rec_mediatype_gml]]
+[width="100%",cols="2,6"]
+|===
+^|*Recommendation  {counter:rec-id}* |*/rec/mediatype/gml*
+2+|Data for all parts of the CityGML 3.0 GML encoding standard is encoded in GML-conformant XML documents. The standard MIME-type and sub-type for GML data SHOULD be used to indicate the encoding in internet exchange.
+The registered MIME Media Type for GML documents is `application/gml+xml`.
+|===
