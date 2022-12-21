@@ -22,7 +22,7 @@ In the GML encoding of the CityGML 3.0 Conceptual Model, different types of obje
 
 The CityGML 3.0 Conceptual Model introduces two attributes to provide all features and top-level features with a unique identity: 1) the mandatory _featureID_ attribute to distinguish all (top-level) features and possible multiple versions of the same real-world object and 2) an optional _identifier_ attribute to reference specific (top-level) features independent from their actual feature version. The featureID attribute value is unique within the same CityGML dataset and also for a specific version of a feature, whereas the identifier attribute has an identical value for all versions of the same real-world object. It is recommended to use globally unique identifiers like UUID values or identifiers maintained by an organization such as a mapping agency for both attributes: for the identifier attribute, as these identifiers should remain stable over the lifetime of the real-world object, and for the featureID attribute, as this ensures that 3D city models which are integrated from different sources into e.g. one GIS or database will not have colliding featureID values and also to be able to uniquely identify a specific version of a feature using these identifiers together with a timestamp and a version number.
 
-The two attributes are defined in the UML class _AbstractFeature_ as part of the Core module of the CityGML 3.0 Conceptual Model. They are mapped to the predefined GML concepts _gml:id_ and _gml:identifier_ in the GML encoding. <<table-gml-identifiers>> lists the two identity attributes together with their definition and GML encoding, and the GML code in <<listing-gml-identifiers>> illustrates the use of the identity attributes to represent the object identity in GML instance documents. Please note that, although the _featureID_ attribute is defined mandatory in the CityGML 3.0 Conceptual Model, the _gml:id_ attribute is optional according to the GML standard.
+The two attributes are defined in the UML class _AbstractFeature_ as part of the Core module of the CityGML 3.0 Conceptual Model. They are mapped to the predefined GML concepts _gml:id_ and _gml:identifier_ in the GML encoding. <<table-gml-identifiers>> lists the two identity attributes together with their definition and GML encoding, and the GML code in <<listing-gml-identifiers>> illustrates the use of the identity attributes to represent the object identity in GML instance documents. Please note that the values of the _gml:id_ and the _gml:identifier_ might also be identical, for example, when only a first version of the object exists. Please also note that, although the _featureID_ attribute is defined mandatory in the CityGML 3.0 Conceptual Model, the _gml:id_ attribute is optional according to the GML standard.
 
 [[table-gml-identifiers]]
 .Identity attributes used in CityGML 3.
@@ -45,7 +45,7 @@ The two attributes are defined in the UML class _AbstractFeature_ as part of the
 .Use of the identity attributes in CityGML 3 instance documents.
 [source,XML,highlight='1,2']
 ----
-<bldg:Building gml:id="B1020">
+<bldg:Building gml:id="B1020_t1">
   <gml:identifier codeSpace="www.xyz.org">B1020</gml:identifier>
   <core:creationDate>2012-08-02T00:00:00</core:creationDate>
   <core:terminationDate>2013-10-09T00:00:00</core:terminationDate>
