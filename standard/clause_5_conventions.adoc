@@ -20,4 +20,4 @@ In addition, this standard provides several UML object diagrams as illustrations
 [[XML_notation_section]]
 === XML Notation
 
-The CityGML XML schemas derived from the CityGML CM follow the rules in <<ogc07-036>>, GML, Annex E, UML-to-GML application schema encoding rules.
+The CityGML XML schemas derived from the CityGML CM follow the rules in <<ogc07-036r1>>, GML, Annex E, UML-to-GML application schema encoding rules.

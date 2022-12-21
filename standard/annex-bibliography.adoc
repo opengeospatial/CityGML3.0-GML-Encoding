@@ -39,7 +39,15 @@
 
 * [[Ishimaru2020,Ishimaru et al. 2020]]Ishimaru, N., Kurokawa, C., Tanaka, Y., Oishi, T., Akahoshi, K., Kutzner, T., Kolbe, T. H., 2020: *CityGML Urban Planning ADE for i-Urban Revitalization*, Open Geospatial Consortium. https://portal.ogc.org/files/?artifact_id=92113[OGC Doc. 20-000r1]
 
+* [[inspirebu,INSPIRE: D2.8.III.2]] INSPIRE: D2.8.III.2 Data Specification on Buildings – Technical Guidelines. European Commission Joint Research Centre.
+
+* [[iso19103,ISO 19103:2015]] ISO: ISO 19103:2015, Geographic Information – Conceptual Schema Language
+
 * [[iso19107,ISO 19107:2003]] ISO: ISO 19107:2003, Geographic Information – Spatial Schema
+
+* [[iso19505,ISO/IEC 19505-2:2012]] ISO: ISO/IEC 19505-2:2012, Information technology — Object Management Group Unified Modeling Language (OMG UML) — Part 2: Superstructure
+
+* [[iso19507,ISO/IEC 19507:2012]] ISO/IEC 19507:2012, Information technology — Object Management Group Object Constraint Language (OCL)
 
 * [[Jensen1998,Jensen & Dyreson 1998]]Jensen, Christian S. and Dyreson, Curtis E.: *The Consensus Glossary of Temporal Database Concepts*. February 1998 Version. In: Temporal Databases: Research and Practice [online]. Springer Berlin Heidelberg, 1998. p. 367–405. Lecture Notes in Computer Science. Available from: 10.1007/BFb0053710
 
