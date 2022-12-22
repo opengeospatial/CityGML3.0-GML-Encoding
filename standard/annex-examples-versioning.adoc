@@ -1,7 +1,9 @@
 [[annex-examples-versioning]]
 === Versioning Examples
 
-*Version Management using XLinks*
+Different versions of city models can be managed with CityGML 3.0 in two ways, 1) using XLinks and identifiers of features, and 2) using the concepts _Version_ and _VersionTransition_ defined in the Versioning module. Both methods are presented in the following.
+
+==== Version Management using XLinks
 
 The CityGML 3.0 Conceptual Model introduces the concept of versioned features. The individual versions of a specific city object can be identified by their _featureID_ attribute, which is different for each version of the same real-world object. The featureID attribute is mapped to the _gml:id_ attribute in CityGML 3.0 data sets encoded in GML. This gml:id is used for referencing versioned features. See <<object-identifier-section>> for more information on identifiers for features.
 
@@ -48,10 +50,10 @@ image::images/VersionManagement_Rule2_Aggregation.png[align="center"]
 . This rule is a combination of Rules 1 and 2; i.e., when a top-level feature and its corresponding subordinate features change, both rules are applied jointly.
 
 [[figure-version-management-rule3]]
-.Use of Rule3 in case a top-level feature and a corresponding subordinate feature changes.
+.Use of Rule 3 in case a top-level feature and a corresponding subordinate feature changes.
 image::images/VersionManagement_Rule3.png[align="center"]
 
-The use of rule 3 is illustrated in <<figure-version-management-rule2>>. Here, the top-level feature Building and its subordinate feature BuildingPart change. Thus, new versions are created for both features with new gml:ids, new attribute values and a reference from the new Building feature to the new BuildingPart feature.
+The use of rule 3 is illustrated in <<figure-version-management-rule3>>. Here, the top-level feature Building and its subordinate feature BuildingPart change. Thus, new versions are created for both features with new gml:ids, new attribute values and a reference from the new Building feature to the new BuildingPart feature.
 
 
 *Example: Successive version management over a period of time*
@@ -110,9 +112,9 @@ image::images/VersionManagement_Example1.png[align="center"]
 </core:CityModel>
 ----
 
-*Example: Successive version management with Versions and VersionTransitions*
+==== Version management using Versions and VersionTransitions
 
-The example in <<figure-version-management-example2>> illustrates 4 Building features (b1, b2-1, b2-2, and b3) represented across 2 Versions (v1 and v2). A _historicalSuccession_ type VersionTransition (vt1) stores the changes between each Building through 3 Transactions (t1, t2, and t3). t1 shows that Building b1 is _deleted_ from v1, t2 shows that Building b2-1 is _replaced_ by Building b2-2 in v2, and t3 shows that Building b3 is _inserted_ into v2. <<listing-gml-version-management-example2>> represents this example in GML.
+The example in <<figure-version-management-example2>> illustrates four Building features (b1, b2-1, b2-2, and b3) represented across two Versions (v1 and v2). A VersionTransition (vt1) of the type _historicalSuccession_ stores the changes between each Building through three Transactions (t1, t2, and t3). t1 shows that Building b1 is _deleted_ from v1, t2 shows that Building b2-1 is _replaced_ by Building b2-2 in v2, and t3 shows that Building b3 is _inserted_ into v2. <<listing-gml-version-management-example2>> represents this example in GML.
 
 [[figure-version-management-example2]]
 .Successive version management using Versions and VersionTransitions.
