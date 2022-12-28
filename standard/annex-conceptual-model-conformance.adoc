@@ -4,5 +4,27 @@
 [[annex-cm-conformance]]
 == Conceptual Model Conformance (Normative)
 
-[NOTE]
-This is where conformance with CityGML 3.0 Conceptual Model is documented.
+This standard is an Implementation Specifications of the CityGML 3.0 Conceptual Model (CM).
+
+=== Implementation of the CityGML 3.0 Conceptual Model
+
+The CityGML-3.0 GML Encoding standard is an implementation of the CityGML 3.0 Conceptual Model (CM). The CityGML 3.0 CM standard allows definition of a standardization target that is a version of the CM tailored for a specific user community. Tailoring for this purpose can include:
+
+- Omission of one or more of the optional UML packages
+
+- Reduction of the multiplicity for an attribute or association
+
+- Restriction on the valid values for an attribute
+
+=== Conformance of this Implementation Specification to the CityGML-3.0 CM
+
+Implementation Specifications define how a Conceptual Model should be implemented using a specific technology. Conformant Implementation Specifications provide evidence that they are an accurate representation of the Conceptual Model. This evidence should include implementations of the abstract tests specified in Annex A (normative) of the CityGML 3.0 Conceptual Model standard.
+
+Since the CM standard is agnostic to the implementing technologies, the specific techniques to be used for conformance testing cannot be specified. This Implementation Specifications provides evidence of conformance which is appropriate for the GML encoding technology in Annex XXXX.
+
+=== Inheritance of CityGML-3.0 Conformance Classes
+The CityGML-3.0 CM standard identifies seventeen (17) conformance classes. One conformance class is defined for each package in the UML model. Each conformance class is defined by one requirements class. The tests in Annex A are organized by Requirements Class. As an implementation of the CM, an instance document created in accordance with the XML Schema description files and associated constraints shall also conform to the CM requirements.
+
+Of the seventeen CM conformance classes, only the Core conformance class is mandatory. All other conformance classes are optional. In the case where a conformance class has a dependency on another conformance class, that conformance class should also be implemented.
+
+The CityGML Conceptual Model is defined by the CityGML UML model. That standard is a representation of that UML model in document form. In the case of a discrepancy between the UML model and that document, the UML model takes precedence.
