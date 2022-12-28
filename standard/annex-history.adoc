@@ -5,7 +5,13 @@
 [width="90%",options="header"]
 |===
 |Date |Release |Editor | Primary clauses modified |Description
-|2021-12-15 |0.1 |T. Kutzner|all |initial version
-|2022-02-01 |0.2 |T. Kutzner, S. Smyth|Conformance, Codelist Annex |Most sections are complete, at least in draft form.
+|2021-12-15 |0.1.0 |T. Kutzner|all |initial version
+|2022-02-01 |0.2.0 |T. Kutzner, S. Smyth|Conformance, Codelist Annex |Most sections are complete, at least in draft form.
+|2022-07-21|0.6.0|T. Kutzner, P. Parslow, D. Vinasco-Alvarez, C. Nagel, T. Kolbe, C.S. Smyth|Conformance and general editorial.|Complete for public review
+|2022-07-21|0.7.0|T. Kutzner, P. Parslow, C. Nagel, C.S. Smyth|Abstract Tests, Conformance|Front material, References, general editorial.
+|2022-09-29|0.8.0|T. Kutzner, P. Parslow, N. Ishimaru, C.S. Smyth|Abstract Tests, Conformance|Revisions from resolution of public review comments.
+|2022-11-17|0.9.0|T. Kutzner, P. Parslow, C. Nagel, C.S. Smyth|Abstract Tests, Conformance|Revisions from resolution of public review comments.
+|2022-12-28|0.9.1|T. Kutzner, C.S. Smyth|Conformance, entire document|General editorial - from GitHub issue tasks.
+
 
 |===
