@@ -4,7 +4,7 @@
 [[annex-cm-conformance]]
 == Conceptual Model Conformance (Normative)
 
-This standard is an Implementation Specifications of the CityGML 3.0 Conceptual Model (CM).
+This standard is an Implementation Specifications of the CityGML 3.0 Conceptual Model (CM). This Annex addresses the conformance of this Encoding Standard
 
 === Implementation of the CityGML 3.0 Conceptual Model
 
@@ -20,7 +20,7 @@ The CityGML-3.0 GML Encoding standard is an implementation of the CityGML 3.0 Co
 
 Implementation Specifications define how a Conceptual Model should be implemented using a specific technology. Conformant Implementation Specifications provide evidence that they are an accurate representation of the Conceptual Model. This evidence should include implementations of the abstract tests specified in Annex A (normative) of the CityGML 3.0 Conceptual Model standard.
 
-Since the CM standard is agnostic to the implementing technologies, the specific techniques to be used for conformance testing cannot be specified. This Implementation Specifications provides evidence of conformance which is appropriate for the GML encoding technology in Annex XXXX.
+Since the CM standard is agnostic to the implementing technologies, the specific techniques to be used for conformance testing cannot be specified. This Implementation Specification provides evidence of conformance which is appropriate for the GML encoding technology in  <<annex-cm-conformance>>.
 
 === Inheritance of CityGML-3.0 Conformance Classes
 The CityGML-3.0 CM standard identifies seventeen (17) conformance classes. One conformance class is defined for each package in the UML model. Each conformance class is defined by one requirements class. The tests in Annex A are organized by Requirements Class. As an implementation of the CM, an instance document created in accordance with the XML Schema description files and associated constraints shall also conform to the CM requirements.
