@@ -1,0 +1,21 @@
+== Implementations
+
+[#table_implementation,reftext='{table-caption} {counter:table-num}']
+.Implementations
+[cols=",,",width="75%",options="header",align="center"]
+|===
+|Implementation | Type (Reader/Writer) | Contact
+
+| https://github.com/citygml4j/citygml4j[citygml4j]
+| Reader,Writer
+| https://github.com/clausnagel[Claus Nagel]
+
+| TBA
+| TBA
+| TBA
+
+| TBA
+| TBA
+| TBA
+|===
+
