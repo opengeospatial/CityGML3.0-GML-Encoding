@@ -4,6 +4,6 @@
 2+<|*Abstract Test {counter:ats-id}*
 |Test ID: |/conf/vegetation/elements
 |Requirement: |<<req_vegetation_elements,/req/vegetation/elements>>
-|Test purpose: |Verify that the conforming instance document supports the Vegetation XML elements listed in <<vegetation-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd.
-|Test method: |Inspect the instance document to verify the above requirement.
+|Test purpose: |Verify that instance documents using the Vegetation XML elements listed in <<vegetation-xml-elements>> validate against the XML schema specified in http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd.
+|Test method: |Validate the instance document against the vegetation.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.
 |===

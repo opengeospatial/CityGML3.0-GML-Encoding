@@ -4,6 +4,6 @@
 2+<|*Abstract Test {counter:ats-id}*
 |Test ID: |/conf/global/gml
 |Requirement: |<<req_global_gml,/req/global/gml>>
-|Test purpose: |Verify that XML instance documents claiming conformance to this specification validate with respect to the XML schema files.
-|Test method: |Inspect the instance document to verify the above requirement.
+|Test purpose: |Verify that XML instance documents claiming conformance to this specification validate against the XML schema files.
+|Test method: |Validate the instance document against the XML schemas to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.
 |===

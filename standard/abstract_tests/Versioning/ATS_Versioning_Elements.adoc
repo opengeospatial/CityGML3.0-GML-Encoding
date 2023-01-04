@@ -4,6 +4,6 @@
 2+<|*Abstract Test {counter:ats-id}*
 |Test ID: |/conf/versioning/elements
 |Requirement: |<<req_versioning_elements,/req/versioning/elements>>
-|Test purpose: |Verify that the conforming instance document supports the Versioning XML elements listed in <<versioning-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd.
-|Test method: |Inspect the instance document to verify the above requirement.
+|Test purpose: |Verify that instance documents using the Versioning XML elements listed in <<versioning-xml-elements>> validate against the XML schema specified in http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd.
+|Test method: |Validate the instance document against the versioning.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.
 |===
