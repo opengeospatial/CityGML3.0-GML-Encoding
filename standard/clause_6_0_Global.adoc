@@ -210,7 +210,7 @@ image::images/Example_SimpleBuilding.png[width="25%"]
 
 The building (=space) in <<figure-example-simple-building>> is modelled in LOD2 as Solid geometry and is bounded by four WallSurfaces, one RoofSurface, and one GroundSurface (=space boundaries). All space boundaries are modelled as Polygon geometries. The Solid geometry of the building references the Polygon geometries using XLink. This example refers to Requirement <<req_global_referencinggeometries2,/req/global/referencinggeometries2>>.
 
-The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/1_SimpleBuilding[CityGML 3.0 Encodings Github].
+The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/1_SimpleBuilding[CityGML 3.0 GML Encoding GitHub].
 
 The Building from the GML file is illustrated in the object diagram in <<figure-uml-simple-building>>. The XLink references between the Solid geometry and the Polygon geometries are highlighted in red.
 
@@ -228,7 +228,7 @@ The building (=space) in <<figure-example-building-with-roof-overhangs>> is mode
 
 The RoofSurface contains four Polygon geometries. Two of these Polygons are roof overhangs (i.e. dangling surfaces), and, thus, are not referenced by the Solid geometry of the building, as they would render the solid invalid if referenced. For this reason, an additional MultiSurface geometry is added to the building that references the dangling surfaces. In accordance with Requirement <<req_global_referencinggeometries2,/req/global/referencinggeometries2>> this MultiSurface geometry is optional. It is added to the building to provide additional information, but it is not mandatory to add this geometry.
 
-The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/2_SimpleBuilding_Roof_Overhangs[CityGML 3.0 Encodings Github].
+The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/2_SimpleBuilding_Roof_Overhangs[CityGML 3.0 GML Encoding GitHub].
 
 The Building from the GML file is illustrated in the object diagram in <<figure-uml-building-with-roof-overhangs>>. The XLink references between the Solid geometry and the Polygon geometries are highlighted in red, the XLink references between the MultiSurface geometry and the dangling surfaces in blue.
 
@@ -246,7 +246,7 @@ The building (=space) in <<figure-example-building-with-building-installation>> 
 
 The space boundaries of the building and of the building installation are all modelled as Polygon geometries. The Solid geometry of the building references those Polygon geometries that represent the space boundaries of the building space using XLink. The MultiSurface geometry of the building installation references those Polygon geometries that represent the space boundaries of the building installation using XLink. In addition, the Solid geometry may also reference the Polygon geometries that represent the space boundaries of the building installation using XLink. These references to the geometries of a nested space are optional, in accordance with Requirement <<req_global_referencinggeometries2,/req/global/referencinggeometries2>> it is also allowed to not reference these geometries.
 
-The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/3_Building_With_Nested_Features[CityGML 3.0 Encodings Github].
+The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/3_Building_With_Nested_Features[CityGML 3.0 GML Encoding GitHub].
 
 The Building from the GML file is illustrated in the object diagram in <<figure-uml-building-with-building-installation>>. The XLink references from the building to the space boundaries of the building are highlighted in red, whereas those to the space boundaries of the building installation are highlighted in blue.
 
@@ -268,7 +268,7 @@ The two buildings (=top-level features) in <<figure-example-two-buildings>> are 
 
 To express that the WallSurfaces of the two buildings share the Polygon geometry, the WallSurfaces reference each other using a CityObjectRelation with the relation type “shared”. Both WallSurfaces contain the Polygon geometry themselves, the second WallSurface, however, in reverse order.
 
-The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/4_Cross-Top-Level-XLink[CityGML 3.0 Encodings Github].
+The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/4_Cross-Top-Level-XLink[CityGML 3.0 GML Encoding GitHub].
 
 The Buildings from the GML file are illustrated in the object diagram in <<figure-uml-two-buildings>>. The CityObjectRelation is highlighted in red.
 
@@ -286,7 +286,7 @@ A Road and a Bridge (=top-level features) are modelled in LOD2, as is shown in <
 
 To express that the RoofSurfaces share MultiSurface geometries with two TrafficAreas, they reference each other using CityObjectRelations with the relation type “shared”.
 
-The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/Road_over_Bridge_CityGML3.0_LOD2_with_CityObjectRelations.gml[CityGML 3.0 Encodings Github].
+The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/Road_over_Bridge_CityGML3.0_LOD2_with_CityObjectRelations.gml[CityGML 3.0 GML Encoding GitHub].
 
 The Road and Bridge from the GML file are illustrated in the object diagram in <<figure-uml-road-over-bridge>>. The CityObjectRelations are highlighted in red.
 
@@ -304,7 +304,7 @@ The parking garage in <<figure-example-parking-garage>> is modelled in LOD2 as a
 
 To express the sharing of MultiSurface geometries between the Roof-/WallSurfaces and the Sections/TrafficAreas, they reference each other using CityObjectRelations with the relation type “shared”.
 
-The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/Road_over_Bridge_CityGML3.0_LOD2_with_CityObjectRelations.gml[CityGML 3.0 Encodings Github].
+The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/Road_over_Bridge_CityGML3.0_LOD2_with_CityObjectRelations.gml[CityGML 3.0 GML Encoding GitHub].
 
 //
 //[[linking-rules-3-section]]
@@ -313,7 +313,7 @@ The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GM
 
 *Example 7: A specific version of a city model*
 
-A Version features groups, for instance, versions of city objects that are valid within a specific time period. The city model represents the natural aggregation of these versioned city objects, whereas the Version feature represents the alternative aggregation. Thus, the versioned city objects are represented inline as part of the city model, whereas they are referenced by the Version feature using XLink references. This example refers to Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>>.
+A Version feature groups, for instance, versions of city objects that are valid within a specific time period. The city model represents the natural aggregation of these versioned city objects, whereas the Version feature represents the alternative aggregation. Thus, the versioned city objects are represented inline as part of the city model, whereas they are referenced by the Version feature using XLink references. This example refers to Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>>.
 
 *Example 8: Building rooms belonging to a Storey*
 
@@ -336,7 +336,7 @@ image::images/Example_Intersection.png[align="center",width="70%"]
 
 In <<figure-example-intersection>>, two Roads (=top-level features) are shown that each have two Sections and one Intersection. The two Roads cross each other at the Intersection. Although the Intersection and, thus, also its geometry is shared by both Roads, it exists in reality only once; i.e., the Intersection is integral part of both Roads. In contrast to Requirement <<req_global_referencinggeometries4,/req/global/referencinggeometries4>>, this should not be expressed by duplicating the Intersection to represent it inline of both Roads and link the duplicates using CityObjectRelations. Instead, the Intersection should be represented inline as part of one Road (here: Road 2) and be referenced by the other Road (here: Road 3) using an XLink that references the ID of the Intersection feature. This type of feature link is similar to Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>>, where XLinks are used to relate features to alternative aggregations, with the difference that Road 3 cannot semantically be considered an alternative aggregation of the Intersection.
 
-The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/ParkingGarage_CityGML3.0_LOD2_with_CityObjectRelations_and_XLinks.gml[CityGML 3.0 Encodings Github].
+The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/ParkingGarage_CityGML3.0_LOD2_with_CityObjectRelations_and_XLinks.gml[CityGML 3.0 GML Encoding GitHub].
 
 The two Roads and the Intersection from the GML file are illustrated in the object diagram in <<figure-uml-intersection>>. The XLink reference is highlighted in red.
 

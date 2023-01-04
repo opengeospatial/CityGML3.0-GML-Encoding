@@ -4,7 +4,7 @@
 [[annex-examples]]
 == Examples (Informative)
 
-Various CityGML 3.0 test data sets are available in the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples[folder _examples_ on the CityGML 3.0 Encodings Github] for each CityGML module, including those test data sets presented in this chapter.
+Various CityGML 3.0 test data sets are available in the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples[folder _examples_ on the CityGML 3.0 GML Encoding GitHub] for each CityGML module, including those test data sets presented in this chapter.
 
 The examples and information provided in this chapter focus on the new CityGML 3.0 modules Dynamizer, PointCloud, and Versioning. In addition, some examples for the description of addresses using xAL 3 are provided (this is a change from CityGML 2.0, where xAL 2 was used). Since the ADE mechanism has been improved in CityGML 3.0, examples for the use of the revised ADE mechanism are provided as well.
 

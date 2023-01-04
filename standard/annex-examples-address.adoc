@@ -8,7 +8,7 @@ An _Address_ is modeled with two properties:
 - An optional _multiPoint_ property containing a _gml:MultiPoint_ for specifying the 2D or 3D position of the address.
 - A _xalAddress_ property containing a _xAL:Address_ type from the OASIS CIQ TC extensible Address Language standard (xAL).
 
-The CityGML datasets presented here are available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Building[CityGML 3.0 Encodings Github], additional examples are also available on the http://docs.oasis-open.org/ciq/v3.0/cs02/xsd/default/examples/xAL/[OASIS documentation repository].
+The CityGML datasets presented here are available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Building[CityGML 3.0 GML Encoding GitHub], additional examples are also available on the http://docs.oasis-open.org/ciq/v3.0/cs02/xsd/default/examples/xAL/[OASIS documentation repository].
 
 *Example 1: Structured address and multipoint*
 
