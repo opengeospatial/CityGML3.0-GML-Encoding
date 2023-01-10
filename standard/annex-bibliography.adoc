@@ -13,6 +13,8 @@
 
 * [[Beil2017,Beil et al. 2017]]Beil, C., Kolbe, T. H., 2017: *CityGML and the streets of New York - A proposal for detailed street space modelling*. In: Proceedings of the 12th International 3D GeoInfo Conference 2017, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W5, ISPRS. http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017
 
+* [[Beil2021,Beil et al. 2021]]Beil, C., Kutzner, T., Schwab, B., Willenborg, B., Gawronski, A., Kolbe, T. H., 2021: *Integration of 3D point clouds with semantic 3D city models – Providing semantic information beyond classification*. In: Proceedings of the 16th International 3D GeoInfo Conference 2021, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. VIII-4/W2-2021, ISPRS. https://doi.org/10.5194/isprs-annals-VIII-4-W2-2021-105-2021
+
 * [[Biljecki2015,Biljecki et al. 2015]]Biljecki, F., Stoter, J., Ledoux, H., Zlatanova, S., Çöltekin, A., 2015: *Applications of 3D City Models: State of the Art Review*. ISPRS International Journal of Geo-Information, 4(4). https://doi.org/10.3390/ijgi4042842
 
 * [[Biljecki2018,Biljecki et al. 2018]]Biljecki, F., Kumar, K., Nagel, C., 2018: *CityGML Application Domain Extension (ADE): overview of developments*. Open Geospatial Data, Software and Standards, 3(1). https://doi.org/10.1186/s40965-018-0055-6
