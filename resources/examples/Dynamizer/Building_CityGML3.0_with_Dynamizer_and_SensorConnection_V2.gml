@@ -10,16 +10,11 @@
   temperature readings) to the temperature property of the room.
 -->
 <CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.opengis.net/citygml/3.0 ../../Schema/core.xsd http://www.opengis.net/citygml/generics/3.0 ../../Schema/generics.xsd http://www.opengis.net/citygml/construction/3.0 ../../Schema/construction.xsd http://www.opengis.net/citygml/building/3.0 ../../Schema/building.xsd http://www.opengis.net/citygml/dynamizer/3.0 ../../Schema/dynamizer.xsd"
- xmlns="http://www.opengis.net/citygml/3.0"
- xmlns:gen="http://www.opengis.net/citygml/generics/3.0"
- xmlns:xAL="urn:oasis:names:tc:ciq:xal:3"
- xmlns:con="http://www.opengis.net/citygml/construction/3.0"
- xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
- xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0"
- xmlns:gml="http://www.opengis.net/gml/3.2"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- gml:id="cm1">
+  xsi:schemaLocation="http://www.opengis.net/citygml/generics/3.0 ../../../standard/Schema/generics.xsd http://www.opengis.net/citygml/building/3.0 ../../../standard/Schema/building.xsd http://www.opengis.net/citygml/dynamizer/3.0 ../../../standard/Schema/dynamizer.xsd"
+  xmlns="http://www.opengis.net/citygml/3.0" xmlns:gen="http://www.opengis.net/citygml/generics/3.0" xmlns:xAL="urn:oasis:names:tc:ciq:xal:3"
+  xmlns:con="http://www.opengis.net/citygml/construction/3.0" xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
+  xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+  gml:id="cm1">
   <gml:name>LoD2_4490_5322_1_BY</gml:name>
   <gml:boundedBy>
     <gml:Envelope srsName="urn:adv:crs:DE_DHDN_3GK4*DE_DHHN92_NH" srsDimension="3">
@@ -33,9 +28,7 @@
       <creationDate>2014-10-08T00:00:00</creationDate>
       <dynamizer>
         <dyn:Dynamizer gml:id="room1_Dynamizer">
-          <dyn:attributeRef>
-            //bldg:BuildingRoom[@gml:id='DEBY_LOD2_5744682_room1']/genericAttribute/gen:DoubleAttribute[name='temperature']/gen:value
-          </dyn:attributeRef>
+          <dyn:attributeRef>//bldg:BuildingRoom[@gml:id='DEBY_LOD2_5744682_room1']/genericAttribute/gen:DoubleAttribute[name='temperature']/gen:value</dyn:attributeRef>
           <dyn:startTime>2019-01-01T00:00:00Z</dyn:startTime>
           <dyn:endTime>2020-01-01T00:00:00Z</dyn:endTime>
           <dyn:sensorConnection>
@@ -46,13 +39,9 @@
               <dyn:datastreamID>1</dyn:datastreamID>
               <dyn:baseURL>http://127.0.0.1:8080/FROST-Server/v1.0</dyn:baseURL>
               <dyn:authType>none</dyn:authType>
-              <dyn:linkToObservation>
-                %baseURL%/Datastreams(%datastreamID%)/Observations?$filter=during(phenomenonTime, %startTime%/%endTime%)
-              </dyn:linkToObservation>
-              <dyn:linkToSensorDescription>
-                %baseURL%/Datastreams(%datastreamID%)/Sensor
-              </dyn:linkToSensorDescription>
-              <dyn:sensorLocation xlink:href="#DEBY_LOD2_5744682_room1"></dyn:sensorLocation>
+              <dyn:linkToObservation>%baseURL%/Datastreams(%datastreamID%)/Observations?$filter=during(phenomenonTime, %startTime%/%endTime%)</dyn:linkToObservation>
+              <dyn:linkToSensorDescription>%baseURL%/Datastreams(%datastreamID%)/Sensor</dyn:linkToSensorDescription>
+              <dyn:sensorLocation xlink:href="#DEBY_LOD2_5744682_room1"/>
             </dyn:SensorConnection>
           </dyn:sensorConnection>
         </dyn:Dynamizer>
@@ -65,8 +54,9 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_5e13d1c8-7fb5-479f-9794-7b9e1f89ca1e_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490663.45 5322007.59 555.191 4490663.25 5322006.21 554.643 4490666.84 5322005.7 554.642 4490669.8 5322005.28 554.641 4490670.002 5322006.703 555.206 4490670.649 5322011.271 557.02 4490656.141 5322013.32 557.02
-                        4490655.5 5322008.75 555.206 4490663.45 5322007.59 555.191</gml:posList>
+                      <gml:posList>4490663.45 5322007.59 555.191 4490663.25 5322006.21 554.643 4490666.84 5322005.7 554.642 4490669.8 5322005.28
+                        554.641 4490670.002 5322006.703 555.206 4490670.649 5322011.271 557.02 4490656.141 5322013.32 557.02 4490655.5 5322008.75
+                        555.206 4490663.45 5322007.59 555.191</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -83,7 +73,8 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_314d7d2e-1551-4946-80a4-12e463d59de5_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490664.85 5322016.66 548.47 4490664.85 5322016.66 555.241 4490664.85 5322016.7 555.226 4490664.85 5322016.7 548.47 4490664.85 5322016.66 548.47</gml:posList>
+                      <gml:posList>4490664.85 5322016.66 548.47 4490664.85 5322016.66 555.241 4490664.85 5322016.7 555.226 4490664.85 5322016.7 548.47
+                        4490664.85 5322016.66 548.47</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -100,7 +91,8 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_6a1b5359-d4e4-4d80-aeb8-ad63625a56dc_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490664.85 5322016.7 548.47 4490664.85 5322016.7 555.226 4490671.29 5322015.79 555.226 4490671.29 5322015.79 548.47 4490664.85 5322016.7 548.47</gml:posList>
+                      <gml:posList>4490664.85 5322016.7 548.47 4490664.85 5322016.7 555.226 4490671.29 5322015.79 555.226 4490671.29 5322015.79 548.47
+                        4490664.85 5322016.7 548.47</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -117,7 +109,8 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_44e7c68d-da01-4f80-b1a4-9bbde8305c77_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490656.77 5322017.8 548.47 4490656.77 5322017.8 555.242 4490664.85 5322016.66 555.241 4490664.85 5322016.66 548.47 4490656.77 5322017.8 548.47</gml:posList>
+                      <gml:posList>4490656.77 5322017.8 548.47 4490656.77 5322017.8 555.242 4490664.85 5322016.66 555.241 4490664.85 5322016.66 548.47
+                        4490656.77 5322017.8 548.47</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -134,7 +127,8 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_1e36b54e-2518-4afe-a2b4-a59ddff93581_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490663.25 5322006.21 548.47 4490663.25 5322006.21 554.643 4490663.45 5322007.59 555.191 4490663.45 5322007.59 548.47 4490663.25 5322006.21 548.47</gml:posList>
+                      <gml:posList>4490663.25 5322006.21 548.47 4490663.25 5322006.21 554.643 4490663.45 5322007.59 555.191 4490663.45 5322007.59
+                        548.47 4490663.25 5322006.21 548.47</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -151,7 +145,8 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_887068cb-0fcb-45f3-b436-d1a1bdef047f_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490663.45 5322007.59 548.47 4490663.45 5322007.59 555.191 4490655.5 5322008.75 555.206 4490655.5 5322008.75 548.47 4490663.45 5322007.59 548.47</gml:posList>
+                      <gml:posList>4490663.45 5322007.59 548.47 4490663.45 5322007.59 555.191 4490655.5 5322008.75 555.206 4490655.5 5322008.75 548.47
+                        4490663.45 5322007.59 548.47</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -168,8 +163,9 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_80ce6c2a-8724-4a2a-89e4-881da9530ecc_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490670.002 5322006.703 555.206 4490669.8 5322005.28 554.641 4490669.8 5322005.28 548.47 4490670.002 5322006.703 548.47 4490670.649 5322011.271 548.47 4490671.29 5322015.79 548.47 4490671.29 5322015.79 555.226
-                        4490670.649 5322011.271 557.02 4490670.002 5322006.703 555.206</gml:posList>
+                      <gml:posList>4490670.002 5322006.703 555.206 4490669.8 5322005.28 554.641 4490669.8 5322005.28 548.47 4490670.002 5322006.703
+                        548.47 4490670.649 5322011.271 548.47 4490671.29 5322015.79 548.47 4490671.29 5322015.79 555.226 4490670.649 5322011.271
+                        557.02 4490670.002 5322006.703 555.206</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -186,7 +182,8 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_392cb098-6e22-4334-9853-1e8225966156_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490666.84 5322005.7 548.47 4490669.8 5322005.28 548.47 4490669.8 5322005.28 554.641 4490666.84 5322005.7 554.642 4490663.25 5322006.21 554.643 4490663.25 5322006.21 548.47 4490666.84 5322005.7 548.47</gml:posList>
+                      <gml:posList>4490666.84 5322005.7 548.47 4490669.8 5322005.28 548.47 4490669.8 5322005.28 554.641 4490666.84 5322005.7 554.642
+                        4490663.25 5322006.21 554.643 4490663.25 5322006.21 548.47 4490666.84 5322005.7 548.47</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -203,8 +200,8 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_26de5877-57e7-429d-9b9a-274b8ed6aac5_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490670.649 5322011.271 557.02 4490671.29 5322015.79 555.226 4490664.85 5322016.7 555.226 4490664.85 5322016.66 555.241 4490656.77 5322017.8 555.242 4490656.141 5322013.32 557.02 4490670.649 5322011.271
-                        557.02</gml:posList>
+                      <gml:posList>4490670.649 5322011.271 557.02 4490671.29 5322015.79 555.226 4490664.85 5322016.7 555.226 4490664.85 5322016.66
+                        555.241 4490656.77 5322017.8 555.242 4490656.141 5322013.32 557.02 4490670.649 5322011.271 557.02</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -221,8 +218,8 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_dd1b367c-c6d8-4eb2-abe6-0accb0fa91b8_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490655.5 5322008.75 555.206 4490656.141 5322013.32 557.02 4490656.77 5322017.8 555.242 4490656.77 5322017.8 548.47 4490656.141 5322013.32 548.47 4490655.5 5322008.75 548.47 4490655.5 5322008.75
-                        555.206</gml:posList>
+                      <gml:posList>4490655.5 5322008.75 555.206 4490656.141 5322013.32 557.02 4490656.77 5322017.8 555.242 4490656.77 5322017.8 548.47
+                        4490656.141 5322013.32 548.47 4490655.5 5322008.75 548.47 4490655.5 5322008.75 555.206</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -239,8 +236,10 @@
                 <gml:Polygon gml:id="DEBY_LOD2_5744682_58e93bde-fd64-4fec-9626-5824c2e94f0e_poly">
                   <gml:exterior>
                     <gml:LinearRing>
-                      <gml:posList>4490670.649 5322011.271 548.47 4490670.002 5322006.703 548.47 4490669.8 5322005.28 548.47 4490666.84 5322005.7 548.47 4490663.25 5322006.21 548.47 4490663.45 5322007.59 548.47 4490655.5 5322008.75 548.47 4490656.141
-                        5322013.32 548.47 4490656.77 5322017.8 548.47 4490664.85 5322016.66 548.47 4490664.85 5322016.7 548.47 4490671.29 5322015.79 548.47 4490670.649 5322011.271 548.47</gml:posList>
+                      <gml:posList>4490670.649 5322011.271 548.47 4490670.002 5322006.703 548.47 4490669.8 5322005.28 548.47 4490666.84 5322005.7
+                        548.47 4490663.25 5322006.21 548.47 4490663.45 5322007.59 548.47 4490655.5 5322008.75 548.47 4490656.141 5322013.32 548.47
+                        4490656.77 5322017.8 548.47 4490664.85 5322016.66 548.47 4490664.85 5322016.7 548.47 4490671.29 5322015.79 548.47 4490670.649
+                        5322011.271 548.47</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -278,7 +277,7 @@
               <gen:name>temperature</gen:name>
               <gen:value>20.2</gen:value>
             </gen:DoubleAttribute>
-           </genericAttribute>
+          </genericAttribute>
         </bldg:BuildingRoom>
       </bldg:buildingRoom>
       <bldg:address>

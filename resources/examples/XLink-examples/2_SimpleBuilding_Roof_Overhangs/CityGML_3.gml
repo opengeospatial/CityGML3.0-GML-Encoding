@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<CityModel xmlns:app="http://www.opengis.net/citygml/appearance/3.0" xmlns="http://www.opengis.net/citygml/3.0" xmlns:xAL="urn:oasis:names:tc:ciq:xal:3" xmlns:ver="http://www.opengis.net/citygml/versioning/3.0" xmlns:con="http://www.opengis.net/citygml/construction/3.0" xmlns:bldg="http://www.opengis.net/citygml/building/3.0" xmlns:frn="http://www.opengis.net/citygml/cityfurniture/3.0" xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/3.0" xmlns:brid="http://www.opengis.net/citygml/bridge/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:luse="http://www.opengis.net/citygml/landuse/3.0" xmlns:tun="http://www.opengis.net/citygml/tunnel/3.0" xmlns:dem="http://www.opengis.net/citygml/relief/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ct="urn:oasis:names:tc:ciq:ct:3" xmlns:gen="http://www.opengis.net/citygml/generics/3.0" xmlns:wtr="http://www.opengis.net/citygml/waterbody/3.0" xmlns:pnt="http://www.opengis.net/citygml/pointcloud/3.0" xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0" xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0" xmlns:tran="http://www.opengis.net/citygml/transportation/3.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/citygml/building/3.0 ../schemas/building.xsd">
+<CityModel xmlns="http://www.opengis.net/citygml/3.0" xmlns:con="http://www.opengis.net/citygml/construction/3.0"
+  xmlns:bldg="http://www.opengis.net/citygml/building/3.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xsi:schemaLocation="http://www.opengis.net/citygml/building/3.0 ../../../../standard/Schema/building.xsd">
   <cityObjectMember>
     <bldg:Building gml:id="_Overhangs_BD.1">
       <boundary>
@@ -87,7 +90,8 @@
                 <gml:Polygon gml:id="_Overhangs_BD.1_PG.7">
                   <gml:exterior>
                     <gml:LinearRing gml:id="_Overhangs_BD.1_PG.7_LR.1">
-                      <gml:posList srsDimension="3">13.0 15.0 3.0 13.0 10.0 3.0 11.5 10.0 4.5 11.5 9.6 4.5 13.2828427124746 9.6 2.71715728752538 13.2828427124746 15.4 2.71715728752538 11.5 15.4 4.5 11.5 15.0 4.5 13.0 15.0 3.0</gml:posList>
+                      <gml:posList srsDimension="3">13.0 15.0 3.0 13.0 10.0 3.0 11.5 10.0 4.5 11.5 9.6 4.5 13.2828427124746 9.6 2.71715728752538
+                        13.2828427124746 15.4 2.71715728752538 11.5 15.4 4.5 11.5 15.0 4.5 13.0 15.0 3.0</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
@@ -96,7 +100,8 @@
                 <gml:Polygon gml:id="_Overhangs_BD.1_PG.8">
                   <gml:exterior>
                     <gml:LinearRing gml:id="_Overhangs_BD.1_PG.8_LR.1">
-                      <gml:posList srsDimension="3">9.71715728752538 15.4 2.71715728752538 9.71715728752538 9.6 2.71715728752538 11.5 9.6 4.5 11.5 10.0 4.5 10.0 10.0 3.0 10.0 15.0 3.0 11.5 15.0 4.5 11.5 15.4 4.5 9.71715728752538 15.4 2.71715728752538</gml:posList>
+                      <gml:posList srsDimension="3">9.71715728752538 15.4 2.71715728752538 9.71715728752538 9.6 2.71715728752538 11.5 9.6 4.5 11.5
+                        10.0 4.5 10.0 10.0 3.0 10.0 15.0 3.0 11.5 15.0 4.5 11.5 15.4 4.5 9.71715728752538 15.4 2.71715728752538</gml:posList>
                     </gml:LinearRing>
                   </gml:exterior>
                 </gml:Polygon>
