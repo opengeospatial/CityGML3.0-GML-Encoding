@@ -4,6 +4,6 @@
 2+<|*Abstract Test {counter:ats-id}*
 |Test ID: |/conf/relief/elements
 |Requirement: |<<req_relief_elements,/req/relief/elements>>
-|Test purpose: |Verify that the conforming instance document supports the Relief XML elements listed in <<relief-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/relief/3.0/relief.xsd.
-|Test method: |Inspect the instance document to verify the above requirement.
+|Test purpose: |Verify that instance documents using the Relief XML elements listed in <<relief-xml-elements>> validate against the XML schema specified in http://schemas.opengis.net/citygml/relief/3.0/relief.xsd.
+|Test method: |Validate the instance document against the relief.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.
 |===

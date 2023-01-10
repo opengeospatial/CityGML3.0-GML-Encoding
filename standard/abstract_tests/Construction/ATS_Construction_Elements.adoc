@@ -4,6 +4,6 @@
 2+<|*Abstract Test {counter:ats-id}*
 |Test ID: |/conf/construction/elements
 |Requirement: |<<req_construction_elements,/req/construction/elements>>
-|Test purpose: |Verify that the conforming instance document supports the Construction XML elements listed in <<construction-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/construction/3.0/construction.xsd.
-|Test method: |Inspect the instance document to verify the above requirement.
+|Test purpose: |Verify that instance documents using the Construction XML elements listed in <<construction-xml-elements>> validate against the XML schema specified in http://schemas.opengis.net/citygml/construction/3.0/construction.xsd.
+|Test method: |Validate the instance document against the construction.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.
 |===

@@ -4,6 +4,6 @@
 2+<|*Abstract Test {counter:ats-id}*
 |Test ID: |/conf/appearance/elements
 |Requirement: |<<req_appearance_elements,/req/appearance/elements>>
-|Test purpose: |Verify that the conforming instance document supports the Appearance XML elements listed in <<appearance-xml-elements>> in accordance with the GML XML schema specified in http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd.
-|Test method: |Inspect the instance document to verify the above requirement.
+|Test purpose: |Verify that instance documents using the Appearance XML elements listed in <<appearance-xml-elements>> validate against the XML schema specified in http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd.
+|Test method: |Validate the instance document against the appearance.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.
 |===
