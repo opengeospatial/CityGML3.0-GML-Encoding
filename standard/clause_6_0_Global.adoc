@@ -304,7 +304,7 @@ The parking garage in <<figure-example-parking-garage>> is modelled in LOD2 as a
 
 To express the sharing of MultiSurface geometries between the Roof-/WallSurfaces and the Sections/TrafficAreas, they reference each other using CityObjectRelations with the relation type “shared”.
 
-The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/Road_over_Bridge_CityGML3.0_LOD2_with_CityObjectRelations.gml[CityGML 3.0 GML Encoding GitHub].
+The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/ParkingGarage_CityGML3.0_LOD2_with_CityObjectRelations_and_XLinks.gml[CityGML 3.0 GML Encoding GitHub].
 
 //
 //[[linking-rules-3-section]]
