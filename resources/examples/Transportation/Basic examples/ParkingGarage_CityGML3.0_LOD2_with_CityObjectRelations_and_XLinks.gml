@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  This file contains a parking garage that is represented as a Building and shares surfaces with Roads inside the parking garage. The surfaces are related to each other using CityObectRelation with the relationType "equal".
+  This file contains a parking garage that is represented as a Building and shares surfaces with Roads inside the parking garage. The surfaces are related to each other using CityObectRelation with the relationType "shared".
   The file contains also an Intersection that is part of the roads "Road2" and "Road3". The intersection is represented only once as part of "Road2" and is linked from "Road3" using an XLink reference.
 -->
 <core:CityModel xmlns:con="http://www.opengis.net/citygml/construction/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -13,7 +13,7 @@
         <con:FloorSurface gml:id="floorsurface2">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="section2"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -41,7 +41,7 @@
         <con:FloorSurface gml:id="floorsurface4">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="section4"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -71,7 +71,7 @@
         <con:FloorSurface gml:id="floorsurface1">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="section1"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -100,7 +100,7 @@
         <con:FloorSurface gml:id="floorsurface3">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="section3"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -132,7 +132,7 @@
         <con:FloorSurface gml:id="floorsurface5">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="section5"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -160,7 +160,7 @@
         <con:RoofSurface gml:id="roofsurface5">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="trafficarea3"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -188,7 +188,7 @@
         <con:RoofSurface gml:id="roofsurface10">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="trafficarea8"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -216,7 +216,7 @@
         <con:RoofSurface gml:id="roofsurface9">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="trafficarea7"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -244,7 +244,7 @@
         <con:RoofSurface gml:id="roofsurface6">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="trafficarea4"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -272,7 +272,7 @@
         <con:RoofSurface gml:id="roofsurface3">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="auxiliarytrafficarea1"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -305,7 +305,7 @@
         <con:RoofSurface gml:id="roofsurface8">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="trafficarea6"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -333,7 +333,7 @@
         <con:RoofSurface gml:id="roofsurface2">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="trafficarea1"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -362,7 +362,7 @@
         <con:RoofSurface gml:id="roofsurface4">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="trafficarea2"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -390,7 +390,7 @@
         <con:RoofSurface gml:id="roofsurface7">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="trafficarea5"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -418,7 +418,7 @@
         <con:RoofSurface gml:id="roofsurface1">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="section6"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -1934,7 +1934,7 @@
                 <tran:TrafficArea gml:id="trafficarea2">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface4"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -1967,7 +1967,7 @@
                 <tran:TrafficArea gml:id="trafficarea5">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface7"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -2000,7 +2000,7 @@
                 <tran:TrafficArea gml:id="trafficarea6">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface8"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -2033,7 +2033,7 @@
                 <tran:TrafficArea gml:id="trafficarea1">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface2"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -2067,7 +2067,7 @@
                 <tran:TrafficArea gml:id="trafficarea8">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface10"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -2100,7 +2100,7 @@
                 <tran:TrafficArea gml:id="trafficarea3">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface5"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -2133,7 +2133,7 @@
                 <tran:TrafficArea gml:id="trafficarea4">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface6"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -2166,7 +2166,7 @@
                 <tran:TrafficArea gml:id="trafficarea7">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface9"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -2199,7 +2199,7 @@
                 <tran:AuxiliaryTrafficArea gml:id="auxiliarytrafficarea1">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="roofsurface3"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -2237,7 +2237,7 @@
         <tran:Section gml:id="section6">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="roofsurface1"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -2269,7 +2269,7 @@
         <tran:Section gml:id="section1">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="floorsurface1"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -2298,7 +2298,7 @@
         <tran:Section gml:id="section3">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="floorsurface3"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -2330,7 +2330,7 @@
         <tran:Section gml:id="section4">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="floorsurface4"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -2360,7 +2360,7 @@
         <tran:Section gml:id="section5">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="floorsurface5"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -2388,7 +2388,7 @@
         <tran:Section gml:id="section2">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="floorsurface2"/>
             </core:CityObjectRelation>
           </core:relatedTo>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   This file contains a Road and a Bridge that share two surfaces (TrafficArea5/RoofSurface1 and TrafficArea6/RoofSurface2).
-  The surfaces are related to each other using CityObectRelation with the relationType "equal".
+  The surfaces are related to each other using CityObectRelation with the relationType "shared".
 -->
 <core:CityModel xmlns:con="http://www.opengis.net/citygml/construction/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -51,7 +51,7 @@
         <con:RoofSurface gml:id="id_roofsurface1">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="id_trafficarea5"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -95,7 +95,7 @@
         <con:RoofSurface gml:id="id_roofsurface2">
           <core:relatedTo>
             <core:CityObjectRelation>
-              <core:relationType>equal</core:relationType>
+              <core:relationType>shared</core:relationType>
               <core:relatedTo xlink:href="id_trafficarea6"/>
             </core:CityObjectRelation>
           </core:relatedTo>
@@ -418,7 +418,7 @@
                 <tran:TrafficArea gml:id="id_trafficarea5">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="id_roofSurface1"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
@@ -467,7 +467,7 @@
                 <tran:TrafficArea gml:id="id_trafficarea6">
                   <core:relatedTo>
                     <core:CityObjectRelation>
-                      <core:relationType>equal</core:relationType>
+                      <core:relationType>shared</core:relationType>
                       <core:relatedTo xlink:href="id_roofSurface2"/>
                     </core:CityObjectRelation>
                   </core:relatedTo>
