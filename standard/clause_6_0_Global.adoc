@@ -34,7 +34,7 @@ The two attributes are defined in the UML class _AbstractFeature_ as part of the
 |Specifies the unique identifier of the feature that is valid in the instance document within which it occurs.
 |identifier
 |XML element gml:identifier
-|Specifies the unique identifier of the feature that is valid globally.
+|Specifies the global identifier of the feature. The identifier must be globally valid, unique and identical over different feature versions.
 |===
 
 //[[figure-gml-identifiers]]
