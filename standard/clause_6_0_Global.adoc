@@ -321,7 +321,7 @@ A CityObjectGroup groups existing city objects that are usually represented inli
 
 *Referencing features from multiple and different contexts*
 
-The same feature can also be used in multiple and different contexts without being able to distinguish between a natural and alternative aggregations. Nevertheless, also in these scenarios it makes sense to store the feature only once and to reference it from every other context using XLinks in order to avoid duplication and to ensure a non-redundant representation. For this reason, referencing features using XLinks is allowed beyond the scope of Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>> even between top-level features. The following examples illustrate some of these scenarios.
+The same feature can also be used in multiple and different contexts without being able to distinguish between a natural and alternative aggregations. Nevertheless, also in such scenarios it is recommended to store the feature only once and to reference it from every other context using XLinks in order to avoid duplication and to ensure a non-redundant representation. For this reason, referencing features using XLinks is allowed beyond the scope of Requirement <<req_global_alternativeaggregations,/req/global/alternativeaggregations>> even between top-level features. The following examples illustrate some of these scenarios.
 
 *Example 9: Building rooms belonging to a Storey*
 
