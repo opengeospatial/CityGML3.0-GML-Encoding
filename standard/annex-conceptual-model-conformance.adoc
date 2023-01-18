@@ -9,6 +9,6 @@ A requirement of any implementation of the CityGML 3.0 Conceptual Model (CM) is 
 === Conformance of this Implementation Specification to the CityGML-3.0 CM
 
 Implementation Specifications define how a Conceptual Model should be implemented using a specific technology. This standard defines the platform-specific implementation for
-the GML standards version 3.2 and 3.3, which are based on XML. The GML schemas, expressed as XML Schema Description (XSD) language files, were derived fully automatically from the UML Conceptual Model using the software tool link:https://shapechange.net[ShapeChange] with the  link:ShapeChangeConfigurationFile_CityGML_3.0.xml[configuration file] included in this standard. *Conformance of a CityGML 3.0 GML-encoded instance document to the CityGML 3.0 Conceptual Model is assured if the instance conforms to these GML schemas, as detailed in <<conceptual-model-mapping>>.* 
+the GML standards version 3.2 and 3.3, which are based on XML. The GML schemas, expressed as XML Schema Description (XSD) language files, were derived fully automatically from the UML Conceptual Model using the software tool link:https://shapechange.net[ShapeChange] with the  link:../resources/encoding/ShapeChangeConfigurationFile_CityGML_3.0.xml[configuration file] included in this standard. *Conformance of a CityGML 3.0 GML-encoded instance document to the CityGML 3.0 Conceptual Model is assured if the instance conforms to these GML schemas, as detailed in <<conceptual-model-mapping>>.* 
 
 
