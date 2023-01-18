@@ -13,7 +13,8 @@
 |2022-11-17|0.9.0|T. Kutzner, P. Parslow, C. Nagel, C.S. Smyth|Abstract Tests, Conformance|Revisions from resolution of public review comments.
 |2022-12-28|0.9.1|T. Kutzner, C.S. Smyth|Conformance, entire document|General editorial - from GitHub issue tasks.
 |2023-01-17|1.0.0|T. Kutzner, C. Nagel, C.S. Smyth|Conformance|Final cleanup prior to release by SWG.
-|2023-01-18|1.0.1|T. Kutzner|Annex G, Implementation Decisions, Annex D|Improve text and fix links.| | 
+|2023-01-18|1.0.1|T. Kutzner|Annex G, Implementation Decisions, Annex D|Improve text and fix links.
+|2023-01-18|1.0.2|C.S. Smyth|Version and date|Correct| | 
 
 
 |===
