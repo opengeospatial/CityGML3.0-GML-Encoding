@@ -678,6 +678,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#annex-implementation-decisions">Annex G: Implementation Decisions (Informative)</a>
 <ul class="sectlevel2">
 <li><a href="#association-classes-section">G.1. Encoding of association classes</a></li>
+<li><a href="#list-types-section">G.2. Encoding of list types</a></li>
 </ul>
 </li>
 <li><a href="#_revision_history">Annex H: Revision History</a></li>
@@ -8171,7 +8172,7 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 <div class="sect4">
 <h5 id="_example_2_ogc_sensorthings_api"><a class="anchor" href="#_example_2_ogc_sensorthings_api"></a>B.1.1.2. Example 2: OGC SensorThings API</h5>
 <div class="paragraph">
-<p>In this example, the same room temperature from sensor DHT22 is to be retrieved, but now the sensor observations are stored in a FROST Server and, thus, need to be queried using the OGC SensorThings API. The following is an example query to request sensor data from the FROST Server (the request is a single line without linebreaks and spaces). The request retrieves all observations between '2019-04-12T10:00:00.000Z' and '2019-04-12T10:30:00.000Z' for the Datastream ID 1 which is the temperature. According to the SensorThings API, observations are always aligned with datastreams:</p>
+<p>In this example, the same room temperature from sensor DHT22 is to be retrieved, but now the sensor observations are stored in a FROST Server and, thus, need to be queried using the OGC SensorThings API. The FROST Server is an open-source implementation of the OGC SensorThings API standard providing standardized interfaces to retrieve sensor data and observations. The following is an example query to request sensor data from the FROST Server (the request is a single line without linebreaks and spaces). The request retrieves all observations between '2019-04-12T10:00:00.000Z' and '2019-04-12T10:30:00.000Z' for the Datastream ID 1 which is the temperature. According to the SensorThings API, observations are always aligned with datastreams:</p>
 </div>
 <div id="listing-query-sensorthingsapi" class="listingblock">
 <div class="content">
@@ -11224,12 +11225,6 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
       &lt;maxInclusive value="1"/&gt;
     &lt;/restriction&gt;
   &lt;/simpleType&gt;
-  &lt;simpleType name="DoubleBetween0and1ListType"&gt;
-    &lt;annotation&gt;
-      &lt;documentation&gt;DoubleBetween0and1List is a basic type that represents a list of double values greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example.&lt;/documentation&gt;
-    &lt;/annotation&gt;
-    &lt;list itemType="core:DoubleBetween0and1Type"/&gt;
-  &lt;/simpleType&gt;
   &lt;element name="ExternalReference" substitutionGroup="gml:AbstractObject" type="core:ExternalReferenceType"&gt;
     &lt;annotation&gt;
       &lt;documentation&gt;ExternalReference is a reference to a corresponding object in another information system, for example in the German cadastre (ALKIS), the German topographic information system (ATKIS), or the OS UK MasterMap®.&lt;/documentation&gt;
@@ -11490,7 +11485,10 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
     &lt;annotation&gt;
       &lt;documentation&gt;TransformationMatrix2x2 is a 2 by 2 matrix represented as a list of four double values in row major order.&lt;/documentation&gt;
     &lt;/annotation&gt;
-    &lt;restriction base="gml:doubleList"&gt;
+    &lt;restriction&gt;
+      &lt;simpleType&gt;
+        &lt;list itemType="double"/&gt;
+      &lt;/simpleType&gt;
       &lt;length value="4"/&gt;
     &lt;/restriction&gt;
   &lt;/simpleType&gt;
@@ -11498,7 +11496,10 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
     &lt;annotation&gt;
       &lt;documentation&gt;TransformationMatrix3x4 is a 3 by 4 matrix represented as a list of twelve double values in row major order.&lt;/documentation&gt;
     &lt;/annotation&gt;
-    &lt;restriction base="gml:doubleList"&gt;
+    &lt;restriction&gt;
+      &lt;simpleType&gt;
+        &lt;list itemType="double"/&gt;
+      &lt;/simpleType&gt;
       &lt;length value="12"/&gt;
     &lt;/restriction&gt;
   &lt;/simpleType&gt;
@@ -11506,7 +11507,10 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
     &lt;annotation&gt;
       &lt;documentation&gt;TransformationMatrix4x4 is a 4 by 4 matrix represented as a list of sixteen double values in row major order.&lt;/documentation&gt;
     &lt;/annotation&gt;
-    &lt;restriction base="gml:doubleList"&gt;
+    &lt;restriction&gt;
+      &lt;simpleType&gt;
+        &lt;list itemType="double"/&gt;
+      &lt;/simpleType&gt;
       &lt;length value="16"/&gt;
     &lt;/restriction&gt;
   &lt;/simpleType&gt;
@@ -11749,7 +11753,10 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
     &lt;annotation&gt;
       &lt;documentation&gt;Color is a list of three double values between 0 and 1 defining an RGB color value.&lt;/documentation&gt;
     &lt;/annotation&gt;
-    &lt;restriction base="core:DoubleBetween0and1ListType"&gt;
+    &lt;restriction&gt;
+      &lt;simpleType&gt;
+        &lt;list itemType="core:DoubleBetween0and1Type"/&gt;
+      &lt;/simpleType&gt;
       &lt;length value="3"/&gt;
     &lt;/restriction&gt;
   &lt;/simpleType&gt;
@@ -11757,7 +11764,10 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
     &lt;annotation&gt;
       &lt;documentation&gt;Color is a list of four double values between 0 and 1 defining an RGBA color value. Opacity value of 0 means transparent.&lt;/documentation&gt;
     &lt;/annotation&gt;
-    &lt;restriction base="core:DoubleBetween0and1ListType"&gt;
+    &lt;restriction&gt;
+      &lt;simpleType&gt;
+        &lt;list itemType="core:DoubleBetween0and1Type"/&gt;
+      &lt;/simpleType&gt;
       &lt;minLength value="3"/&gt;
       &lt;maxLength value="4"/&gt;
     &lt;/restriction&gt;
@@ -18325,7 +18335,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
 <h3 id="_conformance_of_this_implementation_specification_to_the_citygml_3_0_cm"><a class="anchor" href="#_conformance_of_this_implementation_specification_to_the_citygml_3_0_cm"></a>D.1. Conformance of this Implementation Specification to the CityGML-3.0 CM</h3>
 <div class="paragraph">
 <p>Implementation Specifications define how a Conceptual Model should be implemented using a specific technology. This standard defines the platform-specific implementation for
-the GML standards version 3.2 and 3.3, which are based on XML. The GML schemas, expressed as XML Schema Description (XSD) language files, were derived fully automatically from the UML Conceptual Model using the software tool <a href="https://shapechange.net">ShapeChange</a> with the  <a href="ShapeChangeConfigurationFile_CityGML_3.0.xml">configuration file</a> included in this standard. <strong>Conformance of a CityGML 3.0 GML-encoded instance document to the CityGML 3.0 Conceptual Model is assured if the instance conforms to these GML schemas, as detailed in <a href="#conceptual-model-mapping">Table 1</a>.</strong></p>
+the GML standards version 3.2 and 3.3, which are based on XML. The GML schemas, expressed as XML Schema Description (XSD) language files, were derived fully automatically from the UML Conceptual Model using the software tool <a href="https://shapechange.net">ShapeChange</a> with the  <a href="../resources/encoding/ShapeChangeConfigurationFile_CityGML_3.0.xml">configuration file</a> included in this standard. <strong>Conformance of a CityGML 3.0 GML-encoded instance document to the CityGML 3.0 Conceptual Model is assured if the instance conforms to these GML schemas, as detailed in <a href="#conceptual-model-mapping">Table 1</a>.</strong></p>
 </div>
 </div>
 </div>
@@ -18733,6 +18743,13 @@ Code|3100|saddle roof</pre>
 <div class="sect1">
 <h2 id="annex-implementation-decisions"><a class="anchor" href="#annex-implementation-decisions"></a>Annex G: Implementation Decisions (Informative)</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>As described below, an Implementation Model is used for deriving the GML schemas using ShapeChange. The Implementation model was created based on the <a href="https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap">CityGML 3.0 Conceptual Model Enterprise Architect file</a>.</p>
+</div>
+<div class="paragraph">
+<p>The Entprise Architect file of the Implementation Model and the ShapeChange configuration file required by ShapeChange for deriving the GML schemas are provided in the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/encoding">folder <em>encoding</em> on the CityGML 3.0 GML Encoding GitHub repository</a>.
+The Implementation Model and the ShapeChange configuration file can be used to derive the GML schemas with <a href="https://shapechange.net/">ShapeChange</a> version 2.11 or later.</p>
+</div>
 <div class="sect2">
 <h3 id="association-classes-section"><a class="anchor" href="#association-classes-section"></a>G.1. Encoding of association classes</h3>
 <div class="sect3">
@@ -18934,6 +18951,21 @@ Code|3100|saddle roof</pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="list-types-section"><a class="anchor" href="#list-types-section"></a>G.2. Encoding of list types</h3>
+<div class="paragraph">
+<p>Based on Recommendation 11 given in section 8.2.9 of the <a href="http://www.opengis.net/doc/PER/t17-D022">OGC Testbed-17: Model-Driven Standards Engineering Report</a>, the basic types <em>TransformationMatrix2x2</em>, <em>TransformationMatrix3x4</em>, <em>TransformationMatrix4x4</em>, <em>Color</em>, and <em>ColorPlusOpacity</em> were revised in the Implementation Model.</p>
+</div>
+<div class="paragraph">
+<p>These basic types are no longer modelled as subclasses of the basic types <em>DoubleList</em> and <em>DoubleBetween0and1List</em>, respectively. Instead, they provide now a single <em>list</em> attribute themselves with a maximum multiplicity greater than 1 allowing to encode them as list-based XML Schema simple types.</p>
+</div>
+<div class="paragraph">
+<p>The basic type <em>DoubleBetween0and1List</em> was removed from the Implementation Model as it is no longer needed. The basic type <em>DoubleList</em>, however, remains in the Implementation Model as it serves as data type for the attribute <em>textureCoordinates</em> in the class <em>TexCoordList</em> of the <em>Appearance</em> module.</p>
+</div>
+<div class="paragraph">
+<p>By applying these recommendations in the Implementation Model, <a href="https://shapechange.net/">ShapeChange</a> version 2.11 or later can be used to derive the GML schemas.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -19012,6 +19044,13 @@ Code|3100|saddle roof</pre>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner, C. Nagel, C.S. Smyth</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Final cleanup prior to release by SWG.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2023-01-18</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.0.1</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Annex G, Implementation Decisions, Annex D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Improve text and fix links.</p></td>
 </tr>
 </tbody>
 </table>
