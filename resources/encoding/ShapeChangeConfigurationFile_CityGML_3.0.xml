@@ -32,6 +32,7 @@
         <EncodingRule name="citygml" extends="iso19136_2007">
           <rule name="rule-xsd-rel-association-classes"/>
           <rule name="rule-xsd-cls-basictype"/>
+          <rule name="rule-xsd-cls-basictype-list"/>
           <rule name="rule-xsd-prop-initialValue"/>
           <rule name="rule-xsd-prop-att-map-entry"/>
           <rule name="rule-xsd-prop-constrainingFacets"/>

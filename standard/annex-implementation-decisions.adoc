@@ -4,6 +4,11 @@
 [[annex-implementation-decisions]]
 == Implementation Decisions (Informative)
 
+As described below, an Implementation Model is used for deriving the GML schemas using ShapeChange. The Implementation model was created based on the https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap[CityGML 3.0 Conceptual Model Enterprise Architect file].
+
+The Entprise Architect file of the Implementation Model and the ShapeChange configuration file required by ShapeChange for deriving the GML schemas are provided in the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/encoding[folder _encoding_ on the CityGML 3.0 GML Encoding GitHub repository].
+The Implementation Model and the ShapeChange configuration file can be used to derive the GML schemas with https://shapechange.net/[ShapeChange] version 2.11 or later.
+
 [[association-classes-section]]
 === Encoding of association classes
 
@@ -156,3 +161,14 @@ Within a GML instance document, specifying that the WallSurfaces of two building
   </boundary>
 </bldg:Building>
 ----
+
+[[list-types-section]]
+=== Encoding of list types
+
+Based on Recommendation 11 given in section 8.2.9 of the http://www.opengis.net/doc/PER/t17-D022[OGC Testbed-17: Model-Driven Standards Engineering Report], the basic types _TransformationMatrix2x2_, _TransformationMatrix3x4_, _TransformationMatrix4x4_, _Color_, and _ColorPlusOpacity_ were revised in the Implementation Model.
+
+These basic types are no longer modelled as subclasses of the basic types _DoubleList_ and _DoubleBetween0and1List_, respectively. Instead, they provide now a single _list_ attribute themselves with a maximum multiplicity greater than 1 allowing to encode them as list-based XML Schema simple types.
+
+The basic type _DoubleBetween0and1List_ was removed from the Implementation Model as it is no longer needed. The basic type _DoubleList_, however, remains in the Implementation Model as it serves as data type for the attribute _textureCoordinates_ in the class _TexCoordList_ of the _Appearance_ module.
+
+By applying these recommendations in the Implementation Model, https://shapechange.net/[ShapeChange] version 2.11 or later can be used to derive the GML schemas.
