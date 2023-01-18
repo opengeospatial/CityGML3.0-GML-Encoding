@@ -122,7 +122,7 @@ The actual connection parameters to the ThingSpeak platform are specified by the
 
 ===== Example 2: OGC SensorThings API
 
-In this example, the same room temperature from sensor DHT22 is to be retrieved, but now the sensor observations are stored in a FROST Server and, thus, need to be queried using the OGC SensorThings API. The following is an example query to request sensor data from the FROST Server (the request is a single line without linebreaks and spaces). The request retrieves all observations between '2019-04-12T10:00:00.000Z' and '2019-04-12T10:30:00.000Z' for the Datastream ID 1 which is the temperature. According to the SensorThings API, observations are always aligned with datastreams:
+In this example, the same room temperature from sensor DHT22 is to be retrieved, but now the sensor observations are stored in a FROST Server and, thus, need to be queried using the OGC SensorThings API. The FROST Server is an open-source implementation of the OGC SensorThings API standard providing standardized interfaces to retrieve sensor data and observations. The following is an example query to request sensor data from the FROST Server (the request is a single line without linebreaks and spaces). The request retrieves all observations between '2019-04-12T10:00:00.000Z' and '2019-04-12T10:30:00.000Z' for the Datastream ID 1 which is the temperature. According to the SensorThings API, observations are always aligned with datastreams:
 
 [[listing-query-sensorthingsapi]]
 ----
