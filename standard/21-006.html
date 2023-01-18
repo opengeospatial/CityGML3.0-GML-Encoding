@@ -658,7 +658,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#xml-waterbody-module">C.17. Water Body</a></li>
 </ul>
 </li>
-<li><a href="#annex-cm-conformance">Annex D: Conceptual Model Conformance (Normative)</a></li>
+<li><a href="#annex-cm-conformance">Annex D: CityGML 3.0 Conceptual Model Conformance (Normative)</a>
+<ul class="sectlevel2">
+<li><a href="#_conformance_of_this_implementation_specification_to_the_citygml_3_0_cm">D.1. Conformance of this Implementation Specification to the CityGML-3.0 CM</a></li>
+</ul>
+</li>
 <li><a href="#annex-codelist-usage">Annex E: Codelists (Informative)</a>
 <ul class="sectlevel2">
 <li><a href="#_logical_model">E.1. Logical Model</a></li>
@@ -1230,7 +1234,7 @@ NOTE Top-level features are denoted by the stereotype «TopLevelFeatureType» in
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/global/gml</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">XML instance documents claiming conformance to this specification shall validate with respect to the XML schema files.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">XML instance documents claiming conformance to this specification shall validate against the XML schema files provided in <a href="#annex-schema">Appendix C</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">Note: This means that they have to be valid GML 3.2 documents. They may use certain aspects of GML 3.3; see <a href="#annex-gml-3.3">Appendix F</a> for further information.</p></td>
@@ -1519,7 +1523,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>The building (=space) in <a href="#figure-example-simple-building">Figure 1</a> is modelled in LOD2 as Solid geometry and is bounded by four WallSurfaces, one RoofSurface, and one GroundSurface (=space boundaries). All space boundaries are modelled as Polygon geometries. The Solid geometry of the building references the Polygon geometries using XLink. This example refers to Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
 </div>
 <div class="paragraph">
-<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/1_SimpleBuilding">CityGML 3.0 Encodings Github</a>.</p>
+<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/1_SimpleBuilding">CityGML 3.0 GML Encoding GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Building from the GML file is illustrated in the object diagram in <a href="#figure-uml-simple-building">Figure 2</a>. The XLink references between the Solid geometry and the Polygon geometries are highlighted in red.</p>
@@ -1546,7 +1550,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>The RoofSurface contains four Polygon geometries. Two of these Polygons are roof overhangs (i.e. dangling surfaces), and, thus, are not referenced by the Solid geometry of the building, as they would render the solid invalid if referenced. For this reason, an additional MultiSurface geometry is added to the building that references the dangling surfaces. In accordance with Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a> this MultiSurface geometry is optional. It is added to the building to provide additional information, but it is not mandatory to add this geometry.</p>
 </div>
 <div class="paragraph">
-<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/2_SimpleBuilding_Roof_Overhangs">CityGML 3.0 Encodings Github</a>.</p>
+<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/2_SimpleBuilding_Roof_Overhangs">CityGML 3.0 GML Encoding GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Building from the GML file is illustrated in the object diagram in <a href="#figure-uml-building-with-roof-overhangs">Figure 4</a>. The XLink references between the Solid geometry and the Polygon geometries are highlighted in red, the XLink references between the MultiSurface geometry and the dangling surfaces in blue.</p>
@@ -1573,7 +1577,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>The space boundaries of the building and of the building installation are all modelled as Polygon geometries. The Solid geometry of the building references those Polygon geometries that represent the space boundaries of the building space using XLink. The MultiSurface geometry of the building installation references those Polygon geometries that represent the space boundaries of the building installation using XLink. In addition, the Solid geometry may also reference the Polygon geometries that represent the space boundaries of the building installation using XLink. These references to the geometries of a nested space are optional, in accordance with Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a> it is also allowed to not reference these geometries.</p>
 </div>
 <div class="paragraph">
-<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/3_Building_With_Nested_Features">CityGML 3.0 Encodings Github</a>.</p>
+<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/3_Building_With_Nested_Features">CityGML 3.0 GML Encoding GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Building from the GML file is illustrated in the object diagram in <a href="#figure-uml-building-with-building-installation">Figure 6</a>. The XLink references from the building to the space boundaries of the building are highlighted in red, whereas those to the space boundaries of the building installation are highlighted in blue.</p>
@@ -1600,7 +1604,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>To express that the WallSurfaces of the two buildings share the Polygon geometry, the WallSurfaces reference each other using a CityObjectRelation with the relation type “shared”. Both WallSurfaces contain the Polygon geometry themselves, the second WallSurface, however, in reverse order.</p>
 </div>
 <div class="paragraph">
-<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/4_Cross-Top-Level-XLink">CityGML 3.0 Encodings Github</a>.</p>
+<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/4_Cross-Top-Level-XLink">CityGML 3.0 GML Encoding GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Buildings from the GML file are illustrated in the object diagram in <a href="#figure-uml-two-buildings">Figure 8</a>. The CityObjectRelation is highlighted in red.</p>
@@ -1627,7 +1631,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>To express that the RoofSurfaces share MultiSurface geometries with two TrafficAreas, they reference each other using CityObjectRelations with the relation type “shared”.</p>
 </div>
 <div class="paragraph">
-<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/Road_over_Bridge_CityGML3.0_LOD2_with_CityObjectRelations.gml">CityGML 3.0 Encodings Github</a>.</p>
+<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/Road_over_Bridge_CityGML3.0_LOD2_with_CityObjectRelations.gml">CityGML 3.0 GML Encoding GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Road and Bridge from the GML file are illustrated in the object diagram in <a href="#figure-uml-road-over-bridge">Figure 10</a>. The CityObjectRelations are highlighted in red.</p>
@@ -1654,13 +1658,13 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>To express the sharing of MultiSurface geometries between the Roof-/WallSurfaces and the Sections/TrafficAreas, they reference each other using CityObjectRelations with the relation type “shared”.</p>
 </div>
 <div class="paragraph">
-<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/Road_over_Bridge_CityGML3.0_LOD2_with_CityObjectRelations.gml">CityGML 3.0 Encodings Github</a>.</p>
+<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/ParkingGarage_CityGML3.0_LOD2_with_CityObjectRelations_and_XLinks.gml">CityGML 3.0 GML Encoding GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example 7: A specific version of a city model</strong></p>
 </div>
 <div class="paragraph">
-<p>A Version features groups, for instance, versions of city objects that are valid within a specific time period. The city model represents the natural aggregation of these versioned city objects, whereas the Version feature represents the alternative aggregation. Thus, the versioned city objects are represented inline as part of the city model, whereas they are referenced by the Version feature using XLink references. This example refers to Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a>.</p>
+<p>A Version feature groups, for instance, versions of city objects that are valid within a specific time period. The city model represents the natural aggregation of these versioned city objects, whereas the Version feature represents the alternative aggregation. Thus, the versioned city objects are represented inline as part of the city model, whereas they are referenced by the Version feature using XLink references. This example refers to Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example 8: Building rooms belonging to a Storey</strong></p>
@@ -1693,7 +1697,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>In <a href="#figure-example-intersection">Figure 12</a>, two Roads (=top-level features) are shown that each have two Sections and one Intersection. The two Roads cross each other at the Intersection. Although the Intersection and, thus, also its geometry is shared by both Roads, it exists in reality only once; i.e., the Intersection is integral part of both Roads. In contrast to Requirement <a href="#req_global_referencinggeometries4">/req/global/referencinggeometries4</a>, this should not be expressed by duplicating the Intersection to represent it inline of both Roads and link the duplicates using CityObjectRelations. Instead, the Intersection should be represented inline as part of one Road (here: Road 2) and be referenced by the other Road (here: Road 3) using an XLink that references the ID of the Intersection feature. This type of feature link is similar to Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a>, where XLinks are used to relate features to alternative aggregations, with the difference that Road 3 cannot semantically be considered an alternative aggregation of the Intersection.</p>
 </div>
 <div class="paragraph">
-<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/ParkingGarage_CityGML3.0_LOD2_with_CityObjectRelations_and_XLinks.gml">CityGML 3.0 Encodings Github</a>.</p>
+<p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/ParkingGarage_CityGML3.0_LOD2_with_CityObjectRelations_and_XLinks.gml">CityGML 3.0 GML Encoding GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>The two Roads and the Intersection from the GML file are illustrated in the object diagram in <a href="#figure-uml-intersection">Figure 13</a>. The XLink reference is highlighted in red.</p>
@@ -1823,7 +1827,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/core/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/3.0/core.xsd" target="_blank" rel="noopener">core.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/3.0/core.xsd" target="_blank" rel="noopener">core.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2291,7 +2295,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/appearance/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd" target="_blank" rel="noopener">appearance.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd" target="_blank" rel="noopener">appearance.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2566,7 +2570,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/bridge/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd" target="_blank" rel="noopener">bridge.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd" target="_blank" rel="noopener">bridge.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2940,7 +2944,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/building/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/building/3.0/building.xsd" target="_blank" rel="noopener">building.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/building/3.0/building.xsd" target="_blank" rel="noopener">building.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3391,7 +3395,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/cityfurniture/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd" target="_blank" rel="noopener">cityFurniture.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd" target="_blank" rel="noopener">cityFurniture.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3575,7 +3579,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/cityobjectgroup/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd" target="_blank" rel="noopener">cityObjectGroup.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd" target="_blank" rel="noopener">cityObjectGroup.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3776,7 +3780,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/construction/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/construction/3.0/construction.xsd" target="_blank" rel="noopener">construction.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/construction/3.0/construction.xsd" target="_blank" rel="noopener">construction.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4263,7 +4267,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/dynamizer/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/dynamizer/3.0/dynamizer.xsd" target="_blank" rel="noopener">dynamizer.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/dynamizer/3.0/dynamizer.xsd" target="_blank" rel="noopener">dynamizer.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4489,7 +4493,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/generics/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/generics/3.0/generics.xsd" target="_blank" rel="noopener">generics.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/generics/3.0/generics.xsd" target="_blank" rel="noopener">generics.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4751,7 +4755,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/landuse/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd" target="_blank" rel="noopener">landUse.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd" target="_blank" rel="noopener">landUse.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4891,7 +4895,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/pointcloud/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/pointcloud/3.0/pointCloud.xsd" target="_blank" rel="noopener">pointCloud.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/pointcloud/3.0/pointCloud.xsd" target="_blank" rel="noopener">pointCloud.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -5015,7 +5019,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/relief/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/relief/3.0/relief.xsd" target="_blank" rel="noopener">relief.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/relief/3.0/relief.xsd" target="_blank" rel="noopener">relief.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -5189,7 +5193,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/transportation/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd" target="_blank" rel="noopener">transportation.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd" target="_blank" rel="noopener">transportation.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -5715,7 +5719,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/tunnel/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/tunnel/3.0/tunnel.xsd" target="_blank" rel="noopener">tunnel.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/tunnel/3.0/tunnel.xsd" target="_blank" rel="noopener">tunnel.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -6089,7 +6093,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/vegetation/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd" target="_blank" rel="noopener">vegetation.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd" target="_blank" rel="noopener">vegetation.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -6300,7 +6304,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/versioning/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd" target="_blank" rel="noopener">versioning.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd" target="_blank" rel="noopener">versioning.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -6471,7 +6475,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/waterbody/elements</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the GML XML schema in <a href="http://schemas.opengis.net/citygml/waterbody/3.0/waterBody.xsd" target="_blank" rel="noopener">waterBody.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">CityGML XML elements implemented by a conforming instance document shall conform to the XML schema in <a href="http://schemas.opengis.net/citygml/waterbody/3.0/waterBody.xsd" target="_blank" rel="noopener">waterBody.xsd</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -6632,11 +6636,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that XML instance documents claiming conformance to this specification validate with respect to the XML schema files.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that XML instance documents claiming conformance to this specification validate against the XML schema files.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the XML schemas to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -6836,11 +6840,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Core XML elements listed in <a href="#core-xml-elements">Table 4</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/3.0/core.xsd" class="bare">http://schemas.opengis.net/citygml/3.0/core.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Core XML elements listed in <a href="#core-xml-elements">Table 4</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/3.0/core.xsd" class="bare">http://schemas.opengis.net/citygml/3.0/core.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the core.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -6932,11 +6936,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Appearance XML elements listed in <a href="#appearance-xml-elements">Table 6</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd" class="bare">http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Appearance XML elements listed in <a href="#appearance-xml-elements">Table 6</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd" class="bare">http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the appearance.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7079,11 +7083,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Bridge XML elements listed in <a href="#bridge-xml-elements">Table 7</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd" class="bare">http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Bridge XML elements listed in <a href="#bridge-xml-elements">Table 7</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd" class="bare">http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the bridge.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7136,11 +7140,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Building XML elements listed in <a href="#building-xml-elements">Table 9</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/building/3.0/building.xsd" class="bare">http://schemas.opengis.net/citygml/building/3.0/building.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Building XML elements listed in <a href="#building-xml-elements">Table 9</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/building/3.0/building.xsd" class="bare">http://schemas.opengis.net/citygml/building/3.0/building.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the building.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7193,11 +7197,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the CityFurniture XML elements listed in <a href="#cityfurniture-xml-elements">Table 11</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd" class="bare">http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the CityFurniture XML elements listed in <a href="#cityfurniture-xml-elements">Table 11</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd" class="bare">http://schemas.opengis.net/citygml/cityfurniture/3.0/cityFurniture.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the cityFurniture.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7250,11 +7254,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the CityObjectGroup XML elements listed in <a href="#cityobjectgroup-xml-elements">Table 13</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd" class="bare">http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the CityObjectGroup XML elements listed in <a href="#cityobjectgroup-xml-elements">Table 13</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd" class="bare">http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the cityObjectGroup.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7346,11 +7350,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Construction XML elements listed in <a href="#construction-xml-elements">Table 15</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/construction/3.0/construction.xsd" class="bare">http://schemas.opengis.net/citygml/construction/3.0/construction.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Construction XML elements listed in <a href="#construction-xml-elements">Table 15</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/construction/3.0/construction.xsd" class="bare">http://schemas.opengis.net/citygml/construction/3.0/construction.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the construction.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7403,11 +7407,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Dynamizer XML elements listed in <a href="#dynamizer-xml-elements">Table 17</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/dynamizer/3.0/dynamizer.xsd" class="bare">http://schemas.opengis.net/citygml/dynamizer/3.0/dynamizer.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Dynamizer XML elements listed in <a href="#dynamizer-xml-elements">Table 17</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/dynamizer/3.0/dynamizer.xsd" class="bare">http://schemas.opengis.net/citygml/dynamizer/3.0/dynamizer.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the dynamizer.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7502,11 +7506,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Generics XML elements listed in <a href="#generics-xml-elements">Table 18</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/generics/3.0/generics.xsd" class="bare">http://schemas.opengis.net/citygml/generics/3.0/generics.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Generics XML elements listed in <a href="#generics-xml-elements">Table 18</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/generics/3.0/generics.xsd" class="bare">http://schemas.opengis.net/citygml/generics/3.0/generics.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the generics.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7559,11 +7563,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the LandUse XML elements listed in <a href="#landuse-xml-elements">Table 20</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd" class="bare">http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the LandUse XML elements listed in <a href="#landuse-xml-elements">Table 20</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd" class="bare">http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the landUse.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7589,11 +7593,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the PointCloud XML elements listed in <a href="#pointcloud-xml-elements">Table 21</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/pointcloud/3.0/pointCloud.xsd" class="bare">http://schemas.opengis.net/citygml/pointcloud/3.0/pointCloud.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the PointCloud XML elements listed in <a href="#pointcloud-xml-elements">Table 21</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/pointcloud/3.0/pointCloud.xsd" class="bare">http://schemas.opengis.net/citygml/pointcloud/3.0/pointCloud.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the pointCloud.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7619,11 +7623,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Relief XML elements listed in <a href="#relief-xml-elements">Table 22</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/relief/3.0/relief.xsd" class="bare">http://schemas.opengis.net/citygml/relief/3.0/relief.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Relief XML elements listed in <a href="#relief-xml-elements">Table 22</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/relief/3.0/relief.xsd" class="bare">http://schemas.opengis.net/citygml/relief/3.0/relief.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the relief.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7649,11 +7653,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Transportation XML elements listed in <a href="#transportation-xml-elements">Table 23</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd" class="bare">http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Transportation XML elements listed in <a href="#transportation-xml-elements">Table 23</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd" class="bare">http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the transportation.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7745,11 +7749,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Tunnel XML elements listed in <a href="#tunnel-xml-elements">Table 25</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/tunnel/3.0/tunnel.xsd" class="bare">http://schemas.opengis.net/citygml/tunnel/3.0/tunnel.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Tunnel XML elements listed in <a href="#tunnel-xml-elements">Table 25</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/tunnel/3.0/tunnel.xsd" class="bare">http://schemas.opengis.net/citygml/tunnel/3.0/tunnel.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the tunnel.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7802,11 +7806,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Vegetation XML elements listed in <a href="#vegetation-xml-elements">Table 27</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd" class="bare">http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Vegetation XML elements listed in <a href="#vegetation-xml-elements">Table 27</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd" class="bare">http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the vegetation.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7859,11 +7863,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the Versioning XML elements listed in <a href="#versioning-xml-elements">Table 29</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd" class="bare">http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the Versioning XML elements listed in <a href="#versioning-xml-elements">Table 29</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd" class="bare">http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the versioning.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7937,11 +7941,11 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that the conforming instance document supports the WaterBody XML elements listed in <a href="#waterbody-xml-elements">Table 30</a> in accordance with the GML XML schema specified in <a href="http://schemas.opengis.net/citygml/waterbody/3.0/waterBody.xsd" class="bare">http://schemas.opengis.net/citygml/waterbody/3.0/waterBody.xsd</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that instance documents using the WaterBody XML elements listed in <a href="#waterbody-xml-elements">Table 30</a> validate against the XML schema specified in <a href="http://schemas.opengis.net/citygml/waterbody/3.0/waterBody.xsd" class="bare">http://schemas.opengis.net/citygml/waterbody/3.0/waterBody.xsd</a>.</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect the instance document to verify the above requirement.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Validate the instance document against the waterBody.xsd schema to verify the above requirement. The process may be using an appropriate software tool for validation or be a manual process that checks all definitions from the XML schema specification.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7979,7 +7983,7 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 <h2 id="annex-examples"><a class="anchor" href="#annex-examples"></a>Annex B: Examples (Informative)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Various CityGML 3.0 test data sets are available in the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples">folder <em>examples</em> on the CityGML 3.0 Encodings Github</a> for each CityGML module, including those test data sets presented in this chapter.</p>
+<p>Various CityGML 3.0 test data sets are available in the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples">folder <em>examples</em> on the CityGML 3.0 GML Encoding GitHub</a> for each CityGML module, including those test data sets presented in this chapter.</p>
 </div>
 <div class="paragraph">
 <p>The examples and information provided in this chapter focus on the new CityGML 3.0 modules Dynamizer, PointCloud, and Versioning. In addition, some examples for the description of addresses using xAL 3 are provided (this is a change from CityGML 2.0, where xAL 2 was used). Since the ADE mechanism has been improved in CityGML 3.0, examples for the use of the revised ADE mechanism are provided as well.</p>
@@ -8864,10 +8868,10 @@ wall2,2015-01,kWh,1313.344,3112.122,4109.742
 <div class="sect2">
 <h3 id="annex-examples-pointcloud"><a class="anchor" href="#annex-examples-pointcloud"></a>B.2. Point Cloud Examples</h3>
 <div class="paragraph">
-<p>The PointCloud module allows for representing the geometries of city objects by 3D point clouds in three different options, which are illustrated in the following.</p>
+<p>The PointCloud module allows for representing the geometries of city objects by 3D point clouds in three different options, which are described in <a href="#Beil2021">Beil et al. 2021</a> and are illustrated in the following.</p>
 </div>
 <div class="paragraph">
-<p>The CityGML and LAZ data sets presented here are available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/PointCloud/Real-world%20examples/CityGML_3.0_buildings">CityGML 3.0 Encodings Github</a>.</p>
+<p>The CityGML and LAZ data sets presented here are available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/PointCloud/Real-world%20examples/CityGML_3.0_buildings">CityGML 3.0 GML Encoding GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Option 1: Inline representation</strong></p>
@@ -9282,7 +9286,7 @@ The <em>function</em> attribute of the top-level feature Building changes from <
 </ul>
 </div>
 <div class="paragraph">
-<p>The CityGML datasets presented here are available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Building">CityGML 3.0 Encodings Github</a>, additional examples are also available on the <a href="http://docs.oasis-open.org/ciq/v3.0/cs02/xsd/default/examples/xAL/">OASIS documentation repository</a>.</p>
+<p>The CityGML datasets presented here are available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Building">CityGML 3.0 GML Encoding GitHub</a>, additional examples are also available on the <a href="http://docs.oasis-open.org/ciq/v3.0/cs02/xsd/default/examples/xAL/">OASIS documentation repository</a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example 1: Structured address and multipoint</strong></p>
@@ -9692,11 +9696,9 @@ The UML Conceptual Model of the Test ADE is shown in <a href="#figure-test-ade-u
 <div class="title">Listing 25. Example dataset implementing the illustrated Test ADE schema</div>
 <div class="content">
 <pre class="highlight"><code class="language-XML" data-lang="XML">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
-&lt;CityModel xmlns:con="http://www.opengis.net/citygml/construction/3.0" xmlns:tran="http://www.opengis.net/citygml/transportation/3.0" xmlns:wtr="http://www.opengis.net/citygml/waterbody/3.0" xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0" xmlns="http://www.opengis.net/citygml/3.0" xmlns:dem="http://www.opengis.net/citygml/relief/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:bldg="http://www.opengis.net/citygml/building/3.0" xmlns:ct="urn:oasis:names:tc:ciq:ct:3" xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/3.0" xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0" xmlns:pnt="http://www.opengis.net/citygml/pointcloud/3.0" xmlns:tun="http://www.opengis.net/citygml/tunnel/3.0" xmlns:frn="http://www.opengis.net/citygml/cityfurniture/3.0" xmlns:gen="http://www.opengis.net/citygml/generics/3.0" xmlns:xAL="urn:oasis:names:tc:ciq:xal:3" xmlns:app="http://www.opengis.net/citygml/appearance/3.0" xmlns:luse="http://www.opengis.net/citygml/landuse/3.0" xmlns:brid="http://www.opengis.net/citygml/bridge/3.0" xmlns:ver="http://www.opengis.net/citygml/versioning/3.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:test="http://www.citygml.org/ade/TestADE/2.0"&gt;
+&lt;CityModel xmlns="http://www.opengis.net/citygml/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:bldg="http://www.opengis.net/citygml/building/3.0" xmlns:test="http://www.citygml.org/ade/TestADE/2.0"&gt;
   &lt;cityObjectMember&gt;
     &lt;test:IndustrialBuilding&gt;
-      &lt;gml:description&gt;FZK/IAI test cases only&lt;/gml:description&gt;
-      &lt;gml:name&gt;Testcase-0-0_LoD2&lt;/gml:name&gt;
       &lt;bldg:class&gt;1100&lt;/bldg:class&gt;
       &lt;bldg:roofType&gt;1030&lt;/bldg:roofType&gt;
       &lt;bldg:storeysAboveGround&gt;5&lt;/bldg:storeysAboveGround&gt;
@@ -18308,19 +18310,17 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
 </div>
 </div>
 <div class="sect1">
-<h2 id="annex-cm-conformance"><a class="anchor" href="#annex-cm-conformance"></a>Annex D: Conceptual Model Conformance (Normative)</h2>
+<h2 id="annex-cm-conformance"><a class="anchor" href="#annex-cm-conformance"></a>Annex D: CityGML 3.0 Conceptual Model Conformance (Normative)</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This is where conformance with CityGML 3.0 Conceptual Model is documented.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>A requirement of any implementation of the CityGML 3.0 Conceptual Model (CM) is that the implementation shall conform to the CM. This Annex explains how this CityGML 3.0 GML Encoding insures conformance with the CM.</p>
+</div>
+<div class="sect2">
+<h3 id="_conformance_of_this_implementation_specification_to_the_citygml_3_0_cm"><a class="anchor" href="#_conformance_of_this_implementation_specification_to_the_citygml_3_0_cm"></a>D.1. Conformance of this Implementation Specification to the CityGML-3.0 CM</h3>
+<div class="paragraph">
+<p>Implementation Specifications define how a Conceptual Model should be implemented using a specific technology. This standard defines the platform-specific implementation for
+the GML standards version 3.2 and 3.3, which are based on XML. The GML schemas, expressed as XML Schema Description (XSD) language files, were derived fully automatically from the UML Conceptual Model using the software tool <a href="https://shapechange.net">ShapeChange</a> with the  <a href="ShapeChangeConfigurationFile_CityGML_3.0.xml">configuration file</a> included in this standard. <strong>Conformance of a CityGML 3.0 GML-encoded instance document to the CityGML 3.0 Conceptual Model is assured if the instance conforms to these GML schemas, as detailed in <a href="#conceptual-model-mapping">Table 1</a>.</strong></p>
+</div>
 </div>
 </div>
 </div>
@@ -18328,7 +18328,7 @@ This is where conformance with CityGML 3.0 Conceptual Model is documented.
 <h2 id="annex-codelist-usage"><a class="anchor" href="#annex-codelist-usage"></a>Annex E: Codelists (Informative)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Codelists are tables of values and corresponding descriptions or definitions. Values in a specific codelist may be used for designated properties with the codelist stereotype and a gml:CodeValue datatype in the UML Conceptual Model (CM). The CityGML 3.0 CM defines 140 such values.</p>
+<p>Codelists are tables of values and corresponding descriptions or definitions. Values in a specific codelist may be used for designated properties with the codelist stereotype in the UML Conceptual Model (CM) and a gml:CodeValue datatype in this GML Encoding Specification. The CityGML 3.0 CM defines 140 such values.</p>
 </div>
 <div class="paragraph">
 <p>A gml:CodeValue datatype may have an optional codeSpace attribute. The purpose of the codeSpace attribute is to identify the codelist from which the value has been taken. Providing the codeSpace, especially with a dereferenceable identifier, allows easy access to further information detailing rules governing the use and meaning of the codelist&#8217;s values and metadata. There may also be rules defining such things as the use and interpretation of values that do not appear in the codelist, the duplication of values, or any other characteristics of a codelist. All such properties and uses of a codelist or codelist value are outside the scope of this CityGML 3.0 Encoding Specification. This does not in any way restrict the ability of an authority sponsoring a codelist, as denoted by the use of a codeSpace attribute, to have application-specific codelist values, rules, interpretations, and uses in an independent specification.</p>
@@ -18953,17 +18953,59 @@ Code|3100|saddle roof</pre>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2021-12-15</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.1</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.1.0</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">initial version</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2022-02-01</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.2</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.2.0</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner, S. Smyth</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance, Codelist Annex</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Most sections are complete, at least in draft form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2022-07-21</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.6.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner, P. Parslow, D. Vinasco-Alvarez, C. Nagel, T. Kolbe, C.S. Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance and general editorial.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Complete for public review</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2022-07-21</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.7.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner, P. Parslow, C. Nagel, C.S. Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Abstract Tests, Conformance</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Front material, References, general editorial.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2022-09-29</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.8.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner, P. Parslow, N. Ishimaru, C.S. Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Abstract Tests, Conformance</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Revisions from resolution of public review comments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2022-11-17</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.9.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner, P. Parslow, C. Nagel, C.S. Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Abstract Tests, Conformance</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Revisions from resolution of public review comments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2022-12-28</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.9.1</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner, C.S. Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance, entire document</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">General editorial - from GitHub issue tasks.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2023-01-17</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.0.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T. Kutzner, C. Nagel, C.S. Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Final cleanup prior to release by SWG.</p></td>
 </tr>
 </tbody>
 </table>
@@ -19172,6 +19214,9 @@ Particular variation of a spatial object<br>
 <p><a id="Beil2017"></a>Beil, C., Kolbe, T. H., 2017: <strong>CityGML and the streets of New York - A proposal for detailed street space modelling</strong>. In: Proceedings of the 12th International 3D GeoInfo Conference 2017, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W5, ISPRS. <a href="http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017" class="bare">http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017</a></p>
 </li>
 <li>
+<p><a id="Beil2021"></a>Beil, C., Kutzner, T., Schwab, B., Willenborg, B., Gawronski, A., Kolbe, T. H., 2021: <strong>Integration of 3D point clouds with semantic 3D city models – Providing semantic information beyond classification</strong>. In: Proceedings of the 16th International 3D GeoInfo Conference 2021, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. VIII-4/W2-2021, ISPRS. <a href="https://doi.org/10.5194/isprs-annals-VIII-4-W2-2021-105-2021" class="bare">https://doi.org/10.5194/isprs-annals-VIII-4-W2-2021-105-2021</a></p>
+</li>
+<li>
 <p><a id="Biljecki2015"></a>Biljecki, F., Stoter, J., Ledoux, H., Zlatanova, S., Çöltekin, A., 2015: <strong>Applications of 3D City Models: State of the Art Review</strong>. ISPRS International Journal of Geo-Information, 4(4). <a href="https://doi.org/10.3390/ijgi4042842" class="bare">https://doi.org/10.3390/ijgi4042842</a></p>
 </li>
 <li>
@@ -19311,7 +19356,7 @@ Particular variation of a spatial object<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-28 23:46:15 +0200
+Last updated 2022-07-07 16:36:24 -0700
 </div>
 </div>
 </body>
