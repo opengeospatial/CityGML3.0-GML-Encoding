@@ -69,7 +69,7 @@ CodeType|Identifier|Description
 Meta|CityGML_DataType|Building|RoofTypeValue
 Meta|CityGML_Namespace|http://www.opengis.net/citygml/building/3.0		
 Meta|Language|en-UK
-Meta|CityGML_Version|3.0		
+Meta|Version|1.0		
 Code|1000|flat roof
 Code|3100|saddle roof
 ----
@@ -262,7 +262,7 @@ The following is the previous example in the suggested JSON encoding:
             "namespace": "http://www.opengis.net/citygml/building/3.0",
             "language": "en",
             "authority": "Some Organization",
-            "version": "3.0"
+            "version": "1.0"
          }
       },
       "description": "Roof type values",
