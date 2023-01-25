@@ -18,12 +18,12 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: <yyyy-mm-dd>
+|Submission Date: <2023-01-25>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2023-01-18>
+|Publication Date:   <TBD>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/CityGML-2/3.0
 |Internal reference number of this OGC(R) document:    21-006
-|Version: 1.0.2
+|Version: 3.0.0
 |Category: OGC(R) Implementation Specification
 |Editors: Tatjana Kutzner, Carl Stephen Smyth, Claus Nagel, Volker Coors, Diego Vinasco-Alvarez, Nobuhiro Ishimaru, Zhihang Yao, Charles Heazel, Thomas H. Kolbe
 |===
