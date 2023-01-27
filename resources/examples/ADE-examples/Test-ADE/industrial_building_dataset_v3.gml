@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <CityModel xmlns="http://www.opengis.net/citygml/3.0" xmlns:test="http://www.citygml.org/ade/TestADE/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:bldg="http://www.opengis.net/citygml/building/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.opengis.net/citygml/3.0 testADE.xsd">
+  xsi:schemaLocation="http://www.citygml.org/ade/TestADE/2.0 testADE.xsd">
   <cityObjectMember>
     <test:IndustrialBuilding>
       <bldg:class>1100</bldg:class>
