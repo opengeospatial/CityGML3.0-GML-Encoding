@@ -1,5 +1,12 @@
 === Conformance Class Appearance
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/appearance
+|*Requirements class* |<<appearance-requirements-class,Requirements Class "Appearance">>
+|===
+
 include::Appearance/ATS_Appearance_Elements.adoc[]
 
 include::Appearance/ATS_Appearance_Target.adoc[]

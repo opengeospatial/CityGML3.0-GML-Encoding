@@ -1,5 +1,12 @@
 === Conformance Class Transportation
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/transportation
+|*Requirements class* |<<transportation-requirements-class,Requirements Class "Transportation">>
+|===
+
 include::Transportation/ATS_Transportation_Elements.adoc[]
 
 include::Transportation/ATS_Transportation_Reference.adoc[]

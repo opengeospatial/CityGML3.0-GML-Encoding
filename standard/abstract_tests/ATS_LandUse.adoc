@@ -1,3 +1,10 @@
 === Conformance Class LandUse
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/landuse
+|*Requirements class* |<<land-use-requirements-class,Requirements Class "LandUse">>
+|===
+
 include::LandUse/ATS_LandUse_Elements.adoc[]

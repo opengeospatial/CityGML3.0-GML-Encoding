@@ -1,5 +1,12 @@
 === Conformance Class Tunnel
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/tunnel
+|*Requirements class* |<<tunnel-requirements-class,Requirements Class "Tunnel">>
+|===
+
 include::Tunnel/ATS_Tunnel_Elements.adoc[]
 
 include::Tunnel/ATS_Tunnel_Boundaries.adoc[]

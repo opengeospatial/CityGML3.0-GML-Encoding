@@ -1,5 +1,12 @@
 === Conformance Class Generics
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/generics
+|*Requirements class* |<<generics-requirements-class,Requirements Class "Generics">>
+|===
+
 include::Generics/ATS_Generics_Elements.adoc[]
 
 include::Generics/ATS_Generics_Boundaries.adoc[]

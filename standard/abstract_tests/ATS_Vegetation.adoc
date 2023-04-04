@@ -1,5 +1,12 @@
 === Conformance Class Vegetation
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/vegetation
+|*Requirements class* |<<vegetation-requirements-class,Requirements Class "Vegetation">>
+|===
+
 include::Vegetation/ATS_Vegetation_Elements.adoc[]
 
 include::Vegetation/ATS_Vegetation_Boundaries.adoc[]

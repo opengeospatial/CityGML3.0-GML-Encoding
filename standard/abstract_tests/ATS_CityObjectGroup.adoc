@@ -1,5 +1,12 @@
 === Conformance Class CityObjectGroup
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/cityobjectgroup
+|*Requirements class* |<<city-object-group-requirements-class,Requirements Class "CityObjectGroup">>
+|===
+
 include::CityObjectGroup/ATS_CityObjectGroup_Elements.adoc[]
 
 include::CityObjectGroup/ATS_CityObjectGroup_Reference.adoc[]

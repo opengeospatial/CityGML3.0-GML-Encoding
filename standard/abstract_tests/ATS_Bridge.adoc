@@ -1,5 +1,12 @@
 === Conformance Class Bridge
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/bridge
+|*Requirements class* |<<bridge-requirements-class,Requirements Class "Bridge">>
+|===
+
 include::Bridge/ATS_Bridge_Elements.adoc[]
 
 include::Bridge/ATS_Bridge_Boundaries.adoc[]

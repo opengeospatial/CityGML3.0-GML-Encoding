@@ -1,5 +1,12 @@
 === Conformance Class WaterBody
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/waterbody
+|*Requirements class* |<<water-body-requirements-class,Requirements Class "WaterBody">>
+|===
+
 include::WaterBody/ATS_Waterbody_Elements.adoc[]
 
 include::WaterBody/ATS_Waterbody_Boundaries.adoc[]

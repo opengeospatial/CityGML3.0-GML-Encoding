@@ -1,5 +1,12 @@
 === Conformance Class Global
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/global
+|*Requirements class* |<<global-requirements-class,Requirements Class "Global">>
+|===
+
 include::Global/ATS_Global_GML.adoc[]
 
 include::Global/ATS_Global_ReferencingGeometries1.adoc[]

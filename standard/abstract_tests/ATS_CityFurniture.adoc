@@ -1,5 +1,12 @@
 === Conformance Class CityFurniture
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/cityfurniture
+|*Requirements class* |<<city-furniture-requirements-class,Requirements Class "CityFurniture">>
+|===
+
 include::CityFurniture/ATS_CityFurniture_Elements.adoc[]
 
 include::CityFurniture/ATS_CityFurniture_Boundaries.adoc[]

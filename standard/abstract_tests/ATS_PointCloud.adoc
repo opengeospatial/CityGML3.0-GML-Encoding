@@ -1,3 +1,10 @@
 === Conformance Class PointCloud
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/pointcloud
+|*Requirements class* |<<point-cloud-requirements-class,Requirements Class "PointCloud">>
+|===
+
 include::PointCloud/ATS_PointCloud_Elements.adoc[]

@@ -1,5 +1,12 @@
 === Conformance Class Construction
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/construction
+|*Requirements class* |<<construction-requirements-class,Requirements Class "Construction">>
+|===
+
 include::Construction/ATS_Construction_Elements.adoc[]
 
 include::Construction/ATS_Construction_Boundaries.adoc[]

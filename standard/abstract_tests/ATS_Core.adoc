@@ -1,5 +1,12 @@
 === Conformance Class Core
 
+[cols="25,75",width="100%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/CityGML-2/3.0/conf/core
+|*Requirements class* |<<core-requirements-class,Requirements Class "Core">>
+|===
+
 include::Core/ATS_Core_Elements.adoc[]
 
 include::Core/ATS_Core_Reference.adoc[]
