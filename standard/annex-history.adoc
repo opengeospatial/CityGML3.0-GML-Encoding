@@ -16,5 +16,5 @@
 |2023-01-18|1.0.1|T. Kutzner|Annex G, Implementation Decisions, Annex D|Improve text and fix links.
 |2023-01-18|1.0.2|C.S. Smyth|Version and date|Correct details
 |2023-01-25|3.0.0|C.S. Smyth|Final edits|Correct details on front page and CodeList examples
-
+|2023-04-04|3.0.1|T. Kutzner|Chapter 6, Annex A, Annex E |Correct Requirements classes, Conformance classes, and CodeList examples
 |===
