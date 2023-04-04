@@ -2,9 +2,9 @@
 [cols="1,4",width="100%"]
 |===
 2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|http://www.opengis.net/spec/CityGML-2/3.0/req/req-class-versioning {set:cellbgcolor:#FFFFFF}
+2+|http://www.opengis.net/spec/CityGML-2/3.0/req/versioning {set:cellbgcolor:#FFFFFF}
 |Target type |Implementations of the CityGML 3.0 Conceptual Model using GML encodings
 |Dependency |http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd[versioning.xsd^]
 |Dependency |http://www.opengis.net/spec/CityGML-1/3.0/req/req-class-versioning
-|Dependency |http://www.opengis.net/spec/CityGML-2/3.0/req/req-class-core
+|Dependency |http://www.opengis.net/spec/CityGML-2/3.0/req/core
 |===

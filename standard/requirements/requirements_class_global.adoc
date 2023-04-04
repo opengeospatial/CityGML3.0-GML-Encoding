@@ -2,7 +2,7 @@
 [cols="1,4",width="100%"]
 |===
 2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|http://www.opengis.net/spec/CityGML-2/3.0/req/req-class-global {set:cellbgcolor:#FFFFFF}
+2+|http://www.opengis.net/spec/CityGML-2/3.0/req/global {set:cellbgcolor:#FFFFFF}
 |Target type |Implementations of the CityGML 3.0 Conceptual Model using GML encodings
 |Dependency |-
 |===
