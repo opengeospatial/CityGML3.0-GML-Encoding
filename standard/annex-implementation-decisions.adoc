@@ -120,13 +120,13 @@ In the following, the solution will be exemplified based on the association clas
 
 [[figure-uml-cityobjectrelation-associationclass]]
 .Association class CityObjectRelation.
-image::images/UML_CityObjectRelation_AssociationClass.png[align="center",width="70%"]
+image::images/UML_CityObjectRelation_AssociationClass.png[align="center",width="90%"]
 
 Within the Implementation Model, this association class is manually converted into an intermediate class and the tagged values of the associations are set as illustrated in <<figure-uml-cityobjectrelation-intermediateclass>>. Afterwards, the XML schemas are derived from the Implementation Model.
 
 [[figure-uml-cityobjectrelation-intermediateclass]]
 .Association class CityObjectRelation represented as intermediate class.
-image::images/UML_CityObjectRelation_IntermediateClass.png[align="center",width="70%"]
+image::images/UML_CityObjectRelation_IntermediateClass.png[align="center",width="90%"]
 
 Within a GML instance document, specifying that the WallSurfaces of two buildings share the same geometry is then restricted to the structure as shown in <<listing-gml-inlineorbyreference-cityobjectrelation>>. The source and target classes are represented by two XML elements <WallSurface> and the intermediate class by the element <CityObjectRelation>. The element WallSurface of building 1 provides the element CityObjectRelation inline, whereas the element CityObjectRelation references the WallSurface element of building 2 using XLink. In the same way, building 2 provides the element CityObjectRelation inline its WallSurface, and the CityObjectRelation references the WallSurface of building 1 using Xlink.
 
