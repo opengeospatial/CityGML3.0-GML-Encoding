@@ -37,10 +37,6 @@ The two attributes are defined in the UML class _AbstractFeature_ as part of the
 |Specifies the global identifier of the feature. The identifier must be globally valid, unique and identical over different feature versions.
 |===
 
-//[[figure-gml-identifiers]]
-//.Use of the identity attributes in CityGML 3 instance documents.
-//image::images/GML_Identifiers.png[align="center"]
-
 [[listing-gml-identifiers]]
 .Use of the identity attributes in CityGML 3 instance documents.
 [source,XML,highlight='1,2']
@@ -62,10 +58,6 @@ There are two XML concepts that are used to reference objects in GML instance do
 
 XLink allows for creating links (referred to as XLinks in this document) by providing specific attributes to XML elements for referencing other resources. The most commonly used attribute is _xlink:href_, the value of the attribute is the URI of the referenced document. In CityGML, however, we are mainly interested in referencing specific objects (features and geometries) within the same or an external GML instance document. To be able to reference specific objects, XPointer needs to be used in addition to XLink. For references to objects in external documents the URI value provided in the xlink:href attribute is complemented by a number sign (\#) followed by the gml:id of the object to be referenced. For references to objects within the same document it is enough to provide the number sign (#) and the gml:id of the referenced object (this is also called a relative URI). This is exemplified in <<listing-gml-references>>, where the element <versionMember> references a <Building> feature. Since the feature is part of the same GML instance document, a relative URI is specified by simply providing the number sign and the gml:id of the building as value of the attribute xlink:href. In the context of version management, referencing features by their gml:id means that a specific feature version of a real-world object is referenced.
 
-//[[figure-gml-references]]
-//.Referencing a feature by its gml:id.
-//image::images/GML_Identifiers.png[align="center"]
-
 [[listing-gml-references]]
 .Referencing a feature by its gml:id.
 [source,XML,highlight='4,8']
@@ -81,10 +73,6 @@ XLink allows for creating links (referred to as XLinks in this document) by prov
   </core:cityObjectMember>
 <core:CityModel>
 ----
-
-
-//For referencing the actual real-world object itself, a reference to the <gml:identifier> element of the feature versions needs to be provided. However, this kind of reference can be ambiguous, since all feature versions of a specific real-world object hold the same <gml:identifier> value; thus, a reference to a <gml:identifier> value may refer to multiple features. A possible disambiguation can be performed when selecting only that feature version that is valid for a given time point (and optionally a specific workspace). In the example below, the XPointer references the real-world feature BuildingPart with the ID “BP_12” by referencing all versions of the BuildingPart feature with the corresponding <gml:identifier> value “BP_12”. For selecting a specific BuildingPart version only, the time points <core:creationDate> and <core:terminationDate> need to be evaluated in addition.
-//Figure
 
 When using references, it is important to keep in mind that many (top-level) features in CityGML have a complex structure. This is shown in <<listing-gml-complex-structure>>. In general, features can have spatial and non-spatial properties that describe the features in more detail. Spatial properties are properties that have a geometry from ISO 19107 as data type (<lod2Solid> in the example). Non-spatial properties can either have a simple data type (<function> with Integer value or <creationDate> with Date value), but they can also be further specified by additional attributes, such as the height of the building that is described by further properties (<height> with the additional properties <highReference>, <lowReference>, <status>, and <value>). In addition, they can also be composed of subfeatures that contain spatial and non-spatial properties themselves (<WallSurface> with <lod2MultiSurface> geometry).
 
@@ -138,50 +126,6 @@ Three different cases for non-redundant representation need to be differentiated
 
 For these cases, different requirements are provided for how to encode the references in CityGML. Although these requirements impose restrictions, they facilitate at the same time reading, storing, processing, and generating of CityGML documents, because they reduce the multiple possibilities of how to represent and link features and geometries in CityGML documents to the most appropriate ones. Furthermore, top-level features can now completely be loaded in the main memory, because links to shared geometries that are part of different top-level features represented further down in the GML document do not need to be resolved any more. This also facilitates querying features and geometries using web services, as up to now queries cannot address specific parts of a geometry. Maintenance at the level of the top-level features becomes easier as well, because links between feature geometries do not need to be maintained and updated any more when a feature changes its geometry or when the feature does not exist anymore.
 
-// <<table-global-requirements>> provides an overview of the different requirements, the link types used to encode the references and whether the link references geometries or features.
-//
-// [[table-global-requirements]]
-// .Overview of linking rules.
-// [cols="60,20,20",options="headers"]
-// |===
-// ^|*Requirement* ^|*Link type* ^|*Link level*
-// |*<<req_global_referencinggeometries1,/req/global/referencinggeometries1>>* +
-// Referencing geometries from another top-level feature +
-// Exception for ImplicitGeometry objects
-// ^|{empty} +
-// - +
-// XLink
-// ^|{empty} +
-// - +
-// Geometry link
-// |*<<req_global_referencinggeometries2,/req/global/referencinggeometries2>>* +
-// Referencing geometries within the same top-level feature
-// ^|{empty} +
-// XLink
-// ^|{empty} +
-// Geometry link
-// |*<<req_global_referencinggeometries3,/req/global/referencinggeometries3>>* +
-// Referencing geometries between different LoDs
-// ^|{empty} +
-// -
-// ^|{empty} +
-// -
-// |*<<req_global_referencinggeometries4,/req/global/referencinggeometries4>>* +
-// Referencing geometries shared between different top-level features
-// ^|{empty} +
-// CityObjectRelation
-// ^|{empty} +
-// Feature link
-// |*<<req_global_alternativeaggregations,/req/global/alternativeaggregations>>* +
-// Referencing features from alternative aggregations
-// ^|{empty} +
-// XLink
-// ^|{empty} +
-// Feature link
-// |===
-
-// [[linking-rules-1-section]]
-// ===== Requirements for referencing geometries using XLinks
 
 include::requirements/global/REQ_Global_ReferencingGeometries1.adoc[]
 
@@ -254,10 +198,6 @@ The Building from the GML file is illustrated in the object diagram in <<figure-
 .UML object diagram for the building in <<figure-example-building-with-building-installation>>.
 image::images/UML_BuildingWithBuildingInstallation.png[align="center"]
 
-//[[linking-rules-2-section]]
-//===== Requirements for referencing geometries using CityObjectRelations
-
-
 *Example 4: Two buildings with shared boundary surface*
 
 [[figure-example-two-buildings]]
@@ -305,11 +245,6 @@ The parking garage in <<figure-example-parking-garage>> is modelled in LOD2 as a
 To express the sharing of MultiSurface geometries between the Roof-/WallSurfaces and the Sections/TrafficAreas, they reference each other using CityObjectRelations with the relation type “shared”.
 
 The GML file is available on the https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/Transportation/Basic%20examples/ParkingGarage_CityGML3.0_LOD2_with_CityObjectRelations_and_XLinks.gml[CityGML 3.0 GML Encoding GitHub].
-
-//
-//[[linking-rules-3-section]]
-//===== Requirements for referencing features using XLinks
-
 
 *Example 7: A specific version of a city model*
 

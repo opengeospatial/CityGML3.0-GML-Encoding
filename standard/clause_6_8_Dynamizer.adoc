@@ -32,7 +32,6 @@ include::requirements/dynamizer/REQ_Dynamizer_Elements.adoc[]
 
 The CityGML Dynamizer XML elements and their corresponding CityGML UML classes are listed in <<dynamizer-xml-elements>>. In addition, the CityGML Dynamizer XML elements are documented in the GML schema http://schemas.opengis.net/citygml/dynamizer/3.0/dynamizer.xsd[dynamizer.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/dynamizer/[XML Schema documentation^].
 
-//[#dynamizer-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[dynamizer-xml-elements]]
 .Dynamizer XML Elements
 [width="100%",cols="10,10",options="header"]

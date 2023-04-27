@@ -31,7 +31,6 @@ include::requirements/generics/REQ_Generics_Elements.adoc[]
 
 The CityGML Generics XML elements and their corresponding CityGML UML classes are listed in <<generics-xml-elements>>. In addition, the CityGML Generics XML elements are documented in the GML schema http://schemas.opengis.net/citygml/generics/3.0/generics.xsd[generics.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/generics/[XML Schema documentation^].
 
-//[#generics-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[generics-xml-elements]]
 .Generics XML Elements
 [width="100%",cols="10,10",options="header"]

@@ -31,7 +31,6 @@ include::requirements/relief/REQ_Relief_Elements.adoc[]
 
 The CityGML Relief XML elements and their corresponding CityGML UML classes are listed in <<relief-xml-elements>>. In addition, the CityGML Relief XML elements are documented in the GML schema http://schemas.opengis.net/citygml/relief/3.0/relief.xsd[relief.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/relief/[XML Schema documentation^].
 
-//[#relief-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[relief-xml-elements]]
 .Relief XML Elements
 [width="100%",cols="10,10",options="header"]

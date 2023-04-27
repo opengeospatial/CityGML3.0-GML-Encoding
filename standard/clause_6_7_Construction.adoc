@@ -31,7 +31,6 @@ include::requirements/construction/REQ_Construction_Elements.adoc[]
 
 The CityGML Construction XML elements and their corresponding CityGML UML classes are listed in <<construction-xml-elements>>. In addition, the CityGML Construction XML elements are documented in the GML schema http://schemas.opengis.net/citygml/construction/3.0/construction.xsd[construction.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/construction/[XML Schema documentation^].
 
-//[#construction-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[construction-xml-elements]]
 .Construction XML Elements
 [width="100%",cols="10,10",options="header"]

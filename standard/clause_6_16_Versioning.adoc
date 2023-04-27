@@ -37,7 +37,6 @@ include::requirements/versioning/REQ_Versioning_Elements.adoc[]
 
 The CityGML Versioning XML elements and their corresponding CityGML UML classes are listed in <<versioning-xml-elements>>. In addition, the CityGML Versioning XML elements are documented in the GML schema http://schemas.opengis.net/citygml/versioning/3.0/versioning.xsd[versioning.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/versioning/[XML Schema documentation^].
 
-//[#versioning-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[versioning-xml-elements]]
 .Versioning XML Elements
 [width="100%",cols="10,10",options="header"]

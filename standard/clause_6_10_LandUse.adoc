@@ -31,7 +31,6 @@ include::requirements/landuse/REQ_LandUse_Elements.adoc[]
 
 The CityGML LandUse XML elements and their corresponding CityGML UML classes are listed in <<landuse-xml-elements>>. In addition, the CityGML LandUse XML elements are documented in the GML schema http://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd[landUse.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/landUse/[XML Schema documentation^].
 
-//[#land-use-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[landuse-xml-elements]]
 .LandUse XML Elements
 [width="100%",cols="10,10",options="header"]

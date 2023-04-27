@@ -31,7 +31,6 @@ include::requirements/bridge/REQ_Bridge_Elements.adoc[]
 
 The CityGML Bridge XML elements and their corresponding CityGML UML classes are listed in <<bridge-xml-elements>>. In addition, the CityGML Bridge XML elements are documented in the GML schema http://schemas.opengis.net/citygml/bridge/3.0/bridge.xsd[bridge.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/bridge/[XML Schema documentation^].
 
-//[#bridge-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[bridge-xml-elements]]
 .Bridge XML Elements
 [width="100%",cols="10,10",options="header"]

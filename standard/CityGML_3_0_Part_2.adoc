@@ -77,9 +77,6 @@ toc::[]
 
 <<<
 
-////
-Make sure to complete each included document
-////
 include::clause_0_front_material.adoc[]
 
 include::clause_1_scope.adoc[]

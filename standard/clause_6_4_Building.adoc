@@ -31,7 +31,6 @@ include::requirements/building/REQ_Building_Elements.adoc[]
 
 The CityGML Building XML elements and their corresponding CityGML UML classes are listed in <<building-xml-elements>>. In addition, the CityGML Building XML elements are documented in the GML schema http://schemas.opengis.net/citygml/building/3.0/building.xsd[building.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/building/[XML Schema documentation^].
 
-//[#building-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[building-xml-elements]]
 .Building XML Elements
 [width="100%",cols="10,10",options="header"]

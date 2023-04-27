@@ -32,7 +32,6 @@ include::requirements/appearance/REQ_Appearance_Elements.adoc[]
 
 The CityGML Appearance XML elements and their corresponding CityGML UML classes are listed in <<appearance-xml-elements>>. In addition, the CityGML Appearance XML elements are documented in the GML schema http://schemas.opengis.net/citygml/appearance/3.0/appearance.xsd[appearance.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/appearance/[XML Schema documentation^].
 
-//[#appearance-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[appearance-xml-elements]]
 .Appearance XML Elements
 [width="100%",cols="10,10",options="header"]

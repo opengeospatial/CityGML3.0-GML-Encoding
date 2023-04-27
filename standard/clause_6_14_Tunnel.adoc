@@ -31,7 +31,6 @@ include::requirements/tunnel/REQ_Tunnel_Elements.adoc[]
 
 The CityGML Tunnel XML elements and their corresponding CityGML UML classes are listed in <<tunnel-xml-elements>>. In addition, the CityGML Tunnel XML elements are documented in the GML schema http://schemas.opengis.net/citygml/tunnel/3.0/tunnel.xsd[tunnel.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/tunnel/[XML Schema documentation^].
 
-//[#tunnel-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[tunnel-xml-elements]]
 .Tunnel XML Elements
 [width="100%",cols="10,10",options="header"]

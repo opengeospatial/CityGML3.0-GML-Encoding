@@ -33,7 +33,6 @@ include::requirements/transportation/REQ_Transportation_Elements.adoc[]
 
 The CityGML Transportation XML elements and their corresponding CityGML UML classes are listed in <<transportation-xml-elements>>. In addition, the CityGML Transportation XML elements are documented in the GML schema http://schemas.opengis.net/citygml/transportation/3.0/transportation.xsd[transportation.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/transportation/[XML Schema documentation^].
 
-//[#transportation-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[transportation-xml-elements]]
 .Transportation XML Elements
 [width="100%",cols="10,10",options="header"]

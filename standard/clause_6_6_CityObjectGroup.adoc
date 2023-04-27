@@ -33,7 +33,6 @@ include::requirements/cityobjectgroup/REQ_CityObjectGroup_Elements.adoc[]
 
 The CityGML CityObjectGroup XML elements and their corresponding CityGML UML classes are listed in <<cityobjectgroup-xml-elements>>. In addition, the CityGML CityObjectGroup XML elements are documented in the GML schema http://schemas.opengis.net/citygml/cityobjectgroup/3.0/cityObjectGroup.xsd[cityObjectGroup.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/cityObjectGroup/[XML Schema documentation^].
 
-//[#city-object-group-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[cityobjectgroup-xml-elements]]
 .CityObjectGroup XML Elements
 [width="100%",cols="10,10",options="header"]

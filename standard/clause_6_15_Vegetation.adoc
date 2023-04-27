@@ -31,7 +31,6 @@ include::requirements/vegetation/REQ_Vegetation_Elements.adoc[]
 
 The CityGML Vegetation XML elements and their corresponding CityGML UML classes are listed in <<vegetation-xml-elements>>. In addition, the CityGML Vegetation XML elements are documented in the GML schema http://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd[vegetation.xsd^] and in this https://opengeospatial.github.io/CityGML-3.0Encodings/xsd-doc/3.0/vegetation/[XML Schema documentation^].
 
-//[#vegetation-xml-elements,reftext='{table-caption} {counter:table-num}']
 [[vegetation-xml-elements]]
 .Vegetation XML Elements
 [width="100%",cols="10,10",options="header"]
