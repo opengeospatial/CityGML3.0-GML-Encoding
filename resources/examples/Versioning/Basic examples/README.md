@@ -1,1 +1,3 @@
-The PDF [CityGML3.0 - Versioning Module](CityGML%203.0%20-%20Versioning%20Module.pdf) contains additional information on the dataset.
+The PDF [CityGML 3.0 version management using XLinks](CityGML%203.0%20version%20management%20using%20XLinks.pdf) contains additional information on the dataset [CityGML_3.0_example_Version_Management_using_XLinks.gml](CityGML_3.0_example_Version_Management_using_XLinks.gml) which demonstrates version management using Versions and VersionTransitions.
+
+The PDF [CityGML3.0 - Versioning Module](CityGML%203.0%20-%20Versioning%20Module.pdf) contains additional information on the dataset [historicalSuccession_CityGML_3.0_LOD2_Versioning.gml](historicalSuccession_CityGML_3.0_LOD2_Versioning.gml) which demonstrates version management using Versions and VersionTransitions.
