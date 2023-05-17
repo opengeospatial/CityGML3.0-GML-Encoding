@@ -11,6 +11,7 @@ The **folder "Basic examples"** provides examples that were created specifically
 File name | Description of test data | Release against which the test data validates
 -------------------------|-----------------------------------------------|-------------------
 historicalSuccession_CityGML_3.0_LOD2_<br>Versioning.gml | This file contains 4 `Building` features represented across 2 `Versions`. A `versionTransition` (as a _historicalSuccession_) composed of 3 `transactions` (_delete_, _insert_, _replace_) demonstrates the changes between each `Version` | 3.0.0-draft.2021.12.01.1
+CityGML_3.0_example_Version_Management_using_XLinks | The file contains one 1 `Building` and 1 `BuildingPart`. The `Building` is represented in 3 different versions, the `BuildingPart` is represented in 2 different versions. The `Building`versions reference the `BuildingPart` versions using XLinks. | 3.0.0-draft.2021.12.01.1
 
 ***
 
