@@ -394,7 +394,7 @@
   </complexType>
   <element name="BridgeRoom" substitutionGroup="core:AbstractUnoccupiedSpace" type="brid:BridgeRoomType">
     <annotation>
-      <documentation>A BridgeRoom is a space within a Bridge or BridgePart intended for human occupancy (e.g. a place of work or recreation) and/or containment (storage) of animals or things. A BridgeRoom is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces).</documentation>
+      <documentation>A BridgeRoom is a space within a Bridge or BridgePart intended for human occupancy (e.g., a place of work or recreation) and/or containment (storage) of animals or things. A BridgeRoom is bounded physically and/or virtually (e.g., by ClosureSurfaces or GenericSurfaces).</documentation>
     </annotation>
   </element>
   <complexType name="BridgeRoomType">

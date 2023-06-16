@@ -307,7 +307,7 @@
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="elevation" type="con:ElevationPropertyType">
             <annotation>
-              <documentation>Specifies qualified elevations of the building subdivision in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]</documentation>
+              <documentation>Specifies qualified elevations of the building subdivision in relation to a well-defined surface which is commonly taken as origin (e.g., geoid or water level). [cf. INSPIRE]</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="sortKey" type="double">
@@ -373,7 +373,7 @@
   </complexType>
   <element name="Building" substitutionGroup="bldg:AbstractBuilding" type="bldg:BuildingType">
     <annotation>
-      <documentation>A Building is a free-standing, self-supporting construction that is roofed, usually walled, and can be entered by humans and is normally designed to stand permanently in one place. It is intended for human occupancy (e.g. a place of work or recreation), habitation and/or shelter of humans, animals or things.</documentation>
+      <documentation>A Building is a free-standing, self-supporting construction that is roofed, usually walled, and can be entered by humans and is normally designed to stand permanently in one place. It is intended for human occupancy (e.g., a place of work or recreation), habitation and/or shelter of humans, animals or things.</documentation>
     </annotation>
   </element>
   <complexType name="BuildingType">
@@ -558,7 +558,7 @@
   </complexType>
   <element name="BuildingRoom" substitutionGroup="core:AbstractUnoccupiedSpace" type="bldg:BuildingRoomType">
     <annotation>
-      <documentation>A BuildingRoom is a space within a Building or BuildingPart intended for human occupancy (e.g. a place of work or recreation) and/or containment of animals or things. A BuildingRoom is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces).</documentation>
+      <documentation>A BuildingRoom is a space within a Building or BuildingPart intended for human occupancy (e.g., a place of work or recreation) and/or containment of animals or things. A BuildingRoom is bounded physically and/or virtually (e.g., by ClosureSurfaces or GenericSurfaces).</documentation>
     </annotation>
   </element>
   <complexType name="BuildingRoomType">

@@ -1096,7 +1096,7 @@
       </element>
       <element minOccurs="0" name="relationType" type="anyURI">
         <annotation>
-          <documentation>Specifies a URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g. the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.</documentation>
+          <documentation>Specifies a URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g., the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.</documentation>
         </annotation>
       </element>
     </sequence>

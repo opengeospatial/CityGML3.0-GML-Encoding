@@ -18,13 +18,13 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: <2023-01-25>
-|Approval Date:   <yyyy-mm-dd>
+|Submission Date: 2023-01-25
+|Approval Date:   2023-05-10
 |Publication Date:   <TBD>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/CityGML-2/3.0
-|Internal reference number of this OGC(R) document:    21-006
-|Version: 3.0.2
-|Category: OGC(R) Implementation Specification
+|Internal reference number of this OGC(R) document:    21-006r2
+|Version: 3.0
+|Category: OGC(R) Implementation Standard
 |Editors: Tatjana Kutzner, Carl Stephen Smyth, Claus Nagel, Volker Coors, Diego Vinasco-Alvarez, Nobuhiro Ishimaru, Zhihang Yao, Charles Heazel, Thomas H. Kolbe
 |===
 
@@ -45,15 +45,13 @@
 |*Warning*
 |===
 
-This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.
-
-Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
 
 [width = "50%", grid = "none"]
 |===
 |Document type:   OGC(R) Standard
-|Document subtype:   Encoding Specification
-|Document stage:   	Draft
+|Document subtype:   Encoding
+|Document stage:   	Approved
 |Document language: 	English
 |===
 

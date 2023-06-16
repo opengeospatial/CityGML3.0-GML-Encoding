@@ -1,12 +1,12 @@
 [[annex-examples-dynamizer]]
 === Dynamizer Examples
 
-This chapter provides examples on the use of the Dynamizer concept to integrate dynamic data coming from sensors or being stored in files with city models. A Dynamizer is a feature that can be included in any CityGML thematic feature (e.g. Building, WallSurface, Section of a road) and that provides a pointer to a specific property of the respective thematic feature, whose static value shall be overridden by timeseries data. See https://docs.ogc.org/is/20-010/20-010.html#toc26[Chapter 6.6 of the CityGML Conceptual Model Standard^] and <<Chaturvedi2019>> for more information. The examples provided here have been taken from <<Chaturvedi2021>>.
+This chapter provides examples on the use of the Dynamizer concept to integrate dynamic data coming from sensors or being stored in files with city models. A Dynamizer is a feature that can be included in any CityGML thematic feature (e.g., Building, WallSurface, Section of a road) and that provides a pointer to a specific property of the respective thematic feature, whose static value shall be overridden by timeseries data. See https://docs.ogc.org/is/20-010/20-010.html#toc26[Chapter 6.6 of the CityGML Conceptual Model Standard^] and <<Chaturvedi2019>> for more information. The examples provided here have been taken from <<Chaturvedi2021>>.
 
 A Dynamizer can provide the timeseries data in different ways:
 
 - As a link to a specific datastream provided by a sensor data service like OGC SensorThings API, OGC Sensor Observation Service, or other sensor data platforms (incl. MQTT). For this purpose the Dynamizer makes use of a _SensorConnection_ object;
-- As a reference to an external file with tabulated data (e.g. CSV, MS Excel, Google Spreadsheet) for which the Dynamizer uses a _TabulatedFileTimeseries_ object;
+- As a reference to an external file with tabulated data (e.g., CSV, MS Excel, Google Spreadsheet) for which the Dynamizer uses a _TabulatedFileTimeseries_ object;
 - As a reference to an external file formatted according to the OGC TimeseriesML or Observations & Measurements standards using a _StandardFileTimeseries_ object;
 - Inline within the Dynamizer feature using a _GenericTimeseries_ object;
 - By defining _CompositeTimeseries_ objects which consist of a combination of various GenericTimeseries objects, TabulatedFileTimeseries objects, and/or StandardFileTimeseries objects.
@@ -15,7 +15,7 @@ For each of these possibilities, examples are provided in the following.
 
 ==== Examples for integrating city objects with real-time sensors
 
-The following examples refer to a Building feature shown in <<listing-gml-building-with-temperature>>. The building has a roof with the ID _roof1_ and a room with the ID _room1_. The building defines two generic attributes that provide a) a static value for the temperature on the roof (generic attribute _outside_temperature_) and b) a static value for the temperatue in the room (generic attribute _temperature_). In addition, the building might also have other static attributes such as building function, roof type, and address which are not shown here.
+The following examples refer to a Building feature shown in <<listing-gml-building-with-temperature>>. The building has a roof with the ID _roof1_ and a room with the ID _room1_. The building defines two generic attributes that provide a) a static value for the temperature on the roof (generic attribute _outside_temperature_) and b) a static value for the temperature in the room (generic attribute _temperature_). In addition, the building might also have other static attributes such as building function, roof type, and address which are not shown here.
 
 The room has an indoor sensor installed which measures the air temperature and humidity in the room. The observations from this sensor can be used to override the static value of the generic attribute _temperature_ with dynamic values coming from the sensor.
 
@@ -172,7 +172,7 @@ http://127.0.0.1:8080/FROST-Server/v1.0/Datastreams(1)/Observations?$filter=duri
 
 The parameters defined by the Dynamizer itself are identical to those shown in the example for the ThingSpeak platform.
 
-However, the following parameters provided within the SensorConenction object differ, since the Dynamizer defines now a connection to the FROST Server:
+However, the following parameters provided within the SensorConnection object differ, since the Dynamizer defines now a connection to the FROST Server:
 
 - _connectionType_ is set to _ogc_sta_1.0_, which represents the OGC SensorThings API version 1.0.
 - _baseURL_ is set to the URL for accessing a specific FROST Server. The base URL may differ for FROST Servers running on different machines or cloud environments.
@@ -244,7 +244,7 @@ In this example, the outside temperature measured by the weather station on the 
 http://api.wunderground.com/api/******/conditions/q/pws:MyPWS1.json
 ----
 
-<<listing-gml-weather-underground-api>> shows the Dynamizer definition requiered to connect the generic attribute _outside_temperature_ to the weather station registered on the Weather Underground platform.
+<<listing-gml-weather-underground-api>> shows the Dynamizer definition required to connect the generic attribute _outside_temperature_ to the weather station registered on the Weather Underground platform.
 
 [[listing-gml-weather-underground-api]]
 .Dynamizer defining a sensor connection to the Weather Underground platform.
@@ -292,7 +292,7 @@ The following parameters of the Dynamizer and the SensorConnection object differ
 
 ===== Example 5: OGC Sensor Observation Service
 
-In this example, the same outside temperature from the weather station is to be retrieved, but now the sensor observations are stored in an OGC Sensor Observation Service (SOS). The observations can then be retrieved using the standardised SOS operation _GetObservation_. The following is an example _GetObservation_ request (the request is a single line without linebreaks and spaces). The request retrieves all temperature observations between '2019-10-12T10:00:00.000Z' and '2019-10-09T00:00:00Z':
+In this example, the same outside temperature from the weather station is to be retrieved, but now the sensor observations are stored in an OGC Sensor Observation Service (SOS). The observations can then be retrieved using the standardized SOS operation _GetObservation_. The following is an example _GetObservation_ request (the request is a single line without linebreaks and spaces). The request retrieves all temperature observations between '2019-10-12T10:00:00.000Z' and '2019-10-09T00:00:00Z':
 [[listing-query-sos]]
 ----
 http://127.0.0.1:8080/weather-sensors-sos-webapp/service?SERVICE=SOS&VERSION=2.0.0&
@@ -555,7 +555,7 @@ The solar potential simulation results can also be represented inline using a Ge
 
 ===== Representing complex periodic patterns using Dynamizers
 
-Dynamizers also support the composition of atomic timeseries, i.e. of GenericTimeseries objects, TabulatedFileTimeseries objects, and/or StandardFileTimeseries objects, to form composite timeseries. One typical example illustrating such a scenario is the mapping of energy values of a building for every hour in a day as is shown in <<figure-example-composite-timeseries>>. The hourly consumption readings for a working day, a Saturday, and a Sunday are represented as individual atomic timeseries A, B, and C, respectively.
+Dynamizers also support the composition of atomic timeseries, i.e., of GenericTimeseries objects, TabulatedFileTimeseries objects, and/or StandardFileTimeseries objects, to form composite timeseries. One typical example illustrating such a scenario is the mapping of energy values of a building for every hour in a day as is shown in <<figure-example-composite-timeseries>>. The hourly consumption readings for a working day, a Saturday, and a Sunday are represented as individual atomic timeseries A, B, and C, respectively.
 
 [[figure-example-composite-timeseries]]
 .Example of a energy consumption pattern composed of atomic timeseries (source: <<Chaturvedi2021>>).

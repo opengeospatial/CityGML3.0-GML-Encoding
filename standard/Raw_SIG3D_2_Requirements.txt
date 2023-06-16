@@ -295,13 +295,13 @@ Req Id	CO-bldg:BU-001
 Short Desc	(Building --- BuildingPart)
 Citation	
 (A) If a building only consists of one (homogeneous) part, it shall be represented by the element Building.
-(B) However, if a building is composed of individual structural segments, it shall be modelled as a Building element having one or more additional BuildingPart elements.
+(B) However, if a building is composed of individual structural segments, it shall be modeled as a Building element having one or more additional BuildingPart elements.
 (C) Only the geometry and non-spatial properties of the main part of the building should be represented within the aggregating Building element.
 Source	CityGML 2.0 10.3.9 (1), p. 78
-Interpretation	[I.1] (A) + (B): How to model Building and BuildingPart? Currently the schema allows for a building to be modelled as Building with or without BuildingParts (containing in turn again BuildingParts..), but also a building to be modelled as a BuildingPart containing more BuildingParts and containing more BuildingParts and so on (so no Building super parent..). I think this second case is unwanted and could be resolved in schema by setting multiplicity of the aggregation of BuildingPart to _AbstractBuilding from "*" to "1..*". So that a BuildingPart ALWAYS needs to have a parent, is the parent again a BuildingPart then it in turn should also have AbstractBuilding parent.. this chain is only broken when a Building as top parent is met.
+Interpretation	[I.1] (A) + (B): How to model Building and BuildingPart? Currently the schema allows for a building to be modeled as Building with or without BuildingParts (containing in turn again BuildingParts..), but also a building to be modeled as a BuildingPart containing more BuildingParts and containing more BuildingParts and so on (so no Building super parent..). I think this second case is unwanted and could be resolved in schema by setting multiplicity of the aggregation of BuildingPart to _AbstractBuilding from "*" to "1..*". So that a BuildingPart ALWAYS needs to have a parent, is the parent again a BuildingPart then it in turn should also have AbstractBuilding parent.. this chain is only broken when a Building as top parent is met.
 [I.2] (A) + (B): Even if this is implemented it is still allowed (by the schema) to model a building as a Building containing BuildingParts which again contain BuildingParts which again contain BuildingParts etc.. Also this Conformance Requirement CO-bldg:BU-001 does not explicitly say that this should not be the case. But maybe this is unwanted and should be enforced.
 
-[I.3] (A) + (B): The Comment whether a building is one homogeneous part or composed of structural segments is not formalizable because "homogenous parts" and "structural elements" is unclear terminology which cannot be interpreted by a computer. Only possibility is perhaps by computing the convex hull of Buildings (that do not have BuildingParts) -> if the volume of the convex hull is much larger than the volume of the Building itself, could indicate that it should be modelled as a Building with BuildingParts, see image underneath. This building should be modelled with BuildingParts, the convexhull (or boundingvolume) is much larger than the volume of the building.
+[I.3] (A) + (B): The Comment whether a building is one homogeneous part or composed of structural segments is not formalizable because "homogenous parts" and "structural elements" is unclear terminology which cannot be interpreted by a computer. Only possibility is perhaps by computing the convex hull of Buildings (that do not have BuildingParts) -> if the volume of the convex hull is much larger than the volume of the Building itself, could indicate that it should be modeled as a Building with BuildingParts, see image underneath. This building should be modeled with BuildingParts, the convexhull (or boundingvolume) is much larger than the volume of the building.
 
 [I.4] (C): When a Building element contains a BuildingPart element WITH geometry, THEN the building element itself should also have geometry. Geometry means in this case: lodxSolid OR lodXMultiSurface (direct property or over boundedBy).
 
@@ -517,7 +517,7 @@ Short Desc	(lod0FootPrint and lod0RoofEdge)
 Citation	
 (A) The lodXSolid and lodXMultiSurface, X ∈ [1..4], properties (gml:SolidPropertyType resp. gml:MultiSurfacePropertyType) of _AbstractBuilding may be used to geometrically represent the exterior shell of a building (as volume or surface model) within each LOD.
 (B) For LOD1, either lod1Solid or lod1MultiSurface must be used, but not both.
-(C) Starting from LOD2, both properties may be modelled individually and complementary.
+(C) Starting from LOD2, both properties may be modeled individually and complementary.
 Source	CityGML 2.0 10.3.9 (3), p. 78
 Interpretation	[I.1] (A): This is already part of the schema
 [I.2] (B): if lod1Solid is used, lod1MultiSurface cannot be used or vice versa
@@ -985,7 +985,7 @@ Parameter	Value
 Req Id	
 Short Desc	
 Citation	
-(A) Starting from LOD3, openings of _BoundarySurface elements may be modelled using the opening property (type: OpeningPropertyType) of _BoundarySurface. This property shall not be used for _BoundarySurface elements only represented in LOD2.
+(A) Starting from LOD3, openings of _BoundarySurface elements may be modeled using the opening property (type: OpeningPropertyType) of _BoundarySurface. This property shall not be used for _BoundarySurface elements only represented in LOD2.
 
 (B) Accordingly, the surface geometry representing a _BoundarySurface in LOD2 must be simply connected.
 
@@ -997,14 +997,14 @@ Source	CityGML 2.0 10.3.9 (8), p. 79
 Interpretation	
 [I.1] (A): if a BoundarySurface element consists of lod3 geometry, it may contain an opening element which references lod3 geometry. If a BoundarySurface element consists of lod4 geometry, it may contain an opening element which references lod4 geometry.
 
-[I.2] (B): the surface geometry representing a _BoundarySurface in LOD2 must be simply connected. The term simply connected is a little problematic in this context since it is possible to form a BoundarySurface of four polygons which are individually all simply connected. However, by connecting them in a way similar to the image below, it becomes a donut-like object which is not simply connected in 3D anymore. Since we can make a "circle" following the long sides of each polygon and if we contract that to a single point we leave the object (we end in the middle). However what is probably meant here is that BoundarySurfaces should not contain a hole. So no innerRing allowed. But it is also possible to make a hole without explicitly modelling it, so restricting innerRings is also not sufficient. Furthermore, and perhaps more importantly: in LoD2 we can model dormers (outerBuildingInstallations) on the roofs which also require a hole in the roof. This conformance requirement is thus considered to be erroneous.
+[I.2] (B): the surface geometry representing a _BoundarySurface in LOD2 must be simply connected. The term simply connected is a little problematic in this context since it is possible to form a BoundarySurface of four polygons which are individually all simply connected. However, by connecting them in a way similar to the image below, it becomes a donut-like object which is not simply connected in 3D anymore. Since we can make a "circle" following the long sides of each polygon and if we contract that to a single point we leave the object (we end in the middle). However what is probably meant here is that BoundarySurfaces should not contain a hole. So no innerRing allowed. But it is also possible to make a hole without explicitly modeling it, so restricting innerRings is also not sufficient. Furthermore, and perhaps more importantly: in LoD2 we can model dormers (outerBuildingInstallations) on the roofs which also require a hole in the roof. This conformance requirement is thus considered to be erroneous.
 
 [I.3] (C): If an opening property of a _BoundarySurface is used to model an opening, and that opening lies geometrically within any of the surfaces of that _BoundarySurface, that specific surface should model an inner hole at the place of the opening. This is a geometrical test and can not be tested for with Schematron.
 
-[I.4] (D): The embrasure (DE: Laibung) of an _Opening element shall belong to the relevant _BoundarySurface and not to the _Opening. This is a geometrical test and can not be tested for with Schematron. Even a geometric test can only heuristically solve this issue, it is a modelling guideline and not a conformance requirement.
+[I.4] (D): The embrasure (DE: Laibung) of an _Opening element shall belong to the relevant _BoundarySurface and not to the _Opening. This is a geometrical test and can not be tested for with Schematron. Even a geometric test can only heuristically solve this issue, it is a modeling guideline and not a conformance requirement.
 
 Definition	
-[D.1] from [I.1]: if a BoundarySurface is only modelled in LoD2 and not in higher LoDs, it shall not be having an opening property
+[D.1] from [I.1]: if a BoundarySurface is only modeled in LoD2 and not in higher LoDs, it shall not be having an opening property
 
 
 Formalization	
@@ -1080,7 +1080,7 @@ Citation
 
 (B) The Room element may be geometrically represented as a surface or volume model, using its lod4Solid or lod4MultiSurface property (gml:SolidPropertyType resp. gml:MultiSurfacePropertyType).
 
-(C) In addition, different parts of the visible surface of a room may be modelled by thematic _BoundarySurface elements. Only FloorSurface, CeilingSurface, InteriorWallSurface, and ClosureSurface as subclasses of _BoundarySurface are allowed.
+(C) In addition, different parts of the visible surface of a room may be modeled by thematic _BoundarySurface elements. Only FloorSurface, CeilingSurface, InteriorWallSurface, and ClosureSurface as subclasses of _BoundarySurface are allowed.
 
 (D) If the visible surface of a room is represented by _BoundarySurface elements, an additional geometric representation as volume or surface model using the lod4Solid and 'lod4MultiSurface property shall not explicitly define the geometry, but has to reference the according components of the gml:MultiSurface element of _BoundarySurface using the XLink concept of GML 3.1.1.
 

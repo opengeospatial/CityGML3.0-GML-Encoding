@@ -349,7 +349,7 @@ The hook has been implemented in the CityGML 3.0 Conceptual Model as data type _
 The UML model for the Urban Object module has been implemented as described in Requirement 50 in https://docs.ogc.org/is/20-010/20-010.html#toc71[section 9.5 of the CityGML 3.0 Conceptual Model]. The UML model has been defined using the software tool https://sparxsystems.com/[Enterprise Architect] and is available https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/ADE-examples/Urban-Planning-ADE/CityGML_3.0_UrbanPlanningADE.eap[here] as .eap file.
 
 The UML conceptual model is illustrated in <<figure-ADE-realworld-uml1>>.
-The DataType _BuildingProperties_ is modelled as subclass of the "hook" data type _ADEOfAbstractBuilding_ and defines the additional properties that are added to the CityGML _AbstractBuilding_ class. Additionally, a DataType _KeyValuePair_ and a Union _ValueType_ are defined. By using the _BuildingProperties_ that includes two sets of properties, _BuildingDetails_ and _LargeCustomerFacilities_, 3D city models can systematically be extended with the detailed properties for urban planning.
+The DataType _BuildingProperties_ is modeled as subclass of the "hook" data type _ADEOfAbstractBuilding_ and defines the additional properties that are added to the CityGML _AbstractBuilding_ class. Additionally, a DataType _KeyValuePair_ and a Union _ValueType_ are defined. By using the _BuildingProperties_ that includes two sets of properties, _BuildingDetails_ and _LargeCustomerFacilities_, 3D city models can systematically be extended with the detailed properties for urban planning.
 
 [[figure-ADE-realworld-uml1]]
 .UML model of the Urban Object module from the Urban Planning ADE

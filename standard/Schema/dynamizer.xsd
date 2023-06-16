@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/dynamizer/3.0" version="3.0.0">
   <annotation>
-    <documentation>The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g. OGC TimeseriesML or OGC Observations &amp; Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time-value pairs.</documentation>
+    <documentation>The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g., OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g., OGC TimeseriesML or OGC Observations &amp; Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time-value pairs.</documentation>
   </annotation>
   <import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./core.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
@@ -293,7 +293,7 @@
   </complexType>
   <element name="SensorConnection" substitutionGroup="gml:AbstractObject" type="dyn:SensorConnectionType">
     <annotation>
-      <documentation>A SensorConnection provides all details that are required to retrieve a specific datastream from an external sensor web service. This data type comprises the service type (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), the URL of the sensor service, the identifier for the sensor or thing, and its observed property as well as information about the required authentication method.</documentation>
+      <documentation>A SensorConnection provides all details that are required to retrieve a specific datastream from an external sensor web service. This data type comprises the service type (e.g., OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), the URL of the sensor service, the identifier for the sensor or thing, and its observed property as well as information about the required authentication method.</documentation>
     </annotation>
   </element>
   <complexType name="SensorConnectionType">

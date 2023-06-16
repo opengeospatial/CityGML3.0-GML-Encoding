@@ -9,7 +9,7 @@ The CityGML and LAZ data sets presented here are available on the https://github
 
 A MultiPoint geometry is provided inline with the CityGML file, i.e., the point cloud of a specific feature is embedded directly within the feature represented by the point cloud. <<listing-gml-pointcloud-inline>> shows an example for a point cloud of a building represented inline the Building feature.
 
-<<figure-example-pointcloud-inline>> shows different visualisations of the GML file. The left image displays the building features themselves, the middle image shows the point clouds of the buildings, and the right image is a combination of the building features and the point clouds.
+<<figure-example-pointcloud-inline>> shows different visualizations of the GML file. The left image displays the building features themselves, the middle image shows the point clouds of the buildings, and the right image is a combination of the building features and the point clouds.
 
 [[figure-example-pointcloud-inline]]
 .Visualization of the inline representation of points clouds.

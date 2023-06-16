@@ -176,7 +176,7 @@
   </complexType>
   <element name="GenericLogicalSpace" substitutionGroup="core:AbstractLogicalSpace" type="gen:GenericLogicalSpaceType">
     <annotation>
-      <documentation>A GenericLogicalSpace is a space that is not represented by any explicitly modelled AbstractLogicalSpace subclass within CityGML.</documentation>
+      <documentation>A GenericLogicalSpace is a space that is not represented by any explicitly modeled AbstractLogicalSpace subclass within CityGML.</documentation>
     </annotation>
   </element>
   <complexType name="GenericLogicalSpaceType">
@@ -216,7 +216,7 @@
   </complexType>
   <element name="GenericOccupiedSpace" substitutionGroup="core:AbstractOccupiedSpace" type="gen:GenericOccupiedSpaceType">
     <annotation>
-      <documentation>A GenericOccupiedSpace is a space that is not represented by any explicitly modelled AbstractOccupiedSpace subclass within CityGML.</documentation>
+      <documentation>A GenericOccupiedSpace is a space that is not represented by any explicitly modeled AbstractOccupiedSpace subclass within CityGML.</documentation>
     </annotation>
   </element>
   <complexType name="GenericOccupiedSpaceType">
@@ -256,7 +256,7 @@
   </complexType>
   <element name="GenericThematicSurface" substitutionGroup="core:AbstractThematicSurface" type="gen:GenericThematicSurfaceType">
     <annotation>
-      <documentation>A GenericThematicSurface is a surface that is not represented by any explicitly modelled AbstractThematicSurface subclass within CityGML.</documentation>
+      <documentation>A GenericThematicSurface is a surface that is not represented by any explicitly modeled AbstractThematicSurface subclass within CityGML.</documentation>
     </annotation>
   </element>
   <complexType name="GenericThematicSurfaceType">
@@ -296,7 +296,7 @@
   </complexType>
   <element name="GenericUnoccupiedSpace" substitutionGroup="core:AbstractUnoccupiedSpace" type="gen:GenericUnoccupiedSpaceType">
     <annotation>
-      <documentation>A GenericUnoccupiedSpace is a space that is not represented by any explicitly modelled AbstractUnoccupiedSpace subclass within CityGML.</documentation>
+      <documentation>A GenericUnoccupiedSpace is a space that is not represented by any explicitly modeled AbstractUnoccupiedSpace subclass within CityGML.</documentation>
     </annotation>
   </element>
   <complexType name="GenericUnoccupiedSpaceType">

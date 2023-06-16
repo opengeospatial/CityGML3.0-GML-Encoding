@@ -11,7 +11,7 @@
 
 * [[Becker2011,Becker et al. 2011]]Becker, T., Nagel, C., Kolbe, T. H., 2011: *Integrated 3D Modeling of Multi-utility Networks and their Interdependencies for Critical Infrastructure Analysis*. In: T. H. Kolbe, G. König, C. Nagel (Eds.): Advances in 3D Geoinformation Sciences. LNG&C, Springer, Berlin. https://doi.org/10.1007/978-3-642-12670-3_1
 
-* [[Beil2017,Beil et al. 2017]]Beil, C., Kolbe, T. H., 2017: *CityGML and the streets of New York - A proposal for detailed street space modelling*. In: Proceedings of the 12th International 3D GeoInfo Conference 2017, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W5, ISPRS. http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017
+* [[Beil2017,Beil et al. 2017]]Beil, C., Kolbe, T. H., 2017: *CityGML and the streets of New York - A proposal for detailed street space modeling*. In: Proceedings of the 12th International 3D GeoInfo Conference 2017, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W5, ISPRS. http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017
 
 * [[Beil2021,Beil et al. 2021]]Beil, C., Kutzner, T., Schwab, B., Willenborg, B., Gawronski, A., Kolbe, T. H., 2021: *Integration of 3D point clouds with semantic 3D city models – Providing semantic information beyond classification*. In: Proceedings of the 16th International 3D GeoInfo Conference 2021, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. VIII-4/W2-2021, ISPRS. https://doi.org/10.5194/isprs-annals-VIII-4-W2-2021-105-2021
 
@@ -65,7 +65,7 @@
 
 * [[Konde2018,Konde et al. 2018]]Konde, A., Tauscher, H., Biljecki, F., Crawford, J., 2018: *Floor plans in CityGML*. In: Proceedings of the 13th 3D GeoInfo Conference 2018, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W6, 25–32, ISPRS. https://doi.org/10.5194/isprs-annals-IV-4-W6-25-2018
 
-* [[Kutzner2018,Kutzner et al. 2018]]Kutzner, T., Hijazi, I., Kolbe, T. H., 2018: *Semantic Modelling of 3D Multi-utility Networks for Urban Analyses and Simulations – The CityGML Utility Network ADE*. International Journal of 3-D Information Modeling (IJ3DIM) 7(2), 1-34. https://dx.doi.org/10.4018/IJ3DIM.2018040101
+* [[Kutzner2018,Kutzner et al. 2018]]Kutzner, T., Hijazi, I., Kolbe, T. H., 2018: *Semantic modeling of 3D Multi-utility Networks for Urban Analyses and Simulations – The CityGML Utility Network ADE*. International Journal of 3-D Information Modeling (IJ3DIM) 7(2), 1-34. https://dx.doi.org/10.4018/IJ3DIM.2018040101
 
 * [[Kutzner2020,Kutzner et al. 2020]]Kutzner, T., Chaturvedi, K. & Kolbe, T. H., 2020: *CityGML 3.0: New Functions Open Up New Applications*. PFG - Journal of Photogrammetry, Remote Sensing and Geoinformation Science, 88, 43–61. https://doi.org/10.1007/s41064-020-00095-z
 

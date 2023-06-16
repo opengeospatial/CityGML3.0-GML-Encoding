@@ -1255,7 +1255,7 @@ NOTE Top-level features are denoted by the stereotype «TopLevelFeatureType» in
 <p>In the GML encoding of the CityGML 3.0 Conceptual Model, different types of objects exist: <em>features</em>, <em>top-level features</em>, and <em>geometries</em>. All these objects have a unique identity, thus, they can be distinguished from each other and can also be referenced from other objects.</p>
 </div>
 <div class="paragraph">
-<p>The CityGML 3.0 Conceptual Model introduces two attributes to provide all features and top-level features with a unique identity: 1) the mandatory <em>featureID</em> attribute to distinguish all (top-level) features and possible multiple versions of the same real-world object and 2) an optional <em>identifier</em> attribute to reference specific (top-level) features independent from their actual feature version. The featureID attribute value is unique within the same CityGML dataset and also for a specific version of a feature, whereas the identifier attribute has an identical value for all versions of the same real-world object. It is recommended to use globally unique identifiers like UUID values or identifiers maintained by an organization such as a mapping agency for both attributes: for the identifier attribute, as these identifiers should remain stable over the lifetime of the real-world object, and for the featureID attribute, as this ensures that 3D city models which are integrated from different sources into e.g. one GIS or database will not have colliding featureID values and also to be able to uniquely identify a specific version of a feature using these identifiers together with a timestamp and a version number.</p>
+<p>The CityGML 3.0 Conceptual Model introduces two attributes to provide all features and top-level features with a unique identity: 1) the mandatory <em>featureID</em> attribute to distinguish all (top-level) features and possible multiple versions of the same real-world object and 2) an optional <em>identifier</em> attribute to reference specific (top-level) features independent from their actual feature version. The featureID attribute value is unique within the same CityGML dataset and also for a specific version of a feature, whereas the identifier attribute has an identical value for all versions of the same real-world object. It is recommended to use globally unique identifiers like UUID values or identifiers maintained by an organization such as a mapping agency for both attributes: for the identifier attribute, as these identifiers should remain stable over the lifetime of the real-world object, and for the featureID attribute, as this ensures that 3D city models which are integrated from different sources into e.g., one GIS or database will not have colliding featureID values and also to be able to uniquely identify a specific version of a feature using these identifiers together with a timestamp and a version number.</p>
 </div>
 <div class="paragraph">
 <p>The two attributes are defined in the UML class <em>AbstractFeature</em> as part of the Core module of the CityGML 3.0 Conceptual Model. They are mapped to the predefined GML concepts <em>gml:id</em> and <em>gml:identifier</em> in the GML encoding. <a href="#table-gml-identifiers">Table 3</a> lists the two identity attributes together with their definition and GML encoding, and the GML code in <a href="#listing-gml-identifiers">Listing 1</a> illustrates the use of the identity attributes to represent the object identity in GML instance documents. Please note that the values of the <em>gml:id</em> and the <em>gml:identifier</em> might also be identical, for example, when only a first version of the object exists. Please also note that, although the <em>featureID</em> attribute is defined mandatory in the CityGML 3.0 Conceptual Model, the <em>gml:id</em> attribute is optional according to the GML standard.</p>
@@ -1297,7 +1297,7 @@ NOTE Top-level features are denoted by the stereotype «TopLevelFeatureType» in
 </div>
 </div>
 <div class="paragraph">
-<p>The GML encoding implements the geometry model defined in ISO 19107. This means that all geometries are derived from the class AbstractGML as well and, thus, also geometries exhibit the same unique identity as features do. The fact that geometries also have an identity is of particular importance for CityGML, since CityGML requires defining references to geometries. For these references, only the gml:id attribute is of interest. One example is the application of textures to surfaces. The textures reference the gml:ids of those LinearRings that describe the boundaries of the surface geometries (e.g. Triangle, Polygon, or a MultiSurface consisting of Polygons) to which the textures are applied. Another example is that the CityGML GML encoding allows for realising topological relationships amongst others through referencing of shared geometries.</p>
+<p>The GML encoding implements the geometry model defined in ISO 19107. This means that all geometries are derived from the class AbstractGML as well and, thus, also geometries exhibit the same unique identity as features do. The fact that geometries also have an identity is of particular importance for CityGML, since CityGML requires defining references to geometries. For these references, only the gml:id attribute is of interest. One example is the application of textures to surfaces. The textures reference the gml:ids of those LinearRings that describe the boundaries of the surface geometries (e.g., Triangle, Polygon, or a MultiSurface consisting of Polygons) to which the textures are applied. Another example is that the CityGML GML encoding allows for realising topological relationships amongst others through referencing of shared geometries.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1367,7 +1367,7 @@ NOTE Top-level features are denoted by the stereotype «TopLevelFeatureType» in
 <div class="sect3">
 <h4 id="linking-rules-section"><a class="anchor" href="#linking-rules-section"></a>6.1.4. Rules for linking features and geometries that are shared by multiple features</h4>
 <div class="paragraph">
-<p>When modelling cities, geometries and features can be integral parts of multiple city objects. To avoid redundant modelling of these geometries and features, CityGML offers the possibility to represent geometries and features only once and to reference them from any other city object to which they belong as well. This non-redundant representation guarantees that no integrity problems occur, i.e., several differing instances of the same geometry or feature will not exist.</p>
+<p>When modeling cities, geometries and features can be integral parts of multiple city objects. To avoid redundant modeling of these geometries and features, CityGML offers the possibility to represent geometries and features only once and to reference them from any other city object to which they belong as well. This non-redundant representation guarantees that no integrity problems occur, i.e., several differing instances of the same geometry or feature will not exist.</p>
 </div>
 <div class="paragraph">
 <p>Three different cases for non-redundant representation need to be differentiated:</p>
@@ -1509,7 +1509,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 </tbody>
 </table>
 <div class="paragraph">
-<p>In this requirement, XLink represents a link at the feature level (“feature link”), i.e., a reference to the ID of the feature being part of the natural aggregation. All features are part of a natural aggregation, i.e., features are typically represented in a data set once in physical form, either directly as part of the city model when they are top-level features (e.g. a Building), or inline as part of other (top-level) features (e.g. a BuildingRoom represented inline as part of the top-level feature Building). At the same time, the features can also occur in alternative aggregations.</p>
+<p>In this requirement, XLink represents a link at the feature level (“feature link”), i.e., a reference to the ID of the feature being part of the natural aggregation. All features are part of a natural aggregation, i.e., features are typically represented in a data set once in physical form, either directly as part of the city model when they are top-level features (e.g., a Building), or inline as part of other (top-level) features (e.g., a BuildingRoom represented inline as part of the top-level feature Building). At the same time, the features can also occur in alternative aggregations.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example 1: Building with Solid geometry and boundary surfaces</strong></p>
@@ -1521,7 +1521,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="title">Figure 1. Simple building with solid geometry and boundary surfaces.</div>
 </div>
 <div class="paragraph">
-<p>The building (=space) in <a href="#figure-example-simple-building">Figure 1</a> is modelled in LOD2 as Solid geometry and is bounded by four WallSurfaces, one RoofSurface, and one GroundSurface (=space boundaries). All space boundaries are modelled as Polygon geometries. The Solid geometry of the building references the Polygon geometries using XLink. This example refers to Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
+<p>The building (=space) in <a href="#figure-example-simple-building">Figure 1</a> is modeled in LOD2 as Solid geometry and is bounded by four WallSurfaces, one RoofSurface, and one GroundSurface (=space boundaries). All space boundaries are modeled as Polygon geometries. The Solid geometry of the building references the Polygon geometries using XLink. This example refers to Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
 </div>
 <div class="paragraph">
 <p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/1_SimpleBuilding">CityGML 3.0 GML Encoding GitHub</a>.</p>
@@ -1545,10 +1545,10 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="title">Figure 3. Building with roof overhangs.</div>
 </div>
 <div class="paragraph">
-<p>The building (=space) in <a href="#figure-example-building-with-roof-overhangs">Figure 3</a> is modelled in LOD2 as Solid geometry and is bounded by four WallSurfaces, one RoofSurface, and one GroundSurface (=space boundaries). All space boundaries are modelled as Polygon geometries. The Solid geometry of the building references the Polygon geometries using XLink. This example refers to Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
+<p>The building (=space) in <a href="#figure-example-building-with-roof-overhangs">Figure 3</a> is modeled in LOD2 as Solid geometry and is bounded by four WallSurfaces, one RoofSurface, and one GroundSurface (=space boundaries). All space boundaries are modeled as Polygon geometries. The Solid geometry of the building references the Polygon geometries using XLink. This example refers to Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
 </div>
 <div class="paragraph">
-<p>The RoofSurface contains four Polygon geometries. Two of these Polygons are roof overhangs (i.e. dangling surfaces), and, thus, are not referenced by the Solid geometry of the building, as they would render the solid invalid if referenced. For this reason, an additional MultiSurface geometry is added to the building that references the dangling surfaces. In accordance with Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a> this MultiSurface geometry is optional. It is added to the building to provide additional information, but it is not mandatory to add this geometry.</p>
+<p>The RoofSurface contains four Polygon geometries. Two of these Polygons are roof overhangs (i.e., dangling surfaces), and, thus, are not referenced by the Solid geometry of the building, as they would render the solid invalid if referenced. For this reason, an additional MultiSurface geometry is added to the building that references the dangling surfaces. In accordance with Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a> this MultiSurface geometry is optional. It is added to the building to provide additional information, but it is not mandatory to add this geometry.</p>
 </div>
 <div class="paragraph">
 <p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/2_SimpleBuilding_Roof_Overhangs">CityGML 3.0 GML Encoding GitHub</a>.</p>
@@ -1572,10 +1572,10 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="title">Figure 5. Building with building installation.</div>
 </div>
 <div class="paragraph">
-<p>The building (=space) in <a href="#figure-example-building-with-building-installation">Figure 5</a> is modelled in LOD2 as Solid geometry and is bounded by eight WallSurfaces, four RoofSurfaces, and one GroundSurface (=space boundaries). In addition, the building has a dormer that is modelled as BuildingInstallation (=space). The building installation is modelled as MultiSurface geometry and is bounded by one RoofSurface and three WallSurfaces (=space boundaries). This example refers to Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
+<p>The building (=space) in <a href="#figure-example-building-with-building-installation">Figure 5</a> is modeled in LOD2 as Solid geometry and is bounded by eight WallSurfaces, four RoofSurfaces, and one GroundSurface (=space boundaries). In addition, the building has a dormer that is modeled as BuildingInstallation (=space). The building installation is modeled as MultiSurface geometry and is bounded by one RoofSurface and three WallSurfaces (=space boundaries). This example refers to Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
 </div>
 <div class="paragraph">
-<p>The space boundaries of the building and of the building installation are all modelled as Polygon geometries. The Solid geometry of the building references those Polygon geometries that represent the space boundaries of the building space using XLink. The MultiSurface geometry of the building installation references those Polygon geometries that represent the space boundaries of the building installation using XLink. Moreover, in this example, the Solid geometry of the building has to additionally reference the Polygon geometries that represent the space boundaries of the building installation using XLink to ensure a closed and watertight volume geometry. In general, however, references to the geometries of a nested space are optional, and it is allowed to not reference them in accordance with Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
+<p>The space boundaries of the building and of the building installation are all modeled as Polygon geometries. The Solid geometry of the building references those Polygon geometries that represent the space boundaries of the building space using XLink. The MultiSurface geometry of the building installation references those Polygon geometries that represent the space boundaries of the building installation using XLink. Moreover, in this example, the Solid geometry of the building has to additionally reference the Polygon geometries that represent the space boundaries of the building installation using XLink to ensure a closed and watertight volume geometry. In general, however, references to the geometries of a nested space are optional, and it is allowed to not reference them in accordance with Requirement <a href="#req_global_referencinggeometries2">/req/global/referencinggeometries2</a>.</p>
 </div>
 <div class="paragraph">
 <p>The GML file is available on the <a href="https://github.com/opengeospatial/CityGML3.0-GML-Encoding/tree/main/resources/examples/XLink-examples/3_Building_With_Nested_Features">CityGML 3.0 GML Encoding GitHub</a>.</p>
@@ -1599,7 +1599,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="title">Figure 7. Two buildings with shared boundary surface.</div>
 </div>
 <div class="paragraph">
-<p>The two buildings (=top-level features) in <a href="#figure-example-two-buildings">Figure 7</a> are modelled in LOD2 as Solid geometry and are bounded by Wall-, Roof-, and GroundSurfaces that are modelled as Polygon geometries. One of the WallSurfaces of the first Building shares the Polygon geometry with one of the WallSurfaces of the second Building. Both WallSurfaces might appear identical, however, the surface normals of the Polygon geometries of the WallSurfaces are pointing in opposite directions. This example refers to Requirements <a href="#req_global_referencinggeometries1">/req/global/referencinggeometries1</a> and <a href="#req_global_referencinggeometries4">/req/global/referencinggeometries4</a>.</p>
+<p>The two buildings (=top-level features) in <a href="#figure-example-two-buildings">Figure 7</a> are modeled in LOD2 as Solid geometry and are bounded by Wall-, Roof-, and GroundSurfaces that are modeled as Polygon geometries. One of the WallSurfaces of the first Building shares the Polygon geometry with one of the WallSurfaces of the second Building. Both WallSurfaces might appear identical, however, the surface normals of the Polygon geometries of the WallSurfaces are pointing in opposite directions. This example refers to Requirements <a href="#req_global_referencinggeometries1">/req/global/referencinggeometries1</a> and <a href="#req_global_referencinggeometries4">/req/global/referencinggeometries4</a>.</p>
 </div>
 <div class="paragraph">
 <p>To express that the WallSurfaces of the two buildings share the Polygon geometry, the WallSurfaces reference each other using a CityObjectRelation with the relation type “shared”. Both WallSurfaces contain the Polygon geometry themselves, the second WallSurface, however, in reverse order.</p>
@@ -1626,7 +1626,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="title">Figure 9. Shared surfaces between a road and a bridge.</div>
 </div>
 <div class="paragraph">
-<p>A Road and a Bridge (=top-level features) are modelled in LOD2, as is shown in <a href="#figure-example-road-over-bridge">Figure 9</a>. The Bridge is bounded by Ground-, Roof-, and WallSurfaces that are modelled as MultiSurface geometries. The Road consists of three sections; each section is bounded by two TrafficAreas that are modelled as MultiSurface geometries as well. The RoofSurfaces of the Bridge share MultiSurface geometries with two TrafficAreas of the Road. The RoofSurfaces and the TrafficAreas are geometrically identical, but they differ semantically. This example refers to Requirements <a href="#req_global_referencinggeometries1">/req/global/referencinggeometries1</a> and <a href="#req_global_referencinggeometries4">/req/global/referencinggeometries4</a>.</p>
+<p>A Road and a Bridge (=top-level features) are modeled in LOD2, as is shown in <a href="#figure-example-road-over-bridge">Figure 9</a>. The Bridge is bounded by Ground-, Roof-, and WallSurfaces that are modeled as MultiSurface geometries. The Road consists of three sections; each section is bounded by two TrafficAreas that are modeled as MultiSurface geometries as well. The RoofSurfaces of the Bridge share MultiSurface geometries with two TrafficAreas of the Road. The RoofSurfaces and the TrafficAreas are geometrically identical, but they differ semantically. This example refers to Requirements <a href="#req_global_referencinggeometries1">/req/global/referencinggeometries1</a> and <a href="#req_global_referencinggeometries4">/req/global/referencinggeometries4</a>.</p>
 </div>
 <div class="paragraph">
 <p>To express that the RoofSurfaces share MultiSurface geometries with two TrafficAreas, they reference each other using CityObjectRelations with the relation type “shared”.</p>
@@ -1653,7 +1653,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="title">Figure 11. Shared surfaces in a parking garage.</div>
 </div>
 <div class="paragraph">
-<p>The parking garage in <a href="#figure-example-parking-garage">Figure 11</a> is modelled in LOD2 as a building (=top-level feature) with Floor-, Roof-, and WallSurfaces that are modelled as MultiSurface geometries. The parking garage contains a Road with Sections and TrafficAreas that are modelled as MultiSurface geometries as well. The Floor- and RoofSurface of the Building share MultiSurface geometries with the Sections and TrafficAreas of the Road. This example refers to Requirements <a href="#req_global_referencinggeometries1">/req/global/referencinggeometries1</a> and <a href="#req_global_referencinggeometries4">/req/global/referencinggeometries4</a>.</p>
+<p>The parking garage in <a href="#figure-example-parking-garage">Figure 11</a> is modeled in LOD2 as a building (=top-level feature) with Floor-, Roof-, and WallSurfaces that are modeled as MultiSurface geometries. The parking garage contains a Road with Sections and TrafficAreas that are modeled as MultiSurface geometries as well. The Floor- and RoofSurface of the Building share MultiSurface geometries with the Sections and TrafficAreas of the Road. This example refers to Requirements <a href="#req_global_referencinggeometries1">/req/global/referencinggeometries1</a> and <a href="#req_global_referencinggeometries4">/req/global/referencinggeometries4</a>.</p>
 </div>
 <div class="paragraph">
 <p>To express the sharing of MultiSurface geometries between the Roof-/WallSurfaces and the Sections/TrafficAreas, they reference each other using CityObjectRelations with the relation type “shared”.</p>
@@ -1689,7 +1689,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p><strong>Example 10: A Building installation spanning across several Building Parts</strong></p>
 </div>
 <div class="paragraph">
-<p>Installations that are spanning across several building parts are to be physically modelled as part of one building part. All other building parts reference the installation using XLinks, expressing in this way that the installation does not exclusively belong to one building part only. Since there is no natural or alternative aggregation in this example either, one can choose which building part should contain the installation and which building parts should rather use XLink references.</p>
+<p>Installations that are spanning across several building parts are to be physically modeled as part of one building part. All other building parts reference the installation using XLinks, expressing in this way that the installation does not exclusively belong to one building part only. Since there is no natural or alternative aggregation in this example either, one can choose which building part should contain the installation and which building parts should rather use XLink references.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example 11: Intersection as part of two Roads</strong></p>
@@ -1788,7 +1788,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>The UML class AnyFeature is an instance of the metaclass FeatureType which is defined in ISO 19109. AnyFeature is the generalization of all feature types and acts as superclass of all classes in the CityGML UML model with the stereotype «FeatureType». A comparable concept is defined in ISO 19136 with the XML element gml:AbstractFeature as the most generic feature in GML and its basic feature model gml:AbstractFeatureType from which all feature defined in GML application schemas and, thus, also in the CityGML application schema, are derived. For this reason, the UML class AnyFeature is not encoded as CityGML-specific XML element, but is simply mapped to gml:AbstractFeature.</p>
 </li>
 <li>
-<p>The UML class AbstractFeature is the abstract superclass of all feature types within the CityGML Conceptual Model. This class defines amongst others the attributes featureID, identifier, name, and description. These attributes represent properties that are predefined in ISO 19136 (i.e. gml:id, gml:identifier, gml:name, and gml:description) and are inherited by all features defined in GML application schemas. The attributes were added to the UML model to guarantee that they are available in all possible CityGML encodings. In the GML schema, these attributes are suppressed from being encoded, as they are already inherited by all CityGML features.</p>
+<p>The UML class AbstractFeature is the abstract superclass of all feature types within the CityGML Conceptual Model. This class defines amongst others the attributes featureID, identifier, name, and description. These attributes represent properties that are predefined in ISO 19136 (i.e., gml:id, gml:identifier, gml:name, and gml:description) and are inherited by all features defined in GML application schemas. The attributes were added to the UML model to guarantee that they are available in all possible CityGML encodings. In the GML schema, these attributes are suppressed from being encoded, as they are already inherited by all CityGML features.</p>
 </li>
 <li>
 <p>The UML class ImplicitGeometry is represented as an object type that defines the attribute objectID. This attribute was added to the UML model to guarantee that it is available in all possible CityGML encodings. This attribute represents the GML property gml:id which all object types automatically inherit in the GML encoding, thus, this attribute is suppressed from being encoded.</p>
@@ -1797,7 +1797,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <p>Several UML classes were defined in the CityGML Conceptual Model to represent concepts from the GML 3.2 standard in a language-independent way. These classes are Code, DoubleList, MeasureOrNilReasonList, DoubleOrNilReasonList, DoubleOrNilReason, NilReason, and NilReasonEnumeration. Since these concepts already exist in GML, they are simply mapped to the corresponding representations in GML. Furthermore, the class ID, representing the corresponding XML type ID, was defined as data type for the attributes featureID and objectID (see design decisions above). Since these attributes are suppressed from being encoded, also the class ID is not encoded.</p>
 </li>
 <li>
-<p>As described in <a href="#association-classes-section">Section G.1</a>, the UML association class CityObjectRelation is modelled as an intermediate class in an Implementation Model before the GML encoding is applied. In this way, a relation between two features A and B can be represented in such a way that feature A provides the element CityObjectRelation inline, whereas the CityObjectRelation references feature B using XLink. This encoding also ensures that Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a> on referencing features from alternative aggregations is observed.</p>
+<p>As described in <a href="#association-classes-section">Section G.1</a>, the UML association class CityObjectRelation is modeled as an intermediate class in an Implementation Model before the GML encoding is applied. In this way, a relation between two features A and B can be represented in such a way that feature A provides the element CityObjectRelation inline, whereas the CityObjectRelation references feature B using XLink. This encoding also ensures that Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a> on referencing features from alternative aggregations is observed.</p>
 </li>
 <li>
 <p>All associations allow by default that the referenced features can be provided inline or by reference. However, a restriction is defined for the following association, since it represents an alternative aggregation (see Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a> on referencing features from alternative aggregations):</p>
@@ -2208,7 +2208,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="sect2">
 <h3 id="appearance-section"><a class="anchor" href="#appearance-section"></a>6.3. Appearance</h3>
 <div class="paragraph">
-<p>The Appearance module supports the modelling of the observable surface properties of CityGML features in the form of textures and material.</p>
+<p>The Appearance module supports the modeling of the observable surface properties of CityGML features in the form of textures and material.</p>
 </div>
 <div class="paragraph">
 <p>The concepts of the Appearance module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Appearance module is available under <a href="https://docs.ogc.org/is/20-010/20-010.html#appearance-uml" class="bare" target="_blank" rel="noopener">https://docs.ogc.org/is/20-010/20-010.html#appearance-uml</a>, the Data Dictionary is available under <a href="https://docs.ogc.org/is/20-010/20-010.html#toc50" class="bare" target="_blank" rel="noopener">https://docs.ogc.org/is/20-010/20-010.html#toc50</a>. A detailed discussion of the Appearance module can also be found in the <a href="https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-appearance-section">CityGML 3.0 Users Guide</a>.</p>
@@ -3558,7 +3558,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>As described in <a href="#association-classes-section">Section G.1</a>, the UML association class Role is modelled as an intermediate class in an Implementation Model before the GML encoding is applied. In this way, a relation between a city object group and the features it groups can be represented in such a way that the city object group provides the Role element inline, whereas the Role element references the features that belong to the city object group using XLink. This encoding also ensures that Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a> on referencing features from alternative aggregations is observed.</p>
+<p>As described in <a href="#association-classes-section">Section G.1</a>, the UML association class Role is modeled as an intermediate class in an Implementation Model before the GML encoding is applied. In this way, a relation between a city object group and the features it groups can be represented in such a way that the city object group provides the Role element inline, whereas the Role element references the features that belong to the city object group using XLink. This encoding also ensures that Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a> on referencing features from alternative aggregations is observed.</p>
 </li>
 <li>
 <p>All associations allow by default that the referenced features can be provided inline or by reference. However, a restriction is defined for the following association, since it represents an alternative aggregation (see Requirement <a href="#req_global_alternativeaggregations">/req/global/alternativeaggregations</a> on referencing features from alternative aggregations):</p>
@@ -3700,7 +3700,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="sect2">
 <h3 id="construction-section"><a class="anchor" href="#construction-section"></a>6.8. Construction</h3>
 <div class="paragraph">
-<p>The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g. beams and slabs), installations, and furniture.</p>
+<p>The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g., beams and slabs), installations, and furniture.</p>
 </div>
 <div class="paragraph">
 <p>The concepts of the Construction module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Construction module is available under <a href="https://docs.ogc.org/is/20-010/20-010.html#construction-uml" class="bare" target="_blank" rel="noopener">https://docs.ogc.org/is/20-010/20-010.html#construction-uml</a>, the Data Dictionary is available under <a href="https://docs.ogc.org/is/20-010/20-010.html#toc62" class="bare" target="_blank" rel="noopener">https://docs.ogc.org/is/20-010/20-010.html#toc62</a>. A detailed discussion of the Construction module can also be found in the <a href="https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-construction-section">CityGML 3.0 Users Guide</a>.</p>
@@ -4180,7 +4180,7 @@ Note 2: If the space does not have space boundaries, then the geometry is stored
 <div class="sect2">
 <h3 id="dynamizer-section"><a class="anchor" href="#dynamizer-section"></a>6.9. Dynamizer</h3>
 <div class="paragraph">
-<p>The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g. OGC TimeseriesML or OGC Observations &amp; Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time- value pairs.</p>
+<p>The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g., OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g., OGC TimeseriesML or OGC Observations &amp; Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time- value pairs.</p>
 </div>
 <div class="paragraph">
 <p>The concepts of the Dynamizer module are defined in the OGC CityGML 3.0 Conceptual Model standard. The UML diagram for the Dynamizer module is available under <a href="https://docs.ogc.org/is/20-010/20-010.html#dynamizer-uml" class="bare" target="_blank" rel="noopener">https://docs.ogc.org/is/20-010/20-010.html#dynamizer-uml</a>, the Data Dictionary is available under <a href="https://docs.ogc.org/is/20-010/20-010.html#toc53" class="bare" target="_blank" rel="noopener">https://docs.ogc.org/is/20-010/20-010.html#toc53</a>. A detailed discussion of the Dynamizer module can also be found in the <a href="https://docs.opengeospatial.org/DRAFTS/20-066.html#ug-model-dynamizer-section">CityGML 3.0 Users Guide</a>.</p>
@@ -8322,7 +8322,7 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 <div class="sect2">
 <h3 id="annex-examples-dynamizer"><a class="anchor" href="#annex-examples-dynamizer"></a>B.1. Dynamizer Examples</h3>
 <div class="paragraph">
-<p>This chapter provides examples on the use of the Dynamizer concept to integrate dynamic data coming from sensors or being stored in files with city models. A Dynamizer is a feature that can be included in any CityGML thematic feature (e.g. Building, WallSurface, Section of a road) and that provides a pointer to a specific property of the respective thematic feature, whose static value shall be overridden by timeseries data. See <a href="https://docs.ogc.org/is/20-010/20-010.html#toc26" target="_blank" rel="noopener">Chapter 6.6 of the CityGML Conceptual Model Standard</a> and <a href="#Chaturvedi2019">Chaturvedi &amp; Kolbe 2019</a> for more information. The examples provided here have been taken from <a href="#Chaturvedi2021">Chaturvedi 2021</a>.</p>
+<p>This chapter provides examples on the use of the Dynamizer concept to integrate dynamic data coming from sensors or being stored in files with city models. A Dynamizer is a feature that can be included in any CityGML thematic feature (e.g., Building, WallSurface, Section of a road) and that provides a pointer to a specific property of the respective thematic feature, whose static value shall be overridden by timeseries data. See <a href="https://docs.ogc.org/is/20-010/20-010.html#toc26" target="_blank" rel="noopener">Chapter 6.6 of the CityGML Conceptual Model Standard</a> and <a href="#Chaturvedi2019">Chaturvedi &amp; Kolbe 2019</a> for more information. The examples provided here have been taken from <a href="#Chaturvedi2021">Chaturvedi 2021</a>.</p>
 </div>
 <div class="paragraph">
 <p>A Dynamizer can provide the timeseries data in different ways:</p>
@@ -8333,7 +8333,7 @@ The registered MIME Media Type for GML documents is <code>application/gml+xml</c
 <p>As a link to a specific datastream provided by a sensor data service like OGC SensorThings API, OGC Sensor Observation Service, or other sensor data platforms (incl. MQTT). For this purpose the Dynamizer makes use of a <em>SensorConnection</em> object;</p>
 </li>
 <li>
-<p>As a reference to an external file with tabulated data (e.g. CSV, MS Excel, Google Spreadsheet) for which the Dynamizer uses a <em>TabulatedFileTimeseries</em> object;</p>
+<p>As a reference to an external file with tabulated data (e.g., CSV, MS Excel, Google Spreadsheet) for which the Dynamizer uses a <em>TabulatedFileTimeseries</em> object;</p>
 </li>
 <li>
 <p>As a reference to an external file formatted according to the OGC TimeseriesML or Observations &amp; Measurements standards using a <em>StandardFileTimeseries</em> object;</p>
@@ -9041,7 +9041,7 @@ wall2,2015-01,kWh,1313.344,3112.122,4109.742
 <div class="sect4">
 <h5 id="_representing_complex_periodic_patterns_using_dynamizers"><a class="anchor" href="#_representing_complex_periodic_patterns_using_dynamizers"></a>B.1.2.4. Representing complex periodic patterns using Dynamizers</h5>
 <div class="paragraph">
-<p>Dynamizers also support the composition of atomic timeseries, i.e. of GenericTimeseries objects, TabulatedFileTimeseries objects, and/or StandardFileTimeseries objects, to form composite timeseries. One typical example illustrating such a scenario is the mapping of energy values of a building for every hour in a day as is shown in <a href="#figure-example-composite-timeseries">Figure 14</a>. The hourly consumption readings for a working day, a Saturday, and a Sunday are represented as individual atomic timeseries A, B, and C, respectively.</p>
+<p>Dynamizers also support the composition of atomic timeseries, i.e., of GenericTimeseries objects, TabulatedFileTimeseries objects, and/or StandardFileTimeseries objects, to form composite timeseries. One typical example illustrating such a scenario is the mapping of energy values of a building for every hour in a day as is shown in <a href="#figure-example-composite-timeseries">Figure 14</a>. The hourly consumption readings for a working day, a Saturday, and a Sunday are represented as individual atomic timeseries A, B, and C, respectively.</p>
 </div>
 <div id="figure-example-composite-timeseries" class="imageblock text-center">
 <div class="content">
@@ -9381,7 +9381,7 @@ The rules clearly define when to create new versions of features and when to ref
 <p>When only the top-level feature changes, a new version of the top-level feature is created which receives a new gml:id.</p>
 </li>
 <li>
-<p>All subordinate features, i.e. the features that are part of the top-level feature, remain unchanged and are referenced in their unchanged version by the new version of the top-level feature via their gml:id using XLink.</p>
+<p>All subordinate features, i.e., the features that are part of the top-level feature, remain unchanged and are referenced in their unchanged version by the new version of the top-level feature via their gml:id using XLink.</p>
 </li>
 </ol>
 </div>
@@ -10092,7 +10092,7 @@ The UML model for the Urban Object module has been implemented as described in R
 </div>
 <div class="paragraph">
 <p>The UML conceptual model is illustrated in <a href="#figure-ADE-realworld-uml1">Figure 26</a>.
-The DataType <em>BuildingProperties</em> is modelled as subclass of the "hook" data type <em>ADEOfAbstractBuilding</em> and defines the additional properties that are added to the CityGML <em>AbstractBuilding</em> class. Additionally, a DataType <em>KeyValuePair</em> and a Union <em>ValueType</em> are defined. By using the <em>BuildingProperties</em> that includes two sets of properties, <em>BuildingDetails</em> and <em>LargeCustomerFacilities</em>, 3D city models can systematically be extended with the detailed properties for urban planning.</p>
+The DataType <em>BuildingProperties</em> is modeled as subclass of the "hook" data type <em>ADEOfAbstractBuilding</em> and defines the additional properties that are added to the CityGML <em>AbstractBuilding</em> class. Additionally, a DataType <em>KeyValuePair</em> and a Union <em>ValueType</em> are defined. By using the <em>BuildingProperties</em> that includes two sets of properties, <em>BuildingDetails</em> and <em>LargeCustomerFacilities</em>, 3D city models can systematically be extended with the detailed properties for urban planning.</p>
 </div>
 <div id="figure-ADE-realworld-uml1" class="imageblock text-center">
 <div class="content">
@@ -11568,7 +11568,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
       &lt;/element&gt;
       &lt;element minOccurs="0" name="relationType" type="anyURI"&gt;
         &lt;annotation&gt;
-          &lt;documentation&gt;Specifies a URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g. the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.&lt;/documentation&gt;
+          &lt;documentation&gt;Specifies a URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g., the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.&lt;/documentation&gt;
         &lt;/annotation&gt;
       &lt;/element&gt;
     &lt;/sequence&gt;
@@ -11852,7 +11852,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
 <div class="content">
 <pre class="highlight"><code class="language-XML" data-lang="XML">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:app="http://www.opengis.net/citygml/appearance/3.0" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/appearance/3.0" version="3.0.0"&gt;
   &lt;annotation&gt;
-    &lt;documentation&gt;The Appearance module supports the modelling of the observable surface properties of CityGML features in the form of textures and material.&lt;/documentation&gt;
+    &lt;documentation&gt;The Appearance module supports the modeling of the observable surface properties of CityGML features in the form of textures and material.&lt;/documentation&gt;
   &lt;/annotation&gt;
   &lt;import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./core.xsd"/&gt;
   &lt;import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/&gt;
@@ -12030,7 +12030,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="Appearance" substitutionGroup="core:AbstractAppearance" type="app:AppearanceType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;An Appearance is a collection of surface data, i.e. observable properties for surface geometry objects in the form of textures and material.&lt;/documentation&gt;
+      &lt;documentation&gt;An Appearance is a collection of surface data, i.e., observable properties for surface geometry objects in the form of textures and material.&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="AppearanceType"&gt;
@@ -12785,7 +12785,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="BridgeRoom" substitutionGroup="core:AbstractUnoccupiedSpace" type="brid:BridgeRoomType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A BridgeRoom is a space within a Bridge or BridgePart intended for human occupancy (e.g. a place of work or recreation) and/or containment (storage) of animals or things. A BridgeRoom is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces).&lt;/documentation&gt;
+      &lt;documentation&gt;A BridgeRoom is a space within a Bridge or BridgePart intended for human occupancy (e.g., a place of work or recreation) and/or containment (storage) of animals or things. A BridgeRoom is bounded physically and/or virtually (e.g., by ClosureSurfaces or GenericSurfaces).&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="BridgeRoomType"&gt;
@@ -13174,7 +13174,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
           &lt;/element&gt;
           &lt;element maxOccurs="unbounded" minOccurs="0" name="elevation" type="con:ElevationPropertyType"&gt;
             &lt;annotation&gt;
-              &lt;documentation&gt;Specifies qualified elevations of the building subdivision in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]&lt;/documentation&gt;
+              &lt;documentation&gt;Specifies qualified elevations of the building subdivision in relation to a well-defined surface which is commonly taken as origin (e.g., geoid or water level). [cf. INSPIRE]&lt;/documentation&gt;
             &lt;/annotation&gt;
           &lt;/element&gt;
           &lt;element minOccurs="0" name="sortKey" type="double"&gt;
@@ -13240,7 +13240,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="Building" substitutionGroup="bldg:AbstractBuilding" type="bldg:BuildingType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A Building is a free-standing, self-supporting construction that is roofed, usually walled, and can be entered by humans and is normally designed to stand permanently in one place. It is intended for human occupancy (e.g. a place of work or recreation), habitation and/or shelter of humans, animals or things.&lt;/documentation&gt;
+      &lt;documentation&gt;A Building is a free-standing, self-supporting construction that is roofed, usually walled, and can be entered by humans and is normally designed to stand permanently in one place. It is intended for human occupancy (e.g., a place of work or recreation), habitation and/or shelter of humans, animals or things.&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="BuildingType"&gt;
@@ -13425,7 +13425,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="BuildingRoom" substitutionGroup="core:AbstractUnoccupiedSpace" type="bldg:BuildingRoomType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A BuildingRoom is a space within a Building or BuildingPart intended for human occupancy (e.g. a place of work or recreation) and/or containment of animals or things. A BuildingRoom is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces).&lt;/documentation&gt;
+      &lt;documentation&gt;A BuildingRoom is a space within a Building or BuildingPart intended for human occupancy (e.g., a place of work or recreation) and/or containment of animals or things. A BuildingRoom is bounded physically and/or virtually (e.g., by ClosureSurfaces or GenericSurfaces).&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="BuildingRoomType"&gt;
@@ -13810,7 +13810,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
 <div class="content">
 <pre class="highlight"><code class="language-XML" data-lang="XML">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:con="http://www.opengis.net/citygml/construction/3.0" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/construction/3.0" version="3.0.0"&gt;
   &lt;annotation&gt;
-    &lt;documentation&gt;The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g. beams and slabs), installations, and furniture.&lt;/documentation&gt;
+    &lt;documentation&gt;The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g., beams and slabs), installations, and furniture.&lt;/documentation&gt;
   &lt;/annotation&gt;
   &lt;import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./core.xsd"/&gt;
   &lt;import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/&gt;
@@ -14106,7 +14106,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
           &lt;/element&gt;
           &lt;element maxOccurs="unbounded" minOccurs="0" name="elevation" type="con:ElevationPropertyType"&gt;
             &lt;annotation&gt;
-              &lt;documentation&gt;Specifies qualified elevations of the construction in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]&lt;/documentation&gt;
+              &lt;documentation&gt;Specifies qualified elevations of the construction in relation to a well-defined surface which is commonly taken as origin (e.g., geoid or water level). [cf. INSPIRE]&lt;/documentation&gt;
             &lt;/annotation&gt;
           &lt;/element&gt;
           &lt;element maxOccurs="unbounded" minOccurs="0" name="height" type="con:HeightPropertyType"&gt;
@@ -14862,7 +14862,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
 <div class="content">
 <pre class="highlight"><code class="language-XML" data-lang="XML">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/dynamizer/3.0" version="3.0.0"&gt;
   &lt;annotation&gt;
-    &lt;documentation&gt;The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g. OGC TimeseriesML or OGC Observations &amp;amp; Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time-value pairs.&lt;/documentation&gt;
+    &lt;documentation&gt;The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g., OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g., OGC TimeseriesML or OGC Observations &amp;amp; Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time-value pairs.&lt;/documentation&gt;
   &lt;/annotation&gt;
   &lt;import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./core.xsd"/&gt;
   &lt;import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/&gt;
@@ -15155,7 +15155,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="SensorConnection" substitutionGroup="gml:AbstractObject" type="dyn:SensorConnectionType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A SensorConnection provides all details that are required to retrieve a specific datastream from an external sensor web service. This data type comprises the service type (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), the URL of the sensor service, the identifier for the sensor or thing, and its observed property as well as information about the required authentication method.&lt;/documentation&gt;
+      &lt;documentation&gt;A SensorConnection provides all details that are required to retrieve a specific datastream from an external sensor web service. This data type comprises the service type (e.g., OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), the URL of the sensor service, the identifier for the sensor or thing, and its observed property as well as information about the required authentication method.&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="SensorConnectionType"&gt;
@@ -15720,7 +15720,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="GenericLogicalSpace" substitutionGroup="core:AbstractLogicalSpace" type="gen:GenericLogicalSpaceType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A GenericLogicalSpace is a space that is not represented by any explicitly modelled AbstractLogicalSpace subclass within CityGML.&lt;/documentation&gt;
+      &lt;documentation&gt;A GenericLogicalSpace is a space that is not represented by any explicitly modeled AbstractLogicalSpace subclass within CityGML.&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="GenericLogicalSpaceType"&gt;
@@ -15760,7 +15760,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="GenericOccupiedSpace" substitutionGroup="core:AbstractOccupiedSpace" type="gen:GenericOccupiedSpaceType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A GenericOccupiedSpace is a space that is not represented by any explicitly modelled AbstractOccupiedSpace subclass within CityGML.&lt;/documentation&gt;
+      &lt;documentation&gt;A GenericOccupiedSpace is a space that is not represented by any explicitly modeled AbstractOccupiedSpace subclass within CityGML.&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="GenericOccupiedSpaceType"&gt;
@@ -15800,7 +15800,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="GenericThematicSurface" substitutionGroup="core:AbstractThematicSurface" type="gen:GenericThematicSurfaceType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A GenericThematicSurface is a surface that is not represented by any explicitly modelled AbstractThematicSurface subclass within CityGML.&lt;/documentation&gt;
+      &lt;documentation&gt;A GenericThematicSurface is a surface that is not represented by any explicitly modeled AbstractThematicSurface subclass within CityGML.&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="GenericThematicSurfaceType"&gt;
@@ -15840,7 +15840,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="GenericUnoccupiedSpace" substitutionGroup="core:AbstractUnoccupiedSpace" type="gen:GenericUnoccupiedSpaceType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A GenericUnoccupiedSpace is a space that is not represented by any explicitly modelled AbstractUnoccupiedSpace subclass within CityGML.&lt;/documentation&gt;
+      &lt;documentation&gt;A GenericUnoccupiedSpace is a space that is not represented by any explicitly modeled AbstractUnoccupiedSpace subclass within CityGML.&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="GenericUnoccupiedSpaceType"&gt;
@@ -16976,7 +16976,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="Intersection" substitutionGroup="tran:AbstractTransportationSpace" type="tran:IntersectionType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;An Intersection is a transportation space that is a shared segment of multiple Road, Track, Railway, or Waterway objects (e.g. a crossing of two roads or a level crossing of a road and a railway).&lt;/documentation&gt;
+      &lt;documentation&gt;An Intersection is a transportation space that is a shared segment of multiple Road, Track, Railway, or Waterway objects (e.g., a crossing of two roads or a level crossing of a road and a railway).&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="IntersectionType"&gt;
@@ -17750,7 +17750,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="HollowSpace" substitutionGroup="core:AbstractUnoccupiedSpace" type="tun:HollowSpaceType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A HollowSpace is a space within a Tunnel or TunnelPart intended for certain functions (e.g. transport or passage ways, service rooms, emergency shelters). A HollowSpace is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces).&lt;/documentation&gt;
+      &lt;documentation&gt;A HollowSpace is a space within a Tunnel or TunnelPart intended for certain functions (e.g., transport or passage ways, service rooms, emergency shelters). A HollowSpace is bounded physically and/or virtually (e.g., by ClosureSurfaces or GenericSurfaces).&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="HollowSpaceType"&gt;
@@ -18143,7 +18143,7 @@ xsi:schemaLocation="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/
   &lt;/complexType&gt;
   &lt;element name="SolitaryVegetationObject" substitutionGroup="veg:AbstractVegetationObject" type="veg:SolitaryVegetationObjectType"&gt;
     &lt;annotation&gt;
-      &lt;documentation&gt;A SolitaryVegetationObject represents individual vegetation objects, e.g. trees or bushes.&lt;/documentation&gt;
+      &lt;documentation&gt;A SolitaryVegetationObject represents individual vegetation objects, e.g., trees or bushes.&lt;/documentation&gt;
     &lt;/annotation&gt;
   &lt;/element&gt;
   &lt;complexType name="SolitaryVegetationObjectType"&gt;
@@ -19130,7 +19130,7 @@ The Implementation Model and the ShapeChange configuration file can be used to d
 <p>byReference: the referenced feature is provided elsewhere in the same or an external GML instance document and is referenced from the referencing feature using XLink</p>
 </li>
 <li>
-<p>inlineOrByReference: both representations, i.e. inline and byReference, are possible and, in addition, a mixture of both representations.</p>
+<p>inlineOrByReference: both representations, i.e., inline and byReference, are possible and, in addition, a mixture of both representations.</p>
 </li>
 </ul>
 </div>
@@ -19222,7 +19222,7 @@ The Implementation Model and the ShapeChange configuration file can be used to d
 <p>In order to obtain the restricted structure in GML instance documents, an Implementation Model is created prior to the GML encoding of the CityGML 3.0 Conceptual Model. Within the Implementation Model, the association classes are manually converted into intermediate classes and the tagged values of the associations are set as shown in <a href="#figure-uml-intermediate-class-byreference">Figure 33</a>. This means that the encoding will directly be performed on the Implementation Model. This solution guarantees for representing references between features according to <a href="#listing-gml-inlineorbyreference">Listing 49</a> in GML instance documents and it can be applied directly without any changes to the conversion tools.</p>
 </div>
 <div class="paragraph">
-<p>In the following, the solution will be exemplified based on the association class CityObjectRelation. This association class can be used to specify relationships between different features, e.g. it can be expressed that the WallSurface of one building shares the Polygon geometry with the WallSurface of a second Building. The association class is illustrated in <a href="#figure-uml-cityobjectrelation-associationclass">Figure 34</a>, the tagged value is set to “inlineOrByReference”.</p>
+<p>In the following, the solution will be exemplified based on the association class CityObjectRelation. This association class can be used to specify relationships between different features, e.g., it can be expressed that the WallSurface of one building shares the Polygon geometry with the WallSurface of a second Building. The association class is illustrated in <a href="#figure-uml-cityobjectrelation-associationclass">Figure 34</a>, the tagged value is set to “inlineOrByReference”.</p>
 </div>
 <div id="figure-uml-cityobjectrelation-associationclass" class="imageblock text-center">
 <div class="content">
@@ -19281,7 +19281,7 @@ The Implementation Model and the ShapeChange configuration file can be used to d
 <p>Based on Recommendation 11 given in section 8.2.9 of the <a href="http://www.opengis.net/doc/PER/t17-D022">OGC Testbed-17: Model-Driven Standards Engineering Report</a>, the basic types <em>TransformationMatrix2x2</em>, <em>TransformationMatrix3x4</em>, <em>TransformationMatrix4x4</em>, <em>Color</em>, and <em>ColorPlusOpacity</em> were revised in the Implementation Model.</p>
 </div>
 <div class="paragraph">
-<p>These basic types are no longer modelled as subclasses of the basic types <em>DoubleList</em> and <em>DoubleBetween0and1List</em>, respectively. Instead, they provide now a single <em>list</em> attribute themselves with a maximum multiplicity greater than 1 allowing to encode them as list-based XML Schema simple types.</p>
+<p>These basic types are no longer modeled as subclasses of the basic types <em>DoubleList</em> and <em>DoubleBetween0and1List</em>, respectively. Instead, they provide now a single <em>list</em> attribute themselves with a maximum multiplicity greater than 1 allowing to encode them as list-based XML Schema simple types.</p>
 </div>
 <div class="paragraph">
 <p>The basic type <em>DoubleBetween0and1List</em> was removed from the Implementation Model as it is no longer needed. The basic type <em>DoubleList</em>, however, remains in the Implementation Model as it serves as data type for the attribute <em>textureCoordinates</em> in the class <em>TexCoordList</em> of the <em>Appearance</em> module.</p>
@@ -19608,7 +19608,7 @@ Particular variation of a spatial object<br>
 <p><a id="Becker2011"></a>Becker, T., Nagel, C., Kolbe, T. H., 2011: <strong>Integrated 3D Modeling of Multi-utility Networks and their Interdependencies for Critical Infrastructure Analysis</strong>. In: T. H. Kolbe, G. König, C. Nagel (Eds.): Advances in 3D Geoinformation Sciences. LNG&amp;C, Springer, Berlin. <a href="https://doi.org/10.1007/978-3-642-12670-3_1" class="bare">https://doi.org/10.1007/978-3-642-12670-3_1</a></p>
 </li>
 <li>
-<p><a id="Beil2017"></a>Beil, C., Kolbe, T. H., 2017: <strong>CityGML and the streets of New York - A proposal for detailed street space modelling</strong>. In: Proceedings of the 12th International 3D GeoInfo Conference 2017, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W5, ISPRS. <a href="http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017" class="bare">http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017</a></p>
+<p><a id="Beil2017"></a>Beil, C., Kolbe, T. H., 2017: <strong>CityGML and the streets of New York - A proposal for detailed street space modeling</strong>. In: Proceedings of the 12th International 3D GeoInfo Conference 2017, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W5, ISPRS. <a href="http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017" class="bare">http://doi.org/10.5194/isprs-annals-IV-4-W5-9-2017</a></p>
 </li>
 <li>
 <p><a id="Beil2021"></a>Beil, C., Kutzner, T., Schwab, B., Willenborg, B., Gawronski, A., Kolbe, T. H., 2021: <strong>Integration of 3D point clouds with semantic 3D city models – Providing semantic information beyond classification</strong>. In: Proceedings of the 16th International 3D GeoInfo Conference 2021, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. VIII-4/W2-2021, ISPRS. <a href="https://doi.org/10.5194/isprs-annals-VIII-4-W2-2021-105-2021" class="bare">https://doi.org/10.5194/isprs-annals-VIII-4-W2-2021-105-2021</a></p>
@@ -19689,7 +19689,7 @@ Particular variation of a spatial object<br>
 <p><a id="Konde2018"></a>Konde, A., Tauscher, H., Biljecki, F., Crawford, J., 2018: <strong>Floor plans in CityGML</strong>. In: Proceedings of the 13th 3D GeoInfo Conference 2018, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. IV-4/W6, 25–32, ISPRS. <a href="https://doi.org/10.5194/isprs-annals-IV-4-W6-25-2018" class="bare">https://doi.org/10.5194/isprs-annals-IV-4-W6-25-2018</a></p>
 </li>
 <li>
-<p><a id="Kutzner2018"></a>Kutzner, T., Hijazi, I., Kolbe, T. H., 2018: <strong>Semantic Modelling of 3D Multi-utility Networks for Urban Analyses and Simulations – The CityGML Utility Network ADE</strong>. International Journal of 3-D Information Modeling (IJ3DIM) 7(2), 1-34. <a href="https://dx.doi.org/10.4018/IJ3DIM.2018040101" class="bare">https://dx.doi.org/10.4018/IJ3DIM.2018040101</a></p>
+<p><a id="Kutzner2018"></a>Kutzner, T., Hijazi, I., Kolbe, T. H., 2018: <strong>Semantic modeling of 3D Multi-utility Networks for Urban Analyses and Simulations – The CityGML Utility Network ADE</strong>. International Journal of 3-D Information Modeling (IJ3DIM) 7(2), 1-34. <a href="https://dx.doi.org/10.4018/IJ3DIM.2018040101" class="bare">https://dx.doi.org/10.4018/IJ3DIM.2018040101</a></p>
 </li>
 <li>
 <p><a id="Kutzner2020"></a>Kutzner, T., Chaturvedi, K. &amp; Kolbe, T. H., 2020: <strong>CityGML 3.0: New Functions Open Up New Applications</strong>. PFG - Journal of Photogrammetry, Remote Sensing and Geoinformation Science, 88, 43–61. <a href="https://doi.org/10.1007/s41064-020-00095-z" class="bare">https://doi.org/10.1007/s41064-020-00095-z</a></p>

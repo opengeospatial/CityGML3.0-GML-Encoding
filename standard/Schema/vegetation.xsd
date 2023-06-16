@@ -126,7 +126,7 @@
   </complexType>
   <element name="SolitaryVegetationObject" substitutionGroup="veg:AbstractVegetationObject" type="veg:SolitaryVegetationObjectType">
     <annotation>
-      <documentation>A SolitaryVegetationObject represents individual vegetation objects, e.g. trees or bushes.</documentation>
+      <documentation>A SolitaryVegetationObject represents individual vegetation objects, e.g., trees or bushes.</documentation>
     </annotation>
   </element>
   <complexType name="SolitaryVegetationObjectType">

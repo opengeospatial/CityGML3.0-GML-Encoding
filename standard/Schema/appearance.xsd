@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:app="http://www.opengis.net/citygml/appearance/3.0" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/appearance/3.0" version="3.0.0">
   <annotation>
-    <documentation>The Appearance module supports the modelling of the observable surface properties of CityGML features in the form of textures and material.</documentation>
+    <documentation>The Appearance module supports the modeling of the observable surface properties of CityGML features in the form of textures and material.</documentation>
   </annotation>
   <import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./core.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
@@ -178,7 +178,7 @@
   </complexType>
   <element name="Appearance" substitutionGroup="core:AbstractAppearance" type="app:AppearanceType">
     <annotation>
-      <documentation>An Appearance is a collection of surface data, i.e. observable properties for surface geometry objects in the form of textures and material.</documentation>
+      <documentation>An Appearance is a collection of surface data, i.e., observable properties for surface geometry objects in the form of textures and material.</documentation>
     </annotation>
   </element>
   <complexType name="AppearanceType">

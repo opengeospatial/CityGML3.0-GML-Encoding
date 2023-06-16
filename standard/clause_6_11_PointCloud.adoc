@@ -27,7 +27,7 @@ The following decisions have been made regarding implementation of the CityGML 3
 . The PointCloud module allows for representing the geometries of city objects by 3D point clouds in three ways. Examples for each representation option are provided in <<annex-examples-pointcloud>>:
 * A MultiPoint geometry is provided inline with the CityGML file, i.e., the point cloud of a specific feature is embedded directly within the feature represented by the point cloud.
 * A separate point cloud file is provided for every feature. Each feature in the CityGML file references the corresponding point cloud file.
-* One point cloud file is provided that contains all points from all features in a specific area. In the point cloud file, all points belonging to a specific feature have the same value set in the attribute “point_source_id”. Each feature in the CityGML instance document references the point cloud file and all points with the corresponding value in the attribute “point_source_id”.
+* One point cloud file is provided that contains all points from all features in a specific area. In the point cloud file, all points belonging to a specific feature have the same value set in the attribute “point_source_id.” Each feature in the CityGML instance document references the point cloud file and all points with the corresponding value in the attribute “point_source_id.”
 
 ==== Requirements
 

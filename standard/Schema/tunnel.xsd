@@ -199,7 +199,7 @@
   </complexType>
   <element name="HollowSpace" substitutionGroup="core:AbstractUnoccupiedSpace" type="tun:HollowSpaceType">
     <annotation>
-      <documentation>A HollowSpace is a space within a Tunnel or TunnelPart intended for certain functions (e.g. transport or passage ways, service rooms, emergency shelters). A HollowSpace is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces).</documentation>
+      <documentation>A HollowSpace is a space within a Tunnel or TunnelPart intended for certain functions (e.g., transport or passage ways, service rooms, emergency shelters). A HollowSpace is bounded physically and/or virtually (e.g., by ClosureSurfaces or GenericSurfaces).</documentation>
     </annotation>
   </element>
   <complexType name="HollowSpaceType">
