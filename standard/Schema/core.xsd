@@ -3,7 +3,7 @@
     <documentation>The Core module defines the basic components of the CityGML conceptual model. This includes abstract base classes that define the core properties of more specialized thematic classes defined in other modules as well as concrete classes that are common to other modules, for example basic data types.</documentation>
   </annotation>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="urn:oasis:names:tc:ciq:xal:3" schemaLocation="http://docs.oasis-open.org/ciq/v3.0/cs02/xsd/default/xsd/xAL.xsd"/>
+  <import namespace="urn:oasis:names:tc:ciq:xal:3" schemaLocation="xAL/xAL.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="ADEOfAbstractAppearance" substitutionGroup="gml:AbstractObject" type="core:ADEOfAbstractAppearanceType">
     <annotation>
