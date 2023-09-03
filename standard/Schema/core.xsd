@@ -297,6 +297,9 @@
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="relatedTo">
+            <annotation>
+              <documentation>Relates other city objects to the city object. It also describes how the city objects are related to each other.</documentation>
+            </annotation>
             <complexType>
               <sequence>
                 <element ref="core:CityObjectRelation"/>
@@ -1024,9 +1027,14 @@
               <documentation>Relates generic attributes to the CityObjectRelation.</documentation>
             </annotation>
           </element>
-          <element name="relationType" type="gml:CodeType"/>
+          <element name="relationType" type="gml:CodeType">
+            <annotation>
+              <documentation>Indicates the specific type of the CityObjectRelation.</documentation>
+            </annotation>
+          </element>
           <element name="relatedTo" type="gml:ReferenceType">
             <annotation>
+              <documentation>Relates other city objects to the city object. It also describes how the city objects are related to each other.</documentation>
               <appinfo>
                 <targetElement xmlns="http://www.opengis.net/gml/3.2">core:AbstractCityObject</targetElement>
               </appinfo>

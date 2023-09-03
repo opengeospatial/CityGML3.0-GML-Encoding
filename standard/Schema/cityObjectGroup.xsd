@@ -43,6 +43,9 @@
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="groupMember">
+            <annotation>
+              <documentation>Relates to the city objects that are part of the CityObjectGroup.</documentation>
+            </annotation>
             <complexType>
               <complexContent>
                 <extension base="gml:AbstractMemberType">
@@ -86,9 +89,14 @@
     <complexContent>
       <extension base="gml:AbstractGMLType">
         <sequence>
-          <element minOccurs="0" name="role" type="string"/>
+          <element minOccurs="0" name="role" type="string">
+            <annotation>
+              <documentation>Describes the role the city object plays within the CityObjectGroup.</documentation>
+            </annotation>
+          </element>
           <element name="groupMember">
             <annotation>
+              <documentation>Relates to the city objects that are part of the CityObjectGroup.</documentation>
               <appinfo>
                 <targetElement xmlns="http://www.opengis.net/gml/3.2">core:AbstractCityObject</targetElement>
               </appinfo>
